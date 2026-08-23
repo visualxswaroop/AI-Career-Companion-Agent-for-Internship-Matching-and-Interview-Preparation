@@ -1,0 +1,3881 @@
+[
+  {
+    "id": "af78f0f3-7b3a-41fc-afb7-d8b521309b39",
+    "company": "Google",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Bangalore, India",
+    "mode": "On-site",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5000,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "C++",
+      "Java"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "22168151-5efe-4923-9acf-e964bcd0a67e",
+    "company": "Amazon",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Indore, India",
+    "mode": "Remote",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5001,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "C++",
+      "TypeScript",
+      "Rust"
+    ],
+    "preferred_skills": [
+      "PHP"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "7e6c2de6-50a6-4c39-a13c-963e6b93c4f0",
+    "company": "Microsoft",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Denver, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5002,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Objective-C",
+      "Ruby",
+      "JavaScript",
+      "Python",
+      "Rust"
+    ],
+    "preferred_skills": [
+      "PostgreSQL"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "0a482555-9520-4aeb-96fc-e4433cfcb506",
+    "company": "Apple",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Sydney, Australia",
+    "mode": "On-site",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5003,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Objective-C",
+      "PHP",
+      "Oracle",
+      "Python",
+      "TypeScript",
+      "NoSQL"
+    ],
+    "preferred_skills": [
+      "Kotlin",
+      "Flask"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "3208e69d-3c57-4671-ba86-59ef7da8ed28",
+    "company": "Meta",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Gurugram, India",
+    "mode": "Remote",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5004,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Kotlin",
+      "Go"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "58099ed8-0399-4605-97b1-870d6e0ed259",
+    "company": "Tesla",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Boston, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5005,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Objective-C",
+      "PostgreSQL",
+      "Rust"
+    ],
+    "preferred_skills": [],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "0a64e07b-7bdb-4495-9010-d8830c8e8a1d",
+    "company": "Netflix",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Amsterdam, Netherlands",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5006,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Express.js",
+      "MATLAB",
+      "Redis",
+      "C#",
+      "Python"
+    ],
+    "preferred_skills": [
+      "R",
+      "Next.js"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "b52c966e-e3b7-4a2f-98c7-6ef38b21ce80",
+    "company": "Airbnb",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Mumbai, India",
+    "mode": "Remote",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5007,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "PHP",
+      "Angular",
+      "Spring Boot",
+      "Ansible",
+      "Python",
+      "NoSQL"
+    ],
+    "preferred_skills": [
+      "MATLAB",
+      "Express.js",
+      "GitHub"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "79838830-97c6-489c-a71f-0390908a7cb1",
+    "company": "Uber",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "New York, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5008,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "PostgreSQL",
+      "Ruby"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "bb5a0033-c46d-4fa0-8ed3-2afda0f5a6af",
+    "company": "LinkedIn",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "London, UK",
+    "mode": "On-site",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5009,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Kotlin",
+      "Flask",
+      "Oracle"
+    ],
+    "preferred_skills": [
+      "NoSQL"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "595d13b9-e6f9-4ffe-b79b-4bc85cd151da",
+    "company": "Adobe",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Vancouver, Canada",
+    "mode": "Remote",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5010,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Elasticsearch",
+      "Swift",
+      "Python",
+      "ASP.NET",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "MongoDB",
+      "Docker"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "99a89724-b17e-4964-95ae-a0d825f56bca",
+    "company": "Salesforce",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Kolkata, India",
+    "mode": "Hybrid",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5011,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Objective-C",
+      "REST API",
+      "PyTorch",
+      "AWS",
+      "Angular",
+      "Python"
+    ],
+    "preferred_skills": [
+      "PostgreSQL",
+      "SSL/TLS"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "1128485a-65a6-48d3-aa15-1fabbfb85f7f",
+    "company": "Oracle",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Austin, USA",
+    "mode": "On-site",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5012,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Next.js",
+      "R"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "dc197d21-93b9-41db-89eb-db073ce434a5",
+    "company": "IBM",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Tokyo, Japan",
+    "mode": "Remote",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5013,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "GitHub",
+      "MATLAB",
+      "Express.js"
+    ],
+    "preferred_skills": [
+      "Oracle"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "1d60782f-2efe-4da8-b219-ea9bfcdb513b",
+    "company": "Intel",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Pune, India",
+    "mode": "Hybrid",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5014,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "SQL",
+      "PyTorch",
+      "Linux",
+      "Flask",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "GitHub"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "9e51e54a-c5ca-405d-a426-74f26b5f3824",
+    "company": "NVIDIA",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Los Angeles, USA",
+    "mode": "On-site",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5015,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "REST API",
+      "Spring Boot",
+      "NumPy",
+      "Python",
+      "NoSQL"
+    ],
+    "preferred_skills": [
+      "Elasticsearch",
+      "Bitbucket",
+      "Matplotlib"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "e1ccc410-3484-4ffb-8002-05d5049ad46c",
+    "company": "Qualcomm",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Paris, France",
+    "mode": "Remote",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5016,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "MongoDB",
+      "Docker"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "66a1e362-2f3c-4f1d-954f-195df7393dec",
+    "company": "Cisco",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Hyderabad, India",
+    "mode": "Hybrid",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5017,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "PostgreSQL",
+      "AWS",
+      "SSL/TLS"
+    ],
+    "preferred_skills": [
+      "Angular"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "29a7ea25-a964-45e2-88bf-e5ff054ee0c0",
+    "company": "VMware",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "San Francisco, USA",
+    "mode": "On-site",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5018,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Machine Learning",
+      "MySQL",
+      "Python",
+      "Google Cloud",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "Vue.js",
+      "WebSocket"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "d614a481-d02e-4b39-ae91-e789125d8674",
+    "company": "Stripe",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Portland, USA",
+    "mode": "Remote",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5019,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "PyTorch",
+      "Ansible",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Next.js",
+      "OAuth",
+      "GitHub Actions"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "f9d020e9-7c9e-4b8c-bd44-98107a7c8887",
+    "company": "Square",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Toronto, Canada",
+    "mode": "Hybrid",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5020,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Redis",
+      "GitHub"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "3b074d96-b810-49d9-a225-c404b9c56d95",
+    "company": "Dropbox",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chennai, India",
+    "mode": "On-site",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5021,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Elasticsearch",
+      "Matplotlib",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "Express.js"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "d58eb2d5-579f-4934-b186-d835b9503885",
+    "company": "Box",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chicago, USA",
+    "mode": "Remote",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5022,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "React",
+      "Apache Spark",
+      "Pytest",
+      "Windows",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Django",
+      "Deep Learning"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "a0fbf38d-092e-462b-82e0-a5d2aec283e9",
+    "company": "Figma",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Singapore",
+    "mode": "Hybrid",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5023,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "RabbitMQ",
+      "REST API",
+      "Angular",
+      "GDPR",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Flask",
+      "PyTorch",
+      "End-to-End Testing"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "b3719f52-3a9c-47a5-a67f-686d48ab18ac",
+    "company": "Slack",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Delhi, India",
+    "mode": "On-site",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5024,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Vue.js",
+      "WebSocket"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "aa010f42-a814-446d-8078-65b3f829aa2d",
+    "company": "Zoom",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Seattle, USA",
+    "mode": "Remote",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5025,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "OAuth",
+      "GitHub Actions",
+      "Next.js"
+    ],
+    "preferred_skills": [
+      "Spring Boot"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "977c7d5c-f0ec-4ba9-864e-a975cc86a23c",
+    "company": "Atlassian",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Berlin, Germany",
+    "mode": "Hybrid",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5026,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Helm",
+      "SSL/TLS",
+      "PHP",
+      "Node.js",
+      "Python"
+    ],
+    "preferred_skills": [
+      "ASP.NET",
+      "Matplotlib"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "474094c5-f74e-4394-a287-303f323b5cc4",
+    "company": "HashiCorp",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Bangalore, India",
+    "mode": "On-site",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5027,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Objective-C",
+      "API Gateway",
+      "Express.js",
+      "Ansible",
+      "Scrum",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Plotly",
+      "C++"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "4003607a-a5f5-4366-993e-ef59cbb61300",
+    "company": "GitLab",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Indore, India",
+    "mode": "Remote",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5028,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Django",
+      "Deep Learning"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "628b1dfa-47e0-43de-ba38-b387fd9d674c",
+    "company": "JetBrains",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Denver, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5029,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "End-to-End Testing",
+      "Flask",
+      "PyTorch"
+    ],
+    "preferred_skills": [
+      "AWS"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "00464657-e845-4c7d-9f7f-ead390bf653c",
+    "company": "RedHat",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Sydney, Australia",
+    "mode": "On-site",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5030,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "FastAPI",
+      "Angular",
+      "Jest",
+      "Keras",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Azure",
+      "AWS SNS"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "a1a2f178-7961-4f01-9b0a-149817e3fb66",
+    "company": "Canonical",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Gurugram, India",
+    "mode": "Remote",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5031,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "PyTorch",
+      "Express.js",
+      "Spring Boot",
+      "GDPR",
+      "NumPy",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Google Cloud",
+      "CI/CD",
+      "MATLAB"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "cb616d9f-4365-4382-96d0-2c435bfb6e1d",
+    "company": "Mozilla",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Boston, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5032,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "ASP.NET",
+      "Matplotlib"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "4ee04787-661b-47d3-a550-3fd5fa22f06e",
+    "company": "Apache",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Amsterdam, Netherlands",
+    "mode": "On-site",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5033,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "C++",
+      "Plotly",
+      "Docker"
+    ],
+    "preferred_skills": [
+      "Ansible"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "91f6b5b0-8eca-4897-8222-d3b63025c661",
+    "company": "TensorFlow",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Mumbai, India",
+    "mode": "Remote",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5034,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Kubernetes",
+      "Ansible",
+      "Hadoop",
+      "Go",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Git",
+      "JIRA"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "a731f73e-69c4-447f-b9c0-4a26a0941dc6",
+    "company": "PyTorch",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "New York, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5035,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "RabbitMQ",
+      "PHP",
+      "AWS",
+      "Python",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "GitHub",
+      "Scrum",
+      "Next.js"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "161bfcb6-bd3f-4370-a86b-d626a976e5bc",
+    "company": "FastAI",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "London, UK",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5036,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Azure",
+      "AWS SNS"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "24f006e7-2864-4f2a-8a18-262033934e08",
+    "company": "Hugging Face",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Vancouver, Canada",
+    "mode": "Remote",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5037,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Google Cloud",
+      "MATLAB",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "Bitbucket"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "eafb4dd3-f01d-4505-845d-d5728c98c85e",
+    "company": "OpenAI",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Kolkata, India",
+    "mode": "Hybrid",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5038,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "API Gateway",
+      "GitHub Actions",
+      "MongoDB",
+      "Terraform",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "End-to-End Testing"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "f4852bff-1c54-4678-91d0-88194e2eb160",
+    "company": "Anthropic",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Austin, USA",
+    "mode": "On-site",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5039,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "PyTorch",
+      "Ansible",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Windows",
+      "Pytest",
+      "Google Cloud"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "c5431b99-ae8b-483f-bc84-2f2b5189a1e6",
+    "company": "Databricks",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Tokyo, Japan",
+    "mode": "Remote",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5040,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "JIRA",
+      "Git"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "03813173-e718-4f39-8ab9-78c56221c7e6",
+    "company": "Palantir",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Pune, India",
+    "mode": "Hybrid",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5041,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "GitHub",
+      "Scrum",
+      "Next.js"
+    ],
+    "preferred_skills": [
+      "REST API"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "84628790-45b1-4aa9-af20-0837095d3afa",
+    "company": "Notion",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Los Angeles, USA",
+    "mode": "On-site",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5042,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "RabbitMQ",
+      "GitLab",
+      "Waterfall",
+      "Python",
+      "Django"
+    ],
+    "preferred_skills": [
+      "GraphQL",
+      "Penetration Testing"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "103aaea2-d674-442f-8ff1-24926b806b52",
+    "company": "Asana",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Paris, France",
+    "mode": "Remote",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5043,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Spring Boot",
+      "Bitbucket",
+      "Oracle",
+      "Python",
+      "Unit Testing",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "WebSocket",
+      "WebSocket"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "58954b4b-8286-4432-8a6a-6f8bb36a705f",
+    "company": "Monday.com",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Hyderabad, India",
+    "mode": "Hybrid",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5044,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Linux",
+      "End-to-End Testing"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "a681e6ff-bf5f-4e5c-9484-93830cb045e1",
+    "company": "Jira",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "San Francisco, USA",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5045,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Google Cloud",
+      "Pytest",
+      "Windows"
+    ],
+    "preferred_skills": [
+      "OAuth"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "d57409a9-4d2c-4c6a-8d29-0f65a5edcd5e",
+    "company": "HubSpot",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Portland, USA",
+    "mode": "Remote",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5046,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Mocha",
+      "macOS",
+      "Unit Testing",
+      "Python",
+      "Git"
+    ],
+    "preferred_skills": [
+      "JWT",
+      "Rust"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "b5326a4f-cb93-4731-81e0-9d51ce1c9997",
+    "company": "Marketo",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Toronto, Canada",
+    "mode": "Hybrid",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5047,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "REST API",
+      "Ansible",
+      "Pytest",
+      "GDPR",
+      "Python",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "SSL/TLS",
+      "PHP",
+      "Keras"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "8baea175-1425-45e7-9167-9a4e5afdded8",
+    "company": "Segment",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chennai, India",
+    "mode": "On-site",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5048,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "GraphQL",
+      "Penetration Testing"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "ebd8b6fc-5ad7-475b-83cb-0ef8a2489d9e",
+    "company": "Twilio",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chicago, USA",
+    "mode": "Remote",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5049,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "WebSocket"
+    ],
+    "preferred_skills": [
+      "API Gateway"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "e6f41d3b-ae96-40bc-869d-d8f5562b1ef4",
+    "company": "SendGrid",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Singapore",
+    "mode": "Hybrid",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5050,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "gRPC",
+      "C++",
+      "Python",
+      "TypeScript",
+      "JWT"
+    ],
+    "preferred_skills": [
+      "Machine Learning",
+      "MATLAB"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "eedf9692-40aa-4cfb-9b25-ed4d38f5d579",
+    "company": "Auth0",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Delhi, India",
+    "mode": "On-site",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5051,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "TypeScript",
+      "API Gateway",
+      "PHP",
+      "PyTorch",
+      "Python",
+      "OAuth"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "NoSQL",
+      "AWS SNS"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "235d7bfa-115d-43bd-9620-6111b0452c7b",
+    "company": "PagerDuty",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Seattle, USA",
+    "mode": "Remote",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5052,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Rust",
+      "JWT"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "7dc9e87f-fbe6-4ee1-a545-fb1895e789b3",
+    "company": "LaunchDarkly",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Berlin, Germany",
+    "mode": "Hybrid",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5053,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "PHP",
+      "Keras",
+      "SSL/TLS"
+    ],
+    "preferred_skills": [
+      "PyTorch"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "4bf47bad-21d6-4f6a-83fe-2527e3472c74",
+    "company": "Split.io",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Bangalore, India",
+    "mode": "On-site",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5054,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "CORS",
+      "SciPy",
+      "Kotlin",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Scikit-learn",
+      "Elasticsearch"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "515ac954-5f55-442a-8092-2aed079610d8",
+    "company": "Optimizely",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Indore, India",
+    "mode": "Remote",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5055,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Objective-C",
+      "Docker Compose",
+      "API Gateway",
+      "Angular",
+      "Plotly",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Keras",
+      "Waterfall"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "5f65cf1d-fc55-417c-9e60-7131a1c855a4",
+    "company": "Amplitude",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Denver, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5056,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "MATLAB",
+      "Machine Learning"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "fd6c6871-9351-4052-a8bf-0d1b4e865443",
+    "company": "Mixpanel",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Sydney, Australia",
+    "mode": "On-site",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5057,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "NoSQL",
+      "AWS SNS",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "NumPy"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "acdd1caa-201c-4b19-a061-fcfae0325158",
+    "company": "Heap",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Gurugram, India",
+    "mode": "Remote",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5058,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "AWS",
+      "TensorFlow",
+      "Python",
+      "PostgreSQL",
+      "Jenkins"
+    ],
+    "preferred_skills": [
+      "SciPy",
+      "Flask"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "e1b35fbb-e01b-4967-ba41-dabb496bcd95",
+    "company": "FullStory",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Boston, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5059,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "PyTorch",
+      "Ansible",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Matplotlib",
+      "Spring Boot",
+      "Penetration Testing"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "5c7f42c4-3551-4822-b400-4070017a499f",
+    "company": "LogRocket",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Amsterdam, Netherlands",
+    "mode": "On-site",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5060,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Elasticsearch",
+      "Scikit-learn"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "5de3e18d-ba64-493a-b4da-daf872d31817",
+    "company": "Sentry",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Mumbai, India",
+    "mode": "Remote",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5061,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Angular",
+      "Keras",
+      "Waterfall"
+    ],
+    "preferred_skills": [
+      "Plotly"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "4d7d2099-4eba-461d-9e01-c902e709333b",
+    "company": "Rollbar",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "New York, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5062,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Integration Testing",
+      "Pandas",
+      "Python",
+      "OAuth",
+      "Next.js"
+    ],
+    "preferred_skills": [
+      "Apache Spark",
+      "Google Cloud"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "a378fc17-44d7-4108-a5cf-5f41a18444c2",
+    "company": "DataDog",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "London, UK",
+    "mode": "On-site",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5063,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "API Gateway",
+      "Express.js",
+      "Pytest",
+      "NumPy",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Hadoop",
+      "Ansible",
+      "Kotlin"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "0e2175ac-8138-4e57-96d0-44334580c097",
+    "company": "New Relic",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Vancouver, Canada",
+    "mode": "Remote",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5064,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Flask",
+      "SciPy"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "39511481-8bb0-4214-8179-07b95c3cfdad",
+    "company": "Splunk",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Kolkata, India",
+    "mode": "Hybrid",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5065,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Spring Boot",
+      "Penetration Testing",
+      "Matplotlib"
+    ],
+    "preferred_skills": [
+      "RabbitMQ"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "81135704-75ea-40b4-bf04-337ead0171fc",
+    "company": "Elastic",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Austin, USA",
+    "mode": "On-site",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5066,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Java",
+      "Plotly",
+      "Seaborn",
+      "Python",
+      "Docker"
+    ],
+    "preferred_skills": [
+      "AWS SQS",
+      "Windows"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "da310c4e-38ca-4ce9-bf99-c5027aac2ff4",
+    "company": "Prometheus",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Tokyo, Japan",
+    "mode": "Remote",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5067,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "RabbitMQ",
+      "AWS",
+      "Ansible",
+      "Plotly",
+      "Python",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "AWS SNS",
+      "REST API",
+      "Elasticsearch"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "43135e61-5a1a-44b3-8849-8e04b016d919",
+    "company": "Grafana",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Pune, India",
+    "mode": "Hybrid",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5068,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Google Cloud",
+      "Apache Spark"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "2f993548-888f-4672-8be1-e93c19870388",
+    "company": "Kubernetes",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Los Angeles, USA",
+    "mode": "On-site",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5069,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Ansible",
+      "Hadoop",
+      "Kotlin"
+    ],
+    "preferred_skills": [
+      "CI/CD"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "ac4c696c-56e1-465f-821d-9801bcc6f21a",
+    "company": "Docker",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Paris, France",
+    "mode": "Remote",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5070,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Kafka",
+      "Scrum",
+      "GitHub",
+      "Python",
+      "R"
+    ],
+    "preferred_skills": [
+      "Jenkins",
+      "SSL/TLS"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "e4281952-d065-4ced-b70f-88f8b889444c",
+    "company": "HashiCorp",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Hyderabad, India",
+    "mode": "Hybrid",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5071,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "RabbitMQ",
+      "PyTorch",
+      "Python",
+      "NoSQL",
+      "Unit Testing",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "GitHub Actions",
+      "API Gateway",
+      "Docker"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "779db609-e60a-4511-8091-b2273fd8faa2",
+    "company": "Terraform",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "San Francisco, USA",
+    "mode": "On-site",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5072,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "AWS SQS",
+      "Windows"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "a741f6eb-5cea-4354-be7a-296d3f2f76b9",
+    "company": "Ansible",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Portland, USA",
+    "mode": "Remote",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5073,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Elasticsearch",
+      "AWS SNS",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "Docker Compose"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "23acfd50-11be-42e4-a19a-3e012473ecbc",
+    "company": "Puppet",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Toronto, Canada",
+    "mode": "Hybrid",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5074,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "WebSocket",
+      "Vue.js",
+      "Microservices"
+    ],
+    "preferred_skills": [
+      "Helm",
+      "Keras"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "a10c1770-1e6f-4dee-a46d-60df30fa6ea8",
+    "company": "Chef",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chennai, India",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5075,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "TypeScript",
+      "Docker Compose",
+      "Express.js",
+      "Python",
+      "OAuth",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "JIRA",
+      "NumPy",
+      "Windows"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "53c8596d-5ce9-4247-9371-09c96dd424a1",
+    "company": "SaltStack",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chicago, USA",
+    "mode": "Remote",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5076,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Jenkins",
+      "SSL/TLS"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "27645c4b-2b0b-4d9d-9fba-a778c69a37c2",
+    "company": "Jenkins",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Singapore",
+    "mode": "Hybrid",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5077,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "GitHub Actions",
+      "Docker",
+      "API Gateway"
+    ],
+    "preferred_skills": [
+      "Scrum"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "31df6053-19d2-4fcd-a7de-2b95eeb38683",
+    "company": "GitLab CI",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Delhi, India",
+    "mode": "On-site",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5078,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Azure",
+      "GitLab CI",
+      "Deep Learning",
+      "Python",
+      "NoSQL"
+    ],
+    "preferred_skills": [
+      "Kanban",
+      "Hadoop"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "ec6903ba-ff59-41ce-8a53-6970cbbd91ce",
+    "company": "GitHub Actions",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Seattle, USA",
+    "mode": "Remote",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5079,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "PyTorch",
+      "Ansible",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Waterfall",
+      "RabbitMQ",
+      "Deep Learning"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "531d1bd9-ac68-420d-b355-19c26929cb06",
+    "company": "CircleCI",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Berlin, Germany",
+    "mode": "Hybrid",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5080,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Helm",
+      "Keras"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "2aa1fef0-79d8-48f7-b434-e6f1c5a2535c",
+    "company": "Travis CI",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Bangalore, India",
+    "mode": "On-site",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5081,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "JIRA",
+      "Windows",
+      "NumPy"
+    ],
+    "preferred_skills": [
+      "Unit Testing"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "91f8e9cf-37f7-4a94-a750-c20845a43137",
+    "company": "Drone",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Indore, India",
+    "mode": "Remote",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5082,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "GraphQL",
+      "Spring Boot",
+      "Python",
+      "Agile",
+      "Matplotlib"
+    ],
+    "preferred_skills": [
+      "Integration Testing",
+      "GitHub Actions"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "4d76499f-4976-4e0b-9529-598e0011f6de",
+    "company": "Tekton",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Denver, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5083,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "AWS",
+      "Scrum",
+      "Plotly",
+      "Oracle",
+      "Python",
+      "OAuth"
+    ],
+    "preferred_skills": [
+      "End-to-End Testing",
+      "Docker Compose",
+      "Hadoop"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "dfaea49f-08af-4786-8dcf-261252343cc4",
+    "company": "ArgoCD",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Sydney, Australia",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5084,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Hadoop",
+      "Kanban"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "104eed82-a04e-4262-adb1-ee4a301baad7",
+    "company": "Flux",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Gurugram, India",
+    "mode": "Remote",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5085,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Deep Learning",
+      "RabbitMQ",
+      "Waterfall"
+    ],
+    "preferred_skills": [
+      "Pytest"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "c5d5ab16-cd84-4d6e-8325-30a176da451c",
+    "company": "Helm",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Boston, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5086,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "REST API",
+      "Test-Driven Development",
+      "Scikit-learn",
+      "Python",
+      "AWS SNS"
+    ],
+    "preferred_skills": [
+      "Jest",
+      "Waterfall"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "e6c6539c-a4f4-4731-882a-42b727bd3adb",
+    "company": "Kustomize",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Amsterdam, Netherlands",
+    "mode": "On-site",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5087,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Ansible",
+      "NumPy",
+      "Python",
+      "OAuth",
+      "Unit Testing",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "Mocha",
+      "JIRA"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "bb735235-a2b8-457b-b198-3c7a01de7b1a",
+    "company": "Skaffold",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Mumbai, India",
+    "mode": "Remote",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5088,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Integration Testing",
+      "GitHub Actions"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "e0e9124f-54f8-4c0d-9748-61b262ed5126",
+    "company": "Tilt",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "New York, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5089,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Hadoop",
+      "Docker Compose",
+      "End-to-End Testing"
+    ],
+    "preferred_skills": [
+      "GDPR"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "75a2f8e6-2334-426e-addf-ebe6817e1370",
+    "company": "Telepresence",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "London, UK",
+    "mode": "On-site",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5090,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "AWS SQS",
+      "Selenium",
+      "JIRA",
+      "NumPy",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Encryption",
+      "Mocha"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "e5317957-c426-431e-bd5b-d6a4f9c15bf0",
+    "company": "Okteto",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Vancouver, Canada",
+    "mode": "Remote",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5091,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "PyTorch",
+      "Scrum",
+      "Plotly",
+      "Pytest",
+      "Python",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "Penetration Testing",
+      "GDPR",
+      "Mocha"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "aa754544-ce96-4a24-b01b-40cc7fbb6824",
+    "company": "DevSpace",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Kolkata, India",
+    "mode": "Hybrid",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5092,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Waterfall",
+      "Jest"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "1ef5883c-f1fc-4018-a70e-059450dbba8e",
+    "company": "Nix",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Austin, USA",
+    "mode": "On-site",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5093,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "JIRA",
+      "Mocha",
+      "Unit Testing"
+    ],
+    "preferred_skills": [],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "fed7c1a6-214d-424f-b938-52d3a1167d64",
+    "company": "Flox",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Tokyo, Japan",
+    "mode": "Remote",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5094,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Docker Compose",
+      "End-to-End Testing",
+      "OWASP",
+      "Kanban",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Java",
+      "C++"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "706ad791-ff00-464b-b203-031d4ebf89b8",
+    "company": "Rye",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Pune, India",
+    "mode": "Hybrid",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5095,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "Scrum",
+      "Pytest",
+      "GDPR",
+      "Python",
+      "Unit Testing"
+    ],
+    "preferred_skills": [
+      "C++",
+      "TypeScript",
+      "Rust"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "15f712d0-eba5-4764-ac49-f5087d33f6d6",
+    "company": "Poetry",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Los Angeles, USA",
+    "mode": "On-site",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5096,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Encryption",
+      "Mocha"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "39298cb4-fa63-4045-b1fb-94c9a16bfbdc",
+    "company": "Pipenv",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Paris, France",
+    "mode": "Remote",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5097,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "GDPR",
+      "Penetration Testing",
+      "Mocha"
+    ],
+    "preferred_skills": [
+      "TypeScript"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "1bb4d381-8b96-4f10-a357-98344a648f33",
+    "company": "Conda",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Hyderabad, India",
+    "mode": "Hybrid",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5098,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Bug Bounty",
+      "Encryption",
+      "GDPR",
+      "Python",
+      "Penetration Testing"
+    ],
+    "preferred_skills": [
+      "Go",
+      "Kotlin"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "8f4976ab-d22b-42e2-891c-8f8452d22414",
+    "company": "Mamba",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "San Francisco, USA",
+    "mode": "On-site",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5099,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python"
+    ],
+    "preferred_skills": [
+      "Rust",
+      "Objective-C",
+      "PostgreSQL"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "23c93eb3-aab9-4ccb-af34-18015610f8c6",
+    "company": "Micromamba",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Portland, USA",
+    "mode": "Remote",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5100,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "C++",
+      "Java"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "8c8ffdb4-d8b8-4f03-8134-0220c3552702",
+    "company": "Infosys",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Toronto, Canada",
+    "mode": "Hybrid",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5101,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "C++",
+      "TypeScript",
+      "Rust"
+    ],
+    "preferred_skills": [
+      "PHP"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "8234507c-9420-421d-a48d-c193283eca1e",
+    "company": "TCS",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chennai, India",
+    "mode": "On-site",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5102,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Objective-C",
+      "Ruby",
+      "JavaScript",
+      "Python",
+      "Rust"
+    ],
+    "preferred_skills": [
+      "PostgreSQL"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "a247d739-929d-4e77-9160-e269181ab3d1",
+    "company": "Wipro",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chicago, USA",
+    "mode": "Remote",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5103,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Objective-C",
+      "PHP",
+      "Oracle",
+      "Python",
+      "TypeScript",
+      "NoSQL"
+    ],
+    "preferred_skills": [
+      "Kotlin",
+      "Flask"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "7fa5c579-835b-465d-ac2b-ec4e30be8901",
+    "company": "HCL Technologies",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Singapore",
+    "mode": "Hybrid",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5104,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Kotlin",
+      "Go"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "7a1abb1e-eb84-4e25-bb13-902eb8ac23e1",
+    "company": "Cognizant",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Delhi, India",
+    "mode": "On-site",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5105,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Objective-C",
+      "PostgreSQL",
+      "Rust"
+    ],
+    "preferred_skills": [],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "7ea38cca-699d-4311-bc01-486c140a612a",
+    "company": "Tech Mahindra",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Seattle, USA",
+    "mode": "Remote",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5106,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Express.js",
+      "MATLAB",
+      "Redis",
+      "C#",
+      "Python"
+    ],
+    "preferred_skills": [
+      "R",
+      "Next.js"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "f735a494-8613-49da-afa2-892cde31b66e",
+    "company": "Accenture",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Berlin, Germany",
+    "mode": "Hybrid",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5107,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "PHP",
+      "Angular",
+      "Spring Boot",
+      "Ansible",
+      "Python",
+      "NoSQL"
+    ],
+    "preferred_skills": [
+      "MATLAB",
+      "Express.js",
+      "GitHub"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "cef91c4a-3f46-4338-8035-32c1a2583369",
+    "company": "Deloitte",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Bangalore, India",
+    "mode": "On-site",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5108,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "PostgreSQL",
+      "Ruby"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "24605d6a-eaf1-4e20-bcf0-20d80c8a96cb",
+    "company": "PWC",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Indore, India",
+    "mode": "Remote",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5109,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Kotlin",
+      "Flask",
+      "Oracle"
+    ],
+    "preferred_skills": [
+      "NoSQL"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "55eb29c5-46a0-4345-8c50-0108772143ec",
+    "company": "EY",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Denver, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5110,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Elasticsearch",
+      "Swift",
+      "Python",
+      "ASP.NET",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "MongoDB",
+      "Docker"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "5eed01c2-4879-4aa5-a903-49685314e414",
+    "company": "KPMG",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Sydney, Australia",
+    "mode": "On-site",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5111,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Objective-C",
+      "REST API",
+      "PyTorch",
+      "AWS",
+      "Angular",
+      "Python"
+    ],
+    "preferred_skills": [
+      "PostgreSQL",
+      "SSL/TLS"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "a8154768-2056-4893-9a9d-06a6bea6c7bd",
+    "company": "Capgemini",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Gurugram, India",
+    "mode": "Remote",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5112,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Next.js",
+      "R"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "c101b5d1-b8de-41b3-a3c0-7c2b65b557c6",
+    "company": "Atos",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Boston, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5113,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "GitHub",
+      "MATLAB",
+      "Express.js"
+    ],
+    "preferred_skills": [
+      "Oracle"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "3c434703-4641-461b-8476-5e350678e6da",
+    "company": "Fujitsu",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Amsterdam, Netherlands",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5114,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "SQL",
+      "PyTorch",
+      "Linux",
+      "Flask",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "GitHub"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "fd6723c3-47b4-43af-af2c-c1063f493e35",
+    "company": "NEC",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Mumbai, India",
+    "mode": "Remote",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5115,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "REST API",
+      "Spring Boot",
+      "NumPy",
+      "Python",
+      "NoSQL"
+    ],
+    "preferred_skills": [
+      "Elasticsearch",
+      "Bitbucket",
+      "Matplotlib"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "0efa91f3-949b-4005-9f69-db37f6798f7f",
+    "company": "Hitachi",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "New York, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5116,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "MongoDB",
+      "Docker"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "c6bacf59-cf9c-47b0-a0d3-28ba944cd0ca",
+    "company": "Sony",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "London, UK",
+    "mode": "On-site",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5117,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "PostgreSQL",
+      "AWS",
+      "SSL/TLS"
+    ],
+    "preferred_skills": [
+      "Angular"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "a97dc82f-1f5f-4c7a-a0c6-0e8912efe4dd",
+    "company": "Panasonic",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Vancouver, Canada",
+    "mode": "Remote",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5118,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Machine Learning",
+      "MySQL",
+      "Python",
+      "Google Cloud",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "Vue.js",
+      "WebSocket"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "1606dd18-dcea-436a-ac6c-9ae72589d479",
+    "company": "Samsung",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Kolkata, India",
+    "mode": "Hybrid",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5119,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "PyTorch",
+      "Ansible",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Next.js",
+      "OAuth",
+      "GitHub Actions"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "ebc5d1dc-e548-4ecf-aa46-3fb2ab149395",
+    "company": "LG",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Austin, USA",
+    "mode": "On-site",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5120,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Redis",
+      "GitHub"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "b358b3ed-b27e-4920-8c41-1015f0af7db3",
+    "company": "Hyundai",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Tokyo, Japan",
+    "mode": "Remote",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5121,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Elasticsearch",
+      "Matplotlib",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "Express.js"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "4dcd7178-471b-464e-a23a-75ee57fd1be5",
+    "company": "Kia",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Pune, India",
+    "mode": "Hybrid",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5122,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "React",
+      "Apache Spark",
+      "Pytest",
+      "Windows",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Django",
+      "Deep Learning"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "0c2798d1-67af-4e0f-9676-4ea076d37b5d",
+    "company": "BMW",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Los Angeles, USA",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5123,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "RabbitMQ",
+      "REST API",
+      "Angular",
+      "GDPR",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Flask",
+      "PyTorch",
+      "End-to-End Testing"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "e5e69c00-f290-4a52-97d6-6a79383edbac",
+    "company": "Mercedes-Benz",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Paris, France",
+    "mode": "Remote",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5124,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Vue.js",
+      "WebSocket"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "b9b49820-4f4d-4613-8f85-e2ae9ca3dda4",
+    "company": "Audi",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Hyderabad, India",
+    "mode": "Hybrid",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5125,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "OAuth",
+      "GitHub Actions",
+      "Next.js"
+    ],
+    "preferred_skills": [
+      "Spring Boot"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "1ab8cc1b-1608-43e2-b6b1-1bd1685772a7",
+    "company": "Volkswagen",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "San Francisco, USA",
+    "mode": "On-site",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5126,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Helm",
+      "SSL/TLS",
+      "PHP",
+      "Node.js",
+      "Python"
+    ],
+    "preferred_skills": [
+      "ASP.NET",
+      "Matplotlib"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "96a4262d-a99e-4bd2-a65b-264d5969d648",
+    "company": "Ferrari",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Portland, USA",
+    "mode": "Remote",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5127,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Objective-C",
+      "API Gateway",
+      "Express.js",
+      "Ansible",
+      "Scrum",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Plotly",
+      "C++"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "19416957-dc6f-417a-b82e-e11e8d97449b",
+    "company": "Goldman Sachs",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Toronto, Canada",
+    "mode": "Hybrid",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5128,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Django",
+      "Deep Learning"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "5c45e97c-0ce0-43bc-9976-1526759f4b6f",
+    "company": "JP Morgan",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chennai, India",
+    "mode": "On-site",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5129,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "End-to-End Testing",
+      "Flask",
+      "PyTorch"
+    ],
+    "preferred_skills": [
+      "AWS"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "16126623-f968-40e2-aefc-edf04d0fbfe0",
+    "company": "Morgan Stanley",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chicago, USA",
+    "mode": "Remote",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5130,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "FastAPI",
+      "Angular",
+      "Jest",
+      "Keras",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Azure",
+      "AWS SNS"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "f14d6b54-3811-48b5-b016-801d5d287589",
+    "company": "Bank of America",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Singapore",
+    "mode": "Hybrid",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5131,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "PyTorch",
+      "Express.js",
+      "Spring Boot",
+      "GDPR",
+      "NumPy",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Google Cloud",
+      "CI/CD",
+      "MATLAB"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "4c614f81-4d6e-4786-9382-00119867bcc6",
+    "company": "Citigroup",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Delhi, India",
+    "mode": "On-site",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5132,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "ASP.NET",
+      "Matplotlib"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "6c851545-a746-400a-86db-0211b9f4e79c",
+    "company": "Wells Fargo",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Seattle, USA",
+    "mode": "Remote",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5133,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "C++",
+      "Plotly",
+      "Docker"
+    ],
+    "preferred_skills": [
+      "Ansible"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "dcc2254e-276c-4cd3-9553-b8484515e1b3",
+    "company": "Deutsche Bank",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Berlin, Germany",
+    "mode": "Hybrid",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5134,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Kubernetes",
+      "Ansible",
+      "Hadoop",
+      "Go",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Git",
+      "JIRA"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "83e95998-2f83-4db7-9224-70f2636a1abb",
+    "company": "HSBC",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Bangalore, India",
+    "mode": "On-site",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5135,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "RabbitMQ",
+      "PHP",
+      "AWS",
+      "Python",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "GitHub",
+      "Scrum",
+      "Next.js"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "d6713fc1-5609-42a7-9dc1-757b4aa826a7",
+    "company": "Barclays",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Indore, India",
+    "mode": "Remote",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5136,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Azure",
+      "AWS SNS"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "4b9ac38a-29b5-4e30-b9cd-41f773137594",
+    "company": "RBS",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Denver, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5137,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Google Cloud",
+      "MATLAB",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "Bitbucket"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "33e5ea58-1579-433a-ab70-57debd6320a0",
+    "company": "UBS",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Sydney, Australia",
+    "mode": "On-site",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5138,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "API Gateway",
+      "GitHub Actions",
+      "MongoDB",
+      "Terraform",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "End-to-End Testing"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "254368a9-d873-4ac8-ae74-67264e6aa963",
+    "company": "Credit Suisse",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Gurugram, India",
+    "mode": "Remote",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5139,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "PyTorch",
+      "Ansible",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Windows",
+      "Pytest",
+      "Google Cloud"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "0d1ec890-7da5-49cd-8142-1b4d0a0d3632",
+    "company": "ING",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Boston, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5140,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "JIRA",
+      "Git"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "9fb5f4e3-f566-4e4c-93bc-29feae39026a",
+    "company": "Santander",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Amsterdam, Netherlands",
+    "mode": "On-site",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5141,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "GitHub",
+      "Scrum",
+      "Next.js"
+    ],
+    "preferred_skills": [
+      "REST API"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "cb49db6e-0e04-40cb-9218-ea974d21c23b",
+    "company": "BNP Paribas",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Mumbai, India",
+    "mode": "Remote",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5142,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "RabbitMQ",
+      "GitLab",
+      "Waterfall",
+      "Python",
+      "Django"
+    ],
+    "preferred_skills": [
+      "GraphQL",
+      "Penetration Testing"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "0e07ef9f-bcc9-42a3-a511-9b6045fb153b",
+    "company": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "New York, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5143,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Spring Boot",
+      "Bitbucket",
+      "Oracle",
+      "Python",
+      "Unit Testing",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "WebSocket",
+      "WebSocket"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "6ae5bf5e-991b-42bf-b9fa-2b21ca0092a6",
+    "company": "Airbnb",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "London, UK",
+    "mode": "On-site",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5144,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Linux",
+      "End-to-End Testing"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "0644d766-17a4-4206-8cc4-d728acceacdb",
+    "company": "Booking.com",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Vancouver, Canada",
+    "mode": "Remote",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5145,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Google Cloud",
+      "Pytest",
+      "Windows"
+    ],
+    "preferred_skills": [
+      "OAuth"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "1a6320e3-0a2b-486c-aa3d-fe70c91a2361",
+    "company": "Expedia",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Kolkata, India",
+    "mode": "Hybrid",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5146,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Mocha",
+      "macOS",
+      "Unit Testing",
+      "Python",
+      "Git"
+    ],
+    "preferred_skills": [
+      "JWT",
+      "Rust"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "c86bef3d-e274-40f9-b9c7-e5f4c0406d6e",
+    "company": "Trivago",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Austin, USA",
+    "mode": "On-site",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5147,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "REST API",
+      "Ansible",
+      "Pytest",
+      "GDPR",
+      "Python",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "SSL/TLS",
+      "PHP",
+      "Keras"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "ed1eacef-48db-4f69-903a-7e7f91f679fc",
+    "company": "Kayak",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Tokyo, Japan",
+    "mode": "Remote",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5148,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "GraphQL",
+      "Penetration Testing"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "1060a186-2f88-41fc-8b6c-0c24b00141f3",
+    "company": "Hopper",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Pune, India",
+    "mode": "Hybrid",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5149,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "WebSocket"
+    ],
+    "preferred_skills": [
+      "API Gateway"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "6f336075-b694-4ebe-a96e-18c1d9338b40",
+    "company": "Instacart",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Los Angeles, USA",
+    "mode": "On-site",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5150,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "gRPC",
+      "C++",
+      "Python",
+      "TypeScript",
+      "JWT"
+    ],
+    "preferred_skills": [
+      "Machine Learning",
+      "MATLAB"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "47b08909-1f2c-496c-bdc8-0fc0bc654e29",
+    "company": "DoorDash",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Paris, France",
+    "mode": "Remote",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5151,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "TypeScript",
+      "API Gateway",
+      "PHP",
+      "PyTorch",
+      "Python",
+      "OAuth"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "NoSQL",
+      "AWS SNS"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "bf075da9-ab83-426d-992c-2f03ad832624",
+    "company": "Uber Eats",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Hyderabad, India",
+    "mode": "Hybrid",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5152,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Rust",
+      "JWT"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "ca294eda-fcbf-4d03-bd9d-95936ccffe68",
+    "company": "Grubhub",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "San Francisco, USA",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5153,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "PHP",
+      "Keras",
+      "SSL/TLS"
+    ],
+    "preferred_skills": [
+      "PyTorch"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "2c0afd3e-081c-4f20-9716-102b3cc00853",
+    "company": "Zomato",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Portland, USA",
+    "mode": "Remote",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5154,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "CORS",
+      "SciPy",
+      "Kotlin",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Scikit-learn",
+      "Elasticsearch"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "52817dae-3ef6-450a-ae7e-ebda6e448ab2",
+    "company": "Swiggy",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Toronto, Canada",
+    "mode": "Hybrid",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5155,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Objective-C",
+      "Docker Compose",
+      "API Gateway",
+      "Angular",
+      "Plotly",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Keras",
+      "Waterfall"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "78bc43c2-52cc-4f73-92a8-c4278ddbb332",
+    "company": "Pinterest",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chennai, India",
+    "mode": "On-site",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5156,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "MATLAB",
+      "Machine Learning"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "f3309d54-d3a3-4b88-a595-0fcaf2eaa3cd",
+    "company": "Twitter",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Chicago, USA",
+    "mode": "Remote",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5157,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "NoSQL",
+      "AWS SNS",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "NumPy"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "dd2484bf-3e38-4b00-af80-5003c1a3cb56",
+    "company": "Snapchat",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Singapore",
+    "mode": "Hybrid",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5158,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "AWS",
+      "TensorFlow",
+      "Python",
+      "PostgreSQL",
+      "Jenkins"
+    ],
+    "preferred_skills": [
+      "SciPy",
+      "Flask"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "a4160521-8175-44de-9dd4-a36bd0829239",
+    "company": "TikTok",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Delhi, India",
+    "mode": "On-site",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5159,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "PyTorch",
+      "Ansible",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Matplotlib",
+      "Spring Boot",
+      "Penetration Testing"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "3fd3c737-0579-470c-8da4-58c85a5c0c3c",
+    "company": "Discord",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Seattle, USA",
+    "mode": "Remote",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5160,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Elasticsearch",
+      "Scikit-learn"
+    ],
+    "preferred_skills": [],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "ad26bc10-22ff-467c-8e3a-04a1c7e49503",
+    "company": "Telegram",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Berlin, Germany",
+    "mode": "Hybrid",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5161,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Angular",
+      "Keras",
+      "Waterfall"
+    ],
+    "preferred_skills": [
+      "Plotly"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "d4397dc3-79d8-49fd-bd62-0b297621fdc7",
+    "company": "WhatsApp",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Bangalore, India",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5162,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Integration Testing",
+      "Pandas",
+      "Python",
+      "OAuth",
+      "Next.js"
+    ],
+    "preferred_skills": [
+      "Apache Spark",
+      "Google Cloud"
+    ],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "1e25b142-0fbf-408c-bfa3-867a2c39c5b5",
+    "company": "Signal",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Indore, India",
+    "mode": "Remote",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5163,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "API Gateway",
+      "Express.js",
+      "Pytest",
+      "NumPy",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Hadoop",
+      "Ansible",
+      "Kotlin"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "55d2d39e-6526-472f-807f-52212276394f",
+    "company": "Viber",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Denver, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5164,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Flask",
+      "SciPy"
+    ],
+    "preferred_skills": [],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "6ab02dcb-0b4b-4bfe-bee8-fe93717e54bb",
+    "company": "WeChat",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Sydney, Australia",
+    "mode": "On-site",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5165,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Spring Boot",
+      "Penetration Testing",
+      "Matplotlib"
+    ],
+    "preferred_skills": [
+      "RabbitMQ"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "6d2f2d26-3800-42a5-8489-5695f28905e6",
+    "company": "QQ",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Gurugram, India",
+    "mode": "Remote",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5166,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Java",
+      "Plotly",
+      "Seaborn",
+      "Python",
+      "Docker"
+    ],
+    "preferred_skills": [
+      "AWS SQS",
+      "Windows"
+    ],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "f72c3db3-a843-47b3-9a68-5e745c77f769",
+    "company": "Alipay",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Boston, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 17,
+    "stipend_inr_per_month": 5167,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "RabbitMQ",
+      "AWS",
+      "Ansible",
+      "Plotly",
+      "Python",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "AWS SNS",
+      "REST API",
+      "Elasticsearch"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "d0c0d657-2c3e-4890-b551-a1505335b165",
+    "company": "WeChat Pay",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Amsterdam, Netherlands",
+    "mode": "On-site",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 5168,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Google Cloud",
+      "Apache Spark"
+    ],
+    "preferred_skills": [],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "d2ad5b16-a8a5-40ef-b918-f4e64a394b60",
+    "company": "Spotify",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Mumbai, India",
+    "mode": "Remote",
+    "duration_weeks": 6,
+    "stipend_inr_per_month": 5169,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Ansible",
+      "Hadoop",
+      "Kotlin"
+    ],
+    "preferred_skills": [
+      "CI/CD"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "80e71fa0-f9b9-4a90-ae75-77b795dc4b2e",
+    "company": "Apple Music",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "New York, USA",
+    "mode": "Hybrid",
+    "duration_weeks": 7,
+    "stipend_inr_per_month": 5170,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Kafka",
+      "Scrum",
+      "GitHub",
+      "Python",
+      "R"
+    ],
+    "preferred_skills": [
+      "Jenkins",
+      "SSL/TLS"
+    ],
+    "description": "Join our innovative team to work on cutting-edge technologies and solve real-world problems. You'll collaborate with experienced engineers and get exposure to the full software development lifecycle."
+  },
+  {
+    "id": "04efb9c2-da0a-4913-8401-1fbfbbc6f31e",
+    "company": "Amazon Music",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "London, UK",
+    "mode": "On-site",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 5171,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "RabbitMQ",
+      "PyTorch",
+      "Python",
+      "NoSQL",
+      "Unit Testing",
+      "Bitbucket"
+    ],
+    "preferred_skills": [
+      "GitHub Actions",
+      "API Gateway",
+      "Docker"
+    ],
+    "description": "Be part of our mission to revolutionize Software Development. Work on scalable systems that impact millions of users globally. You'll gain hands-on experience with modern development practices and tools."
+  },
+  {
+    "id": "9f2c0abc-5d1e-4138-884c-4f984c052c52",
+    "company": "YouTube Music",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Vancouver, Canada",
+    "mode": "Remote",
+    "duration_weeks": 9,
+    "stipend_inr_per_month": 5172,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "AWS SQS",
+      "Windows"
+    ],
+    "preferred_skills": [],
+    "description": "Exciting opportunity to contribute to our Software Development platform. You'll work on challenging problems, learn from industry experts, and have the chance to make a real impact on our product."
+  },
+  {
+    "id": "db5f20c1-5d46-4672-bacd-8b9b48750f39",
+    "company": "Tidal",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Kolkata, India",
+    "mode": "Hybrid",
+    "duration_weeks": 10,
+    "stipend_inr_per_month": 5173,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "Elasticsearch",
+      "AWS SNS",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "Docker Compose"
+    ],
+    "description": "Help us build the future of Software Development. This internship offers a unique blend of learning and practical application. You'll work on real projects and collaborate with cross-functional teams."
+  },
+  {
+    "id": "765284d9-81e8-4500-a733-43a8e7e4d6db",
+    "company": "Pandora",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Austin, USA",
+    "mode": "On-site",
+    "duration_weeks": 11,
+    "stipend_inr_per_month": 5174,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "WebSocket",
+      "Vue.js",
+      "Microservices"
+    ],
+    "preferred_skills": [
+      "Helm",
+      "Keras"
+    ],
+    "description": "Dive into our Software Development projects and expand your technical skills. You'll be mentored by experienced professionals and contribute to products used by millions worldwide."
+  },
+  {
+    "id": "395f22a9-a3d7-4e46-a5f3-140b6e6aaddf",
+    "company": "Audible",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Tokyo, Japan",
+    "mode": "Remote",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 5175,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "TypeScript",
+      "Docker Compose",
+      "Express.js",
+      "Python",
+      "OAuth",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "JIRA",
+      "NumPy",
+      "Windows"
+    ],
+    "description": "Join our dynamic team and make an immediate impact. Work on interesting problems in Software Development while developing your professional skills in a supportive environment."
+  },
+  {
+    "id": "5c59229e-a34b-4747-8948-5a0436ba493d",
+    "company": "Scribd",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Pune, India",
+    "mode": "Hybrid",
+    "duration_weeks": 13,
+    "stipend_inr_per_month": 5176,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Python",
+      "Jenkins",
+      "SSL/TLS"
+    ],
+    "preferred_skills": [],
+    "description": "Passionate about Software Development? We're looking for interns who want to learn and grow. You'll work on real-world projects and gain valuable industry experience."
+  },
+  {
+    "id": "7a64310d-b479-4461-8b5b-be0dedd38a1f",
+    "company": "Medium",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Los Angeles, USA",
+    "mode": "On-site",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 5177,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Python",
+      "GitHub Actions",
+      "Docker",
+      "API Gateway"
+    ],
+    "preferred_skills": [
+      "Scrum"
+    ],
+    "description": "Be part of our success story. Internship focused on Software Development where you'll learn, grow, and contribute to meaningful projects. Great mentorship and career development opportunities."
+  },
+  {
+    "id": "95b11548-1ddf-4a8e-866c-75884b617f12",
+    "company": "Substack",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Paris, France",
+    "mode": "Remote",
+    "duration_weeks": 15,
+    "stipend_inr_per_month": 5178,
+    "min_education": "Pursuing B.Tech/B.E.",
+    "required_skills": [
+      "Azure",
+      "GitLab CI",
+      "Deep Learning",
+      "Python",
+      "NoSQL"
+    ],
+    "preferred_skills": [
+      "Kanban",
+      "Hadoop"
+    ],
+    "description": "Transform your passion into expertise. Our Software Development internship provides hands-on experience, mentorship, and the opportunity to work on impactful projects."
+  },
+  {
+    "id": "c7c7a88e-ff42-42d6-bd3e-680958688c50",
+    "company": "Patreon",
+    "role_title": "Software Engineering Intern",
+    "domain": "Software Development",
+    "location": "Hyderabad, India",
+    "mode": "Hybrid",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 5179,
+    "min_education": "Pursuing M.Tech/M.E.",
+    "required_skills": [
+      "Docker Compose",
+      "PyTorch",
+      "Ansible",
+      "Oracle",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Waterfall",
+      "RabbitMQ",
+      "Deep Learning"
+    ],
+    "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  }
+]

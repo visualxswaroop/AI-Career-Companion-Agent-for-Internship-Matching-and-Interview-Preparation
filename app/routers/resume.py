@@ -16,6 +16,9 @@ from app import models,schemas
 from app.dependencies import get_db, get_current_user
 from app.parser import extract_resume_text
 from app.resume_parser import parse_resume
+from app.candidate_preprocessor import prepare_candidate_data
+from app.internship_index import search_internships, apply_second_stage_ranking
+from app.llm_ranker import rank_internships_with_explanations
 
 
 router = APIRouter(
@@ -355,4 +358,116 @@ def get_resume(
         "file_path": resume.file_path,
         "uploaded_at": resume.uploaded_at,
         "extracted_data": extracted_data
+    }
+
+
+# =========================================================
+# SEMANTIC SEARCH - FIND MATCHING INTERNSHIPS
+# =========================================================
+
+@router.post(
+    "/{resume_id}/match-internships",
+    response_model=schemas.SemanticSearchResponse,
+    status_code=200
+)
+def match_internships(
+    resume_id: int,
+    request: schemas.SemanticSearchRequest,
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    """
+    Find internships that match a candidate's profile using semantic similarity.
+    
+    This endpoint:
+    1. Retrieves the candidate's parsed resume
+    2. Prepares the resume data for embedding
+    3. Searches the FAISS vector index
+    4. Returns top-K matching internships with similarity scores
+    
+    Args:
+        resume_id: ID of the candidate's resume
+        request: Contains top_k parameter (default: 5)
+    
+    Returns:
+        Ranked list of internships with similarity scores
+    """
+    
+    # Get the resume
+    resume = db.query(models.Resume).filter(
+        models.Resume.id == resume_id,
+        models.Resume.user_id == current_user.id
+    ).first()
+    
+    if not resume:
+        raise HTTPException(
+            status_code=404,
+            detail="Resume not found"
+        )
+    
+    # Parse extracted data
+    try:
+        extracted_data = json.loads(
+            resume.extracted_data
+        ) if resume.extracted_data else {}
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=500,
+            detail="Resume data is invalid"
+        )
+    
+    if not extracted_data:
+        raise HTTPException(
+            status_code=400,
+            detail="Resume has no extracted data. Please upload a valid resume."
+        )
+    
+    # Prepare candidate data for embedding
+    try:
+        candidate_text = prepare_candidate_data(extracted_data)
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error preparing candidate data: {str(e)}"
+        )
+    
+    if not candidate_text or not candidate_text.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Could not extract candidate information from resume"
+        )
+    
+    # Search for matching internships
+    try:
+        top_k = max(1, min(request.top_k, 100))  # Clamp between 1 and 100
+        results = search_internships(candidate_text, top_k=top_k)
+        
+        # Apply second-stage ranking
+        results = apply_second_stage_ranking(results, extracted_data)
+        
+        # Add LLM-based explanations
+        results = rank_internships_with_explanations(results, extracted_data, use_llm=True)
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error searching internships: {str(e)}"
+        )
+    
+    # Convert results to response format
+    matches = []
+    for result in results:
+        match = schemas.InternshipMatch(
+            rank=result["rank"],
+            internship=schemas.InternshipData(**result["internship"]),
+            similarity_score=result["similarity_score"],
+            adjusted_similarity_score=result.get("adjusted_similarity_score"),
+            skill_analysis=result.get("skill_analysis"),
+            explanation=result.get("explanation")
+        )
+        matches.append(match)
+    
+    return {
+        "message": f"Found {len(matches)} matching internships",
+        "total_results": len(matches),
+        "results": matches
     }

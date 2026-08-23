@@ -1,0 +1,803 @@
+{
+  "evaluation_type": "Comprehensive System Evaluation",
+  "test_candidates": 10,
+  "semantic_search": {
+    "total_candidates": 10,
+    "searches_performed": 10,
+    "avg_top_similarity": 0.7711,
+    "results": [
+      {
+        "candidate": "Candidate 1: Full-stack Developer",
+        "expected_fits": [
+          "Software Development",
+          "DevOps/Cloud"
+        ],
+        "top_match": "Software Engineering Intern",
+        "top_match_domain": "Software Development",
+        "similarity_score": 0.7759,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Software Engineering Intern",
+            "domain": "Software Development",
+            "score": 0.7759
+          },
+          {
+            "rank": 2,
+            "role": "UI Engineering Intern",
+            "domain": "Web Development",
+            "score": 0.7652
+          },
+          {
+            "rank": 3,
+            "role": "React Developer Intern",
+            "domain": "Web Development",
+            "score": 0.7528
+          },
+          {
+            "rank": 4,
+            "role": "React Developer Intern",
+            "domain": "Web Development",
+            "score": 0.7493
+          },
+          {
+            "rank": 5,
+            "role": "Full-Stack Developer Intern",
+            "domain": "Software Development",
+            "score": 0.7473
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 2: Data Science Enthusiast",
+        "expected_fits": [
+          "AI/ML",
+          "Data Science"
+        ],
+        "top_match": "Data Analyst Intern",
+        "top_match_domain": "Data Science",
+        "similarity_score": 0.7654,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Data Analyst Intern",
+            "domain": "Data Science",
+            "score": 0.7654
+          },
+          {
+            "rank": 2,
+            "role": "AI Research Intern",
+            "domain": "Data Science",
+            "score": 0.7621
+          },
+          {
+            "rank": 3,
+            "role": "Machine Learning Intern",
+            "domain": "Data Science",
+            "score": 0.7589
+          },
+          {
+            "rank": 4,
+            "role": "AI Research Intern",
+            "domain": "Data Science",
+            "score": 0.7587
+          },
+          {
+            "rank": 5,
+            "role": "AI Research Intern",
+            "domain": "Data Science",
+            "score": 0.7577
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 3: DevOps & Cloud Specialist",
+        "expected_fits": [
+          "DevOps/Cloud"
+        ],
+        "top_match": "Cloud Engineering Intern",
+        "top_match_domain": "DevOps/Cloud",
+        "similarity_score": 0.8711,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Cloud Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8711
+          },
+          {
+            "rank": 2,
+            "role": "Platform Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8529
+          },
+          {
+            "rank": 3,
+            "role": "Platform Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8285
+          },
+          {
+            "rank": 4,
+            "role": "Platform Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8258
+          },
+          {
+            "rank": 5,
+            "role": "Cloud Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8224
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 4: Cybersecurity Focussed",
+        "expected_fits": [
+          "Cybersecurity"
+        ],
+        "top_match": "Security Analyst Intern",
+        "top_match_domain": "Cybersecurity",
+        "similarity_score": 0.7641,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Security Analyst Intern",
+            "domain": "Cybersecurity",
+            "score": 0.7641
+          },
+          {
+            "rank": 2,
+            "role": "Application Security Intern",
+            "domain": "Cybersecurity",
+            "score": 0.744
+          },
+          {
+            "rank": 3,
+            "role": "Application Security Intern",
+            "domain": "Cybersecurity",
+            "score": 0.7411
+          },
+          {
+            "rank": 4,
+            "role": "Cybersecurity Intern",
+            "domain": "Cybersecurity",
+            "score": 0.7376
+          },
+          {
+            "rank": 5,
+            "role": "Application Security Intern",
+            "domain": "Cybersecurity",
+            "score": 0.7354
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 5: Business Analyst Track",
+        "expected_fits": [
+          "Business Analysis"
+        ],
+        "top_match": "Business Analyst Intern",
+        "top_match_domain": "Business Analysis",
+        "similarity_score": 0.8342,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Business Analyst Intern",
+            "domain": "Business Analysis",
+            "score": 0.8342
+          },
+          {
+            "rank": 2,
+            "role": "Business Analyst Intern",
+            "domain": "Business Analysis",
+            "score": 0.8246
+          },
+          {
+            "rank": 3,
+            "role": "Business Analyst Intern",
+            "domain": "Business Analysis",
+            "score": 0.8141
+          },
+          {
+            "rank": 4,
+            "role": "Business Analyst Intern",
+            "domain": "Business Analysis",
+            "score": 0.8047
+          },
+          {
+            "rank": 5,
+            "role": "Business Analyst Intern",
+            "domain": "Business Analysis",
+            "score": 0.8036
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 6: Versatile Generalist",
+        "expected_fits": [
+          "Software Development"
+        ],
+        "top_match": "Software Engineering Intern",
+        "top_match_domain": "Software Development",
+        "similarity_score": 0.7463,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Software Engineering Intern",
+            "domain": "Software Development",
+            "score": 0.7463
+          },
+          {
+            "rank": 2,
+            "role": "Software Engineering Intern",
+            "domain": "Software Development",
+            "score": 0.7454
+          },
+          {
+            "rank": 3,
+            "role": "Software Engineering Intern",
+            "domain": "Software Development",
+            "score": 0.7441
+          },
+          {
+            "rank": 4,
+            "role": "Java Developer Intern",
+            "domain": "Software Development",
+            "score": 0.7342
+          },
+          {
+            "rank": 5,
+            "role": "Java Developer Intern",
+            "domain": "Software Development",
+            "score": 0.7304
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 7: Early Career - Limited Experience",
+        "expected_fits": [
+          "Software Development"
+        ],
+        "top_match": "Software Engineering Intern",
+        "top_match_domain": "Software Development",
+        "similarity_score": 0.7533,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Software Engineering Intern",
+            "domain": "Software Development",
+            "score": 0.7533
+          },
+          {
+            "rank": 2,
+            "role": "Full-Stack Developer Intern",
+            "domain": "Software Development",
+            "score": 0.7453
+          },
+          {
+            "rank": 3,
+            "role": "Software Engineering Intern",
+            "domain": "Software Development",
+            "score": 0.7399
+          },
+          {
+            "rank": 4,
+            "role": "Software Engineering Intern",
+            "domain": "Software Development",
+            "score": 0.7084
+          },
+          {
+            "rank": 5,
+            "role": "Application Security Intern",
+            "domain": "Cybersecurity",
+            "score": 0.6997
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 8: AI/ML Specialist",
+        "expected_fits": [
+          "AI/ML"
+        ],
+        "top_match": "AI Research Intern",
+        "top_match_domain": "Data Science",
+        "similarity_score": 0.6748,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "AI Research Intern",
+            "domain": "Data Science",
+            "score": 0.6748
+          },
+          {
+            "rank": 2,
+            "role": "Data Analyst Intern",
+            "domain": "Data Science",
+            "score": 0.6433
+          },
+          {
+            "rank": 3,
+            "role": "Machine Learning Intern",
+            "domain": "Data Science",
+            "score": 0.6395
+          },
+          {
+            "rank": 4,
+            "role": "Machine Learning Intern",
+            "domain": "Data Science",
+            "score": 0.6353
+          },
+          {
+            "rank": 5,
+            "role": "AI Research Intern",
+            "domain": "Data Science",
+            "score": 0.6352
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 9: Cloud Infrastructure Expert",
+        "expected_fits": [
+          "DevOps/Cloud"
+        ],
+        "top_match": "Cloud Engineering Intern",
+        "top_match_domain": "DevOps/Cloud",
+        "similarity_score": 0.8079,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Cloud Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8079
+          },
+          {
+            "rank": 2,
+            "role": "Cloud Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8065
+          },
+          {
+            "rank": 3,
+            "role": "Cloud Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8038
+          },
+          {
+            "rank": 4,
+            "role": "Cloud Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.8024
+          },
+          {
+            "rank": 5,
+            "role": "Cloud Engineering Intern",
+            "domain": "DevOps/Cloud",
+            "score": 0.7927
+          }
+        ]
+      },
+      {
+        "candidate": "Candidate 10: Non-Tech Background to Software",
+        "expected_fits": [
+          "Software Development"
+        ],
+        "top_match": "Full-Stack Developer Intern",
+        "top_match_domain": "Software Development",
+        "similarity_score": 0.7183,
+        "top_5_matches": [
+          {
+            "rank": 1,
+            "role": "Full-Stack Developer Intern",
+            "domain": "Software Development",
+            "score": 0.7183
+          },
+          {
+            "rank": 2,
+            "role": "Full-Stack Developer Intern",
+            "domain": "Software Development",
+            "score": 0.7175
+          },
+          {
+            "rank": 3,
+            "role": "Full-Stack Developer Intern",
+            "domain": "Software Development",
+            "score": 0.7141
+          },
+          {
+            "rank": 4,
+            "role": "Java Developer Intern",
+            "domain": "Software Development",
+            "score": 0.7066
+          },
+          {
+            "rank": 5,
+            "role": "Software Engineering Intern",
+            "domain": "Software Development",
+            "score": 0.7027
+          }
+        ]
+      }
+    ]
+  },
+  "second_stage_ranking": {
+    "total_evaluated": 10,
+    "ranking_differences": [
+      {
+        "candidate": "Candidate 1: Full-stack Developer",
+        "semantic_top": "Software Engineering Intern",
+        "ranked_top": "Software Engineering Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.7759,
+        "adjusted_score": 0.7181,
+        "skill_coverage": 60
+      },
+      {
+        "candidate": "Candidate 2: Data Science Enthusiast",
+        "semantic_top": "Data Analyst Intern",
+        "ranked_top": "Data Analyst Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.7654,
+        "adjusted_score": 0.7858,
+        "skill_coverage": 100
+      },
+      {
+        "candidate": "Candidate 3: DevOps & Cloud Specialist",
+        "semantic_top": "Cloud Engineering Intern",
+        "ranked_top": "Cloud Engineering Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.8711,
+        "adjusted_score": 0.9098,
+        "skill_coverage": 100
+      },
+      {
+        "candidate": "Candidate 4: Cybersecurity Focussed",
+        "semantic_top": "Security Analyst Intern",
+        "ranked_top": "Security Analyst Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.7641,
+        "adjusted_score": 0.7848,
+        "skill_coverage": 100
+      },
+      {
+        "candidate": "Candidate 5: Business Analyst Track",
+        "semantic_top": "Business Analyst Intern",
+        "ranked_top": "Business Analyst Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.8342,
+        "adjusted_score": 0.884,
+        "skill_coverage": 100
+      },
+      {
+        "candidate": "Candidate 6: Versatile Generalist",
+        "semantic_top": "Software Engineering Intern",
+        "ranked_top": "Software Engineering Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.7463,
+        "adjusted_score": 0.7224,
+        "skill_coverage": 80
+      },
+      {
+        "candidate": "Candidate 7: Early Career - Limited Experience",
+        "semantic_top": "Software Engineering Intern",
+        "ranked_top": "Backend Developer Intern",
+        "ranking_changed": true,
+        "semantic_score": 0.7533,
+        "adjusted_score": 0.6877,
+        "skill_coverage": 80
+      },
+      {
+        "candidate": "Candidate 8: AI/ML Specialist",
+        "semantic_top": "AI Research Intern",
+        "ranked_top": "AI Research Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.6748,
+        "adjusted_score": 0.6223,
+        "skill_coverage": 40
+      },
+      {
+        "candidate": "Candidate 9: Cloud Infrastructure Expert",
+        "semantic_top": "Cloud Engineering Intern",
+        "ranked_top": "Cloud Engineering Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.8079,
+        "adjusted_score": 0.7465,
+        "skill_coverage": 66
+      },
+      {
+        "candidate": "Candidate 10: Non-Tech Background to Software",
+        "semantic_top": "Full-Stack Developer Intern",
+        "ranked_top": "Full-Stack Developer Intern",
+        "ranking_changed": false,
+        "semantic_score": 0.7183,
+        "adjusted_score": 0.5862,
+        "skill_coverage": 33
+      }
+    ],
+    "skill_gap_analysis": [
+      {
+        "candidate": "Candidate 1: Full-stack Developer",
+        "required_matched": 3,
+        "required_total": 5,
+        "preferred_matched": 1,
+        "skill_gap": [
+          "Data Structures",
+          "Java"
+        ]
+      },
+      {
+        "candidate": "Candidate 2: Data Science Enthusiast",
+        "required_matched": 5,
+        "required_total": 5,
+        "preferred_matched": 0,
+        "skill_gap": []
+      },
+      {
+        "candidate": "Candidate 3: DevOps & Cloud Specialist",
+        "required_matched": 5,
+        "required_total": 5,
+        "preferred_matched": 1,
+        "skill_gap": []
+      },
+      {
+        "candidate": "Candidate 4: Cybersecurity Focussed",
+        "required_matched": 5,
+        "required_total": 5,
+        "preferred_matched": 0,
+        "skill_gap": []
+      },
+      {
+        "candidate": "Candidate 5: Business Analyst Track",
+        "required_matched": 4,
+        "required_total": 4,
+        "preferred_matched": 2,
+        "skill_gap": []
+      },
+      {
+        "candidate": "Candidate 6: Versatile Generalist",
+        "required_matched": 4,
+        "required_total": 5,
+        "preferred_matched": 0,
+        "skill_gap": [
+          "Data Structures"
+        ]
+      },
+      {
+        "candidate": "Candidate 7: Early Career - Limited Experience",
+        "required_matched": 4,
+        "required_total": 5,
+        "preferred_matched": 0,
+        "skill_gap": [
+          "JavaScript"
+        ]
+      },
+      {
+        "candidate": "Candidate 8: AI/ML Specialist",
+        "required_matched": 2,
+        "required_total": 5,
+        "preferred_matched": 3,
+        "skill_gap": [
+          "SQL",
+          "Scikit-learn",
+          "Statistics"
+        ]
+      },
+      {
+        "candidate": "Candidate 9: Cloud Infrastructure Expert",
+        "required_matched": 2,
+        "required_total": 3,
+        "preferred_matched": 1,
+        "skill_gap": [
+          "Git"
+        ]
+      },
+      {
+        "candidate": "Candidate 10: Non-Tech Background to Software",
+        "required_matched": 1,
+        "required_total": 3,
+        "preferred_matched": 0,
+        "skill_gap": [
+          "Algorithms",
+          "C++"
+        ]
+      }
+    ]
+  },
+  "llm_explanations": {
+    "total_generated": 9,
+    "with_llm": 0,
+    "fallback_heuristic": 9,
+    "samples": [
+      {
+        "candidate": "Candidate 1: Full-stack Developer",
+        "internship": "Software Engineering Intern",
+        "match_rating": "Good Match",
+        "strengths": [
+          "Strong skill alignment: 3/5 required skills (60%)"
+        ],
+        "recommendation": "Good Match for Software Engineering Intern position at Pixelforge Softworks Pvt Ltd. Your profile aligns well: Strong skill alignment: 3/5 required skills (60%). Growth opportunity: Consider learning: Data Structures, Java. This role offers a chance to work on Work with the engineering team to design, build, and test features for our production edtech platform. You'll pair with senior engineers, write clean code, and ship real features used by customers."
+      },
+      {
+        "candidate": "Candidate 1: Full-stack Developer",
+        "internship": "UI Engineering Intern",
+        "match_rating": "Good Match",
+        "strengths": [
+          "Strong skill alignment: 3/5 required skills (60%)"
+        ],
+        "recommendation": "Good Match for UI Engineering Intern position at Meridian Systems. Your profile aligns well: Strong skill alignment: 3/5 required skills (60%). Growth opportunity: Consider learning: CSS, Git. This role offers a chance to work on Build and ship user-facing features for our recommendation engine web app, working closely with design and backend teams on performance and accessibility."
+      },
+      {
+        "candidate": "Candidate 1: Full-stack Developer",
+        "internship": "Full-Stack Developer Intern",
+        "match_rating": "Good Match",
+        "strengths": [
+          "Strong skill alignment: 2/4 required skills (50%)"
+        ],
+        "recommendation": "Good Match for Full-Stack Developer Intern position at Fernwood Digital. Your profile aligns well: Strong skill alignment: 2/4 required skills (50%). Growth opportunity: Consider learning: Algorithms, Data Structures. This role offers a chance to work on Work with the engineering team to design, build, and test features for our production fintech app. You'll pair with senior engineers, write clean code, and ship real features used by customers."
+      },
+      {
+        "candidate": "Candidate 2: Data Science Enthusiast",
+        "internship": "Data Analyst Intern",
+        "match_rating": "Excellent Match",
+        "strengths": [
+          "Strong skill alignment: 5/5 required skills (100%)"
+        ],
+        "recommendation": "Excellent Match for Data Analyst Intern position at Foxglove Systems LLP. Your profile aligns well: Strong skill alignment: 5/5 required skills (100%). Growth opportunity: No major gaps identified. This role offers a chance to work on Analyze large datasets and build predictive models to support our e-commerce marketplace team's decisions. Exposure to the full ML lifecycle: data cleaning, modeling, evaluation, and deployment."
+      },
+      {
+        "candidate": "Candidate 2: Data Science Enthusiast",
+        "internship": "AI Research Intern",
+        "match_rating": "Good Match",
+        "strengths": [
+          "Strong skill alignment: 4/5 required skills (80%)"
+        ],
+        "recommendation": "Good Match for AI Research Intern position at Amberline Technologies LLP. Your profile aligns well: Strong skill alignment: 4/5 required skills (80%). Growth opportunity: Consider learning: Statistics. This role offers a chance to work on Analyze large datasets and build predictive models to support our edtech platform team's decisions. Exposure to the full ML lifecycle: data cleaning, modeling, evaluation, and deployment."
+      },
+      {
+        "candidate": "Candidate 2: Data Science Enthusiast",
+        "internship": "AI Research Intern",
+        "match_rating": "Good Match",
+        "strengths": [
+          "Strong skill alignment: 3/4 required skills (75%)"
+        ],
+        "recommendation": "Good Match for AI Research Intern position at Clearwater Solutions Inc. Your profile aligns well: Strong skill alignment: 3/4 required skills (75%). Growth opportunity: Consider learning: Statistics. This role offers a chance to work on Analyze large datasets and build predictive models to support our CRM tool team's decisions. Exposure to the full ML lifecycle: data cleaning, modeling, evaluation, and deployment."
+      },
+      {
+        "candidate": "Candidate 3: DevOps & Cloud Specialist",
+        "internship": "Cloud Engineering Intern",
+        "match_rating": "Excellent Match",
+        "strengths": [
+          "Strong skill alignment: 5/5 required skills (100%)"
+        ],
+        "recommendation": "Excellent Match for Cloud Engineering Intern position at Skyfield Ventures. Your profile aligns well: Strong skill alignment: 5/5 required skills (100%). Growth opportunity: No major gaps identified. This role offers a chance to work on Support the platform team in automating deployments, improving CI/CD pipelines, and monitoring reliability for our recommendation engine infrastructure."
+      },
+      {
+        "candidate": "Candidate 3: DevOps & Cloud Specialist",
+        "internship": "Platform Engineering Intern",
+        "match_rating": "Excellent Match",
+        "strengths": [
+          "Strong skill alignment: 5/5 required skills (100%)"
+        ],
+        "recommendation": "Excellent Match for Platform Engineering Intern position at Bluepeak Digital Pvt Ltd. Your profile aligns well: Strong skill alignment: 5/5 required skills (100%). Growth opportunity: No major gaps identified. This role offers a chance to work on Support the platform team in automating deployments, improving CI/CD pipelines, and monitoring reliability for our e-commerce marketplace infrastructure."
+      },
+      {
+        "candidate": "Candidate 3: DevOps & Cloud Specialist",
+        "internship": "Platform Engineering Intern",
+        "match_rating": "Excellent Match",
+        "strengths": [
+          "Strong skill alignment: 4/4 required skills (100%)"
+        ],
+        "recommendation": "Excellent Match for Platform Engineering Intern position at Nimbus Networks LLP. Your profile aligns well: Strong skill alignment: 4/4 required skills (100%). Growth opportunity: No major gaps identified. This role offers a chance to work on Support the platform team in automating deployments, improving CI/CD pipelines, and monitoring reliability for our payments gateway infrastructure."
+      }
+    ]
+  },
+  "domain_matching": {
+    "total_matches": 10,
+    "domain_hits": {
+      "Software Development": {
+        "hits": 4,
+        "total": 4
+      },
+      "Data Science": {
+        "hits": 1,
+        "total": 2
+      },
+      "DevOps/Cloud": {
+        "hits": 2,
+        "total": 2
+      },
+      "Cybersecurity": {
+        "hits": 1,
+        "total": 1
+      },
+      "Business Analysis": {
+        "hits": 1,
+        "total": 1
+      }
+    },
+    "accuracy_by_profile": [
+      {
+        "candidate": "Candidate 1: Full-stack Developer",
+        "expected_domains": [
+          "Software Development",
+          "DevOps/Cloud"
+        ],
+        "top_match_domain": "Software Development",
+        "match": true
+      },
+      {
+        "candidate": "Candidate 2: Data Science Enthusiast",
+        "expected_domains": [
+          "Data Science",
+          "AI/ML"
+        ],
+        "top_match_domain": "Data Science",
+        "match": true
+      },
+      {
+        "candidate": "Candidate 3: DevOps & Cloud Specialist",
+        "expected_domains": [
+          "DevOps/Cloud"
+        ],
+        "top_match_domain": "DevOps/Cloud",
+        "match": true
+      },
+      {
+        "candidate": "Candidate 4: Cybersecurity Focussed",
+        "expected_domains": [
+          "Cybersecurity"
+        ],
+        "top_match_domain": "Cybersecurity",
+        "match": true
+      },
+      {
+        "candidate": "Candidate 5: Business Analyst Track",
+        "expected_domains": [
+          "Business Analysis"
+        ],
+        "top_match_domain": "Business Analysis",
+        "match": true
+      },
+      {
+        "candidate": "Candidate 6: Versatile Generalist",
+        "expected_domains": [
+          "Software Development"
+        ],
+        "top_match_domain": "Software Development",
+        "match": true
+      },
+      {
+        "candidate": "Candidate 7: Early Career - Limited Experience",
+        "expected_domains": [
+          "Software Development"
+        ],
+        "top_match_domain": "Software Development",
+        "match": true
+      },
+      {
+        "candidate": "Candidate 8: AI/ML Specialist",
+        "expected_domains": [
+          "AI/ML"
+        ],
+        "top_match_domain": "Data Science",
+        "match": false
+      },
+      {
+        "candidate": "Candidate 9: Cloud Infrastructure Expert",
+        "expected_domains": [
+          "DevOps/Cloud"
+        ],
+        "top_match_domain": "DevOps/Cloud",
+        "match": true
+      },
+      {
+        "candidate": "Candidate 10: Non-Tech Background to Software",
+        "expected_domains": [
+          "Software Development"
+        ],
+        "top_match_domain": "Software Development",
+        "match": true
+      }
+    ]
+  }
+}

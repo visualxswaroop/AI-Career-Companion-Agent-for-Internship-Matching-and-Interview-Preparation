@@ -1,4 +1,5 @@
 from pydantic import BaseModel, EmailStr
+from typing import Optional, Dict, List, Any
 from datetime import datetime
 
 
@@ -140,3 +141,60 @@ class ProfileResponse(BaseModel):
     model_config = {
         "from_attributes": True
     }
+
+
+# =========================================================
+# SEMANTIC SEARCH SCHEMAS
+# =========================================================
+
+class InternshipData(BaseModel):
+    id: str
+    company: str
+    role_title: str
+    domain: str
+    location: str
+    mode: str
+    duration_weeks: int
+    stipend_inr_per_month: int
+    min_education: str
+    required_skills: list[str]
+    preferred_skills: list[str]
+    description: str
+
+
+class InternshipMatch(BaseModel):
+    rank: int
+    internship: InternshipData
+    similarity_score: float
+    adjusted_similarity_score: Optional[float] = None
+    skill_analysis: Optional[Dict[str, Any]] = None
+    explanation: Optional[Dict[str, Any]] = None
+
+
+class SemanticSearchRequest(BaseModel):
+    resume_id: int
+    top_k: int = 5
+
+
+class SemanticSearchResponse(BaseModel):
+    message: str
+    total_results: int
+    results: list[InternshipMatch]
+
+
+# =========================================================
+# COVER LETTER SCHEMAS
+# =========================================================
+
+class CoverLetterRequest(BaseModel):
+    resume_id: int
+    internship_id: str | int
+
+
+class CoverLetterResponse(BaseModel):
+    resume_id: int
+    internship_id: str
+    company: str
+    role_title: str
+    cover_letter: str
+    generation_method: str

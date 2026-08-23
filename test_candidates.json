@@ -1,0 +1,523 @@
+[
+  {
+    "candidate": "Candidate 1: Full-stack Developer",
+    "resume_data": {
+      "name": "Candidate 1: Full-stack Developer",
+      "email": "candidate.1:.full-stack.developer@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-1:-full-stack-developer",
+      "github": "github.com/candidate1:full-stackdeveloper",
+      "professional_summary": "Experienced in Python, JavaScript, React",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "React",
+        "FastAPI",
+        "SQL",
+        "Docker",
+        "AWS",
+        "REST API"
+      ],
+      "education": [
+        {
+          "degree": "B.Tech",
+          "field": "Computer Science",
+          "institution": "IIT Delhi",
+          "graduation_year": 2024
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "Software Engineering Intern",
+          "company": "Tech Startup",
+          "duration_months": 4,
+          "description": "Developed REST APIs using FastAPI"
+        }
+      ],
+      "projects": [
+        {
+          "title": "E-commerce Platform",
+          "description": "Built full-stack application with Python/React",
+          "technologies": [
+            "Python",
+            "React",
+            "PostgreSQL"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "Software Development",
+      "DevOps/Cloud"
+    ]
+  },
+  {
+    "candidate": "Candidate 2: Data Science Enthusiast",
+    "resume_data": {
+      "name": "Candidate 2: Data Science Enthusiast",
+      "email": "candidate.2:.data.science.enthusiast@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-2:-data-science-enthusiast",
+      "github": "github.com/candidate2:datascienceenthusiast",
+      "professional_summary": "Experienced in Python, Machine Learning, SQL",
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "SQL",
+        "Pandas",
+        "Scikit-learn",
+        "TensorFlow",
+        "Excel"
+      ],
+      "education": [
+        {
+          "degree": "M.Tech",
+          "field": "Artificial Intelligence",
+          "institution": "IIIT Hyderabad",
+          "graduation_year": 2025
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "ML Research Intern",
+          "company": "AI Lab",
+          "duration_months": 6,
+          "description": "Worked on NLP models"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Sentiment Analysis Model",
+          "description": "Built BERT-based sentiment classifier",
+          "technologies": [
+            "Python",
+            "TensorFlow",
+            "NLP"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "AI/ML",
+      "Data Science"
+    ]
+  },
+  {
+    "candidate": "Candidate 3: DevOps & Cloud Specialist",
+    "resume_data": {
+      "name": "Candidate 3: DevOps & Cloud Specialist",
+      "email": "candidate.3:.devops.&.cloud.specialist@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-3:-devops-&-cloud-specialist",
+      "github": "github.com/candidate3:devops&cloudspecialist",
+      "professional_summary": "Experienced in Docker, Kubernetes, AWS",
+      "skills": [
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Linux",
+        "CI/CD",
+        "Terraform",
+        "Python",
+        "Git"
+      ],
+      "education": [
+        {
+          "degree": "B.Tech",
+          "field": "Electronics & Communication",
+          "institution": "NIT Rourkee",
+          "graduation_year": 2024
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "DevOps Intern",
+          "company": "Cloud Company",
+          "duration_months": 3,
+          "description": "Managed K8s clusters and CI/CD pipelines"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Infrastructure Automation",
+          "description": "Automated deployment using Terraform",
+          "technologies": [
+            "Terraform",
+            "Docker",
+            "AWS"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "DevOps/Cloud"
+    ]
+  },
+  {
+    "candidate": "Candidate 4: Cybersecurity Focussed",
+    "resume_data": {
+      "name": "Candidate 4: Cybersecurity Focussed",
+      "email": "candidate.4:.cybersecurity.focussed@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-4:-cybersecurity-focussed",
+      "github": "github.com/candidate4:cybersecurityfocussed",
+      "professional_summary": "Experienced in Linux, Networking, Python",
+      "skills": [
+        "Linux",
+        "Networking",
+        "Python",
+        "C++",
+        "SQL",
+        "Problem Solving",
+        "Penetration Testing"
+      ],
+      "education": [
+        {
+          "degree": "B.Tech",
+          "field": "Information Technology",
+          "institution": "BITS Pilani",
+          "graduation_year": 2024
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "Security Research Intern",
+          "company": "Cybersecurity Firm",
+          "duration_months": 5,
+          "description": "Conducted vulnerability assessments"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Network Security Tool",
+          "description": "Built packet analyzer in C++",
+          "technologies": [
+            "C++",
+            "Networking",
+            "Linux"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "Cybersecurity"
+    ]
+  },
+  {
+    "candidate": "Candidate 5: Business Analyst Track",
+    "resume_data": {
+      "name": "Candidate 5: Business Analyst Track",
+      "email": "candidate.5:.business.analyst.track@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-5:-business-analyst-track",
+      "github": "github.com/candidate5:businessanalysttrack",
+      "professional_summary": "Experienced in Excel, SQL, Data Analysis",
+      "skills": [
+        "Excel",
+        "SQL",
+        "Data Analysis",
+        "Communication",
+        "JIRA",
+        "Power BI",
+        "Tableau"
+      ],
+      "education": [
+        {
+          "degree": "M.Tech",
+          "field": "Business Administration",
+          "institution": "IIM Ahmedabad",
+          "graduation_year": 2025
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "Business Analyst Intern",
+          "company": "Consulting Firm",
+          "duration_months": 4,
+          "description": "Analyzed business processes and metrics"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Sales Dashboard",
+          "description": "Created Power BI dashboards for reporting",
+          "technologies": [
+            "Power BI",
+            "SQL",
+            "Excel"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "Business Analysis"
+    ]
+  },
+  {
+    "candidate": "Candidate 6: Versatile Generalist",
+    "resume_data": {
+      "name": "Candidate 6: Versatile Generalist",
+      "email": "candidate.6:.versatile.generalist@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-6:-versatile-generalist",
+      "github": "github.com/candidate6:versatilegeneralist",
+      "professional_summary": "Experienced in Python, Java, JavaScript",
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "SQL",
+        "AWS",
+        "REST API",
+        "Communication",
+        "Problem Solving"
+      ],
+      "education": [
+        {
+          "degree": "B.Tech",
+          "field": "Computer Science",
+          "institution": "VIT University",
+          "graduation_year": 2024
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "Software Developer",
+          "company": "MNC",
+          "duration_months": 6,
+          "description": "Worked on multiple technologies"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Multi-platform App",
+          "description": "Built features across web and mobile",
+          "technologies": [
+            "Python",
+            "JavaScript",
+            "SQL"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "Software Development"
+    ]
+  },
+  {
+    "candidate": "Candidate 7: Early Career - Limited Experience",
+    "resume_data": {
+      "name": "Candidate 7: Early Career - Limited Experience",
+      "email": "candidate.7:.early.career.-.limited.experience@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-7:-early-career---limited-experience",
+      "github": "github.com/candidate7:earlycareer-limitedexperience",
+      "professional_summary": "Experienced in Python, Java, HTML/CSS",
+      "skills": [
+        "Python",
+        "Java",
+        "HTML/CSS",
+        "Git",
+        "SQL"
+      ],
+      "education": [
+        {
+          "degree": "B.Tech",
+          "field": "Computer Science",
+          "institution": "Local College",
+          "graduation_year": 2025
+        }
+      ],
+      "work_experience": [],
+      "projects": [
+        {
+          "title": "Student Projects",
+          "description": "Basic college assignments",
+          "technologies": [
+            "Python",
+            "Java",
+            "SQL"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "Software Development"
+    ]
+  },
+  {
+    "candidate": "Candidate 8: AI/ML Specialist",
+    "resume_data": {
+      "name": "Candidate 8: AI/ML Specialist",
+      "email": "candidate.8:.ai/ml.specialist@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-8:-ai/ml-specialist",
+      "github": "github.com/candidate8:ai/mlspecialist",
+      "professional_summary": "Experienced in Python, Machine Learning, Deep Learning",
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "Deep Learning",
+        "PyTorch",
+        "TensorFlow",
+        "NLP",
+        "Computer Vision"
+      ],
+      "education": [
+        {
+          "degree": "M.Tech",
+          "field": "Artificial Intelligence",
+          "institution": "IIT Mumbai",
+          "graduation_year": 2024
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "AI Research Fellow",
+          "company": "Research Institute",
+          "duration_months": 8,
+          "description": "Published papers on deep learning"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Vision Transformer",
+          "description": "Implemented state-of-the-art vision model",
+          "technologies": [
+            "PyTorch",
+            "Computer Vision",
+            "Python"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "AI/ML"
+    ]
+  },
+  {
+    "candidate": "Candidate 9: Cloud Infrastructure Expert",
+    "resume_data": {
+      "name": "Candidate 9: Cloud Infrastructure Expert",
+      "email": "candidate.9:.cloud.infrastructure.expert@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-9:-cloud-infrastructure-expert",
+      "github": "github.com/candidate9:cloudinfrastructureexpert",
+      "professional_summary": "Experienced in AWS, Azure, Google Cloud",
+      "skills": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Linux",
+        "Networking"
+      ],
+      "education": [
+        {
+          "degree": "B.Tech",
+          "field": "Computer Science",
+          "institution": "Delhi Technological University",
+          "graduation_year": 2023
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "Cloud Architect",
+          "company": "Enterprise IT",
+          "duration_months": 12,
+          "description": "Designed multi-cloud infrastructure"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Hybrid Cloud Setup",
+          "description": "Managed AWS and Azure integration",
+          "technologies": [
+            "AWS",
+            "Azure",
+            "Terraform"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "DevOps/Cloud"
+    ]
+  },
+  {
+    "candidate": "Candidate 10: Non-Tech Background to Software",
+    "resume_data": {
+      "name": "Candidate 10: Non-Tech Background to Software",
+      "email": "candidate.10:.non-tech.background.to.software@example.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/candidate-10:-non-tech-background-to-software",
+      "github": "github.com/candidate10:non-techbackgroundtosoftware",
+      "professional_summary": "Experienced in Java, Python, Problem Solving",
+      "skills": [
+        "Java",
+        "Python",
+        "Problem Solving",
+        "Communication",
+        "Learning"
+      ],
+      "education": [
+        {
+          "degree": "B.Com",
+          "field": "Commerce",
+          "institution": "Delhi University",
+          "graduation_year": 2023
+        },
+        {
+          "degree": "Bootcamp",
+          "field": "Full-Stack Development",
+          "institution": "Coding Bootcamp",
+          "graduation_year": 2024
+        }
+      ],
+      "work_experience": [
+        {
+          "title": "Career Switcher",
+          "company": "N/A",
+          "duration_months": 0,
+          "description": "Recently completed bootcamp"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Todo App",
+          "description": "Basic full-stack application",
+          "technologies": [
+            "Python",
+            "Java",
+            "SQL"
+          ]
+        }
+      ],
+      "certifications": [],
+      "achievements": []
+    },
+    "expected_fits": [
+      "Software Development"
+    ]
+  }
+]

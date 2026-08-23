@@ -52,7 +52,7 @@ def register(
 
 @router.post(
     "/login",
-    response_model=schemas.Token,response_model=schemas.TokenResponse
+    response_model=schemas.TokenResponse
 )
 def login(
     user: schemas.UserLogin,

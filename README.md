@@ -26,6 +26,10 @@ A robust, high-performance RESTful API built with **FastAPI**, **SQLAlchemy**, a
   - Database persistence with SQLite and SQLAlchemy ORM.
   - Dedicated CRUD endpoints for listing, viewing, downloading, and deleting parsed resumes.
 
+- **✉️ Personalized Cover Letters**
+  - Generate a grounded cover letter from an authenticated user's parsed resume and a selected internship.
+  - Uses Groq when configured and a fact-only local fallback when it is unavailable.
+
 ---
 
 ## 🛠️ Tech Stack
@@ -133,6 +137,33 @@ The application will start at `http://127.0.0.1:8000`.
 | `GET` | `/resume/{resume_id}` | Retrieve specific parsed resume details by ID |
 | `GET` | `/resume/{resume_id}/download` | Download original uploaded resume file |
 | `DELETE` | `/resume/{resume_id}` | Delete a parsed resume record and associated file |
+
+### Cover Letter (`/cover-letter`)
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/cover-letter/generate` | Generate a personalized cover letter for one of the user's resumes and an internship in `app/internships.json` |
+
+Send a Bearer token and use the internship's UUID from the authoritative dataset (or a matching result):
+
+```json
+{
+  "resume_id": 1,
+  "internship_id": "66065b09-9c2a-4cc2-a378-11f2e18bc4b1"
+}
+```
+
+Example response:
+
+```json
+{
+  "resume_id": 1,
+  "internship_id": "66065b09-9c2a-4cc2-a378-11f2e18bc4b1",
+  "company": "Basecrest Ventures Inc",
+  "role_title": "Application Security Intern",
+  "cover_letter": "Dear Hiring Team, ...",
+  "generation_method": "llm"
+}
+```
 
 ---
 

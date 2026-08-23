@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import auth, profile, resume
+from app.routers import auth, cover_letter, profile, resume
 from app.database import Base, engine
 from app import models
 
@@ -14,6 +14,7 @@ app = FastAPI(
 app.include_router(auth.router)
 app.include_router(profile.router)
 app.include_router(resume.router)
+app.include_router(cover_letter.router)
 
 @app.get("/")
 def home():
