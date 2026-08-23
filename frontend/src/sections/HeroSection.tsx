@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import Button from '../components/Button'
 
 // ─── Dashboard Mockup ────────────────────────────────────────────────────────
@@ -186,12 +187,16 @@ export default function HeroSection() {
             </p>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <Button variant="primary" showArrow>
-                Build My Career Path
-              </Button>
-              <Button variant="ghost" showArrow>
-                See how it works
-              </Button>
+              <Link to="/register">
+                <Button variant="primary" showArrow>
+                  Build My Career Path
+                </Button>
+              </Link>
+              <a href="#how-it-works">
+                <Button variant="ghost" showArrow>
+                  See how it works
+                </Button>
+              </a>
             </div>
 
             {/* Social proof micro-line */}

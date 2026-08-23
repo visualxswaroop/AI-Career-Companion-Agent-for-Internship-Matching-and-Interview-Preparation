@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-router'
 import { BRAND_NAME, NAV_LINKS } from '../config'
+import { useAuth } from '../context/AuthContext'
 import ThemeToggle from './ThemeToggle'
 import Button from './Button'
 
@@ -10,6 +12,7 @@ interface NavigationProps {
 
 export default function Navigation({ isDark, onThemeToggle }: NavigationProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { isAuthenticated, user } = useAuth()
 
   return (
     <header
@@ -32,8 +35,8 @@ export default function Navigation({ isDark, onThemeToggle }: NavigationProps) {
           }}
         >
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            to="/"
             style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '1.05rem',
@@ -44,7 +47,7 @@ export default function Navigation({ isDark, onThemeToggle }: NavigationProps) {
             }}
           >
             {BRAND_NAME}
-          </a>
+          </Link>
 
           {/* Desktop nav links */}
           <div
@@ -85,24 +88,36 @@ export default function Navigation({ isDark, onThemeToggle }: NavigationProps) {
           >
             <ThemeToggle isDark={isDark} onToggle={onThemeToggle} />
 
-            <a
-              href="#signin"
-              style={{
-                fontSize: '0.875rem',
-                color: 'var(--text-muted)',
-                fontWeight: 400,
-                transition: 'color 0.15s ease',
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text)' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-muted)' }}
-              className="nav-signin"
-            >
-              Sign in
-            </a>
+            {isAuthenticated ? (
+              <Link to="/app" className="nav-cta">
+                <Button variant="primary" size="sm">
+                  Dashboard ({user?.name.split(' ')[0] || 'App'}) →
+                </Button>
+              </Link>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  style={{
+                    fontSize: '0.875rem',
+                    color: 'var(--text-muted)',
+                    fontWeight: 400,
+                    transition: 'color 0.15s ease',
+                  }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text)' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-muted)' }}
+                  className="nav-signin"
+                >
+                  Sign in
+                </Link>
 
-            <Button variant="primary" size="sm" className="nav-cta">
-              Get Started
-            </Button>
+                <Link to="/register" className="nav-cta">
+                  <Button variant="primary" size="sm">
+                    Get Started
+                  </Button>
+                </Link>
+              </>
+            )}
 
             {/* Hamburger — mobile only */}
             <button
@@ -160,8 +175,26 @@ export default function Navigation({ isDark, onThemeToggle }: NavigationProps) {
               </a>
             ))}
             <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
-              <Button variant="outline" size="sm">Sign in</Button>
-              <Button variant="primary" size="sm">Get Started</Button>
+              {isAuthenticated ? (
+                <Link to="/app" style={{ width: '100%' }} onClick={() => setMobileOpen(false)}>
+                  <Button variant="primary" size="sm" style={{ width: '100%', justifyContent: 'center' }}>
+                    Dashboard →
+                  </Button>
+                </Link>
+              ) : (
+                <>
+                  <Link to="/login" style={{ flex: 1 }} onClick={() => setMobileOpen(false)}>
+                    <Button variant="outline" size="sm" style={{ width: '100%', justifyContent: 'center' }}>
+                      Sign in
+                    </Button>
+                  </Link>
+                  <Link to="/register" style={{ flex: 1 }} onClick={() => setMobileOpen(false)}>
+                    <Button variant="primary" size="sm" style={{ width: '100%', justifyContent: 'center' }}>
+                      Get Started
+                    </Button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         )}

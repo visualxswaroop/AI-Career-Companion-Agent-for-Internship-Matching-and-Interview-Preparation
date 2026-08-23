@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import Button from '../components/Button'
 
 export default function FinalCTASection() {
@@ -52,35 +53,37 @@ export default function FinalCTASection() {
               flexWrap: 'wrap',
             }}
           >
-            <button
-              style={{
-                padding: '14px 32px',
-                borderRadius: 'var(--radius)',
-                fontFamily: 'var(--font-sans)',
-                fontSize: '0.9375rem',
-                fontWeight: 600,
-                backgroundColor: '#fff',
-                color: 'var(--accent)',
-                border: 'none',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-              }}
-              onMouseEnter={e => {
-                const el = e.currentTarget as HTMLButtonElement
-                el.style.transform = 'translateY(-2px)'
-                el.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)'
-              }}
-              onMouseLeave={e => {
-                const el = e.currentTarget as HTMLButtonElement
-                el.style.transform = 'translateY(0)'
-                el.style.boxShadow = ''
-              }}
-            >
-              Start building your path →
-            </button>
+            <Link to="/register">
+              <button
+                style={{
+                  padding: '14px 32px',
+                  borderRadius: 'var(--radius)',
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '0.9375rem',
+                  fontWeight: 600,
+                  backgroundColor: '#fff',
+                  color: 'var(--accent)',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLButtonElement
+                  el.style.transform = 'translateY(-2px)'
+                  el.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)'
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLButtonElement
+                  el.style.transform = 'translateY(0)'
+                  el.style.boxShadow = ''
+                }}
+              >
+                Start building your path →
+              </button>
+            </Link>
           </div>
 
           <p
@@ -125,9 +128,11 @@ export function InlineCTA() {
       >
         Ready to find your next move?
       </h3>
-      <Button variant="primary" showArrow>
-        Get started — it's free
-      </Button>
+      <Link to="/register">
+        <Button variant="primary" showArrow>
+          Get started — it's free
+        </Button>
+      </Link>
     </div>
   )
 }
