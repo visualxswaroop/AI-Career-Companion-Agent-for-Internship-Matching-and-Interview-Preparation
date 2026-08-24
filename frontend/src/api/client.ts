@@ -37,25 +37,46 @@ interface RequestOptions extends RequestInit {
 }
 
 export async function request<T>(endpoint: string, options: RequestOptions = {}): Promise<T> {
-  const { token, headers = {}, ...rest } = options
+  const { token, headers = {}, body, ...rest } = options
 
   const fullUrl = endpoint.startsWith('http')
     ? endpoint
     : `${API_BASE_URL}${endpoint.startsWith('/') ? endpoint : `/${endpoint}`}`
 
+  const isFormData = typeof FormData !== 'undefined' && body instanceof FormData
+
   const reqHeaders: Record<string, string> = {
-    'Content-Type': 'application/json',
     ...(headers as Record<string, string>),
+  }
+
+  // Let the browser set multipart boundaries for FormData.
+  // JSON requests keep the existing Content-Type unless the caller overrides it.
+  if (!isFormData && !reqHeaders['Content-Type'] && !reqHeaders['content-type']) {
+    reqHeaders['Content-Type'] = 'application/json'
+  }
+
+  if (isFormData) {
+    delete reqHeaders['Content-Type']
+    delete reqHeaders['content-type']
   }
 
   if (token) {
     reqHeaders['Authorization'] = `Bearer ${token}`
   }
 
-  const response = await fetch(fullUrl, {
-    headers: reqHeaders,
-    ...rest,
-  })
+  let response: Response
+  try {
+    response = await fetch(fullUrl, {
+      ...rest,
+      body,
+      headers: reqHeaders,
+    })
+  } catch {
+    throw new ApiRequestError(
+      0,
+      'Unable to reach the server. Please check your connection and try again.'
+    )
+  }
 
   // Handle 204 No Content
   if (response.status === 204) {

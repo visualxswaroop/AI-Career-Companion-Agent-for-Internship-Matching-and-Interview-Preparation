@@ -11,7 +11,7 @@ import LoginPage from './pages/LoginPage'
 import OnboardingPage from './pages/OnboardingPage'
 
 import OverviewPage from './pages/app/OverviewPage'
-import ResumePlaceholderPage from './pages/app/ResumePlaceholderPage'
+import ResumePage from './pages/app/ResumePage'
 import InternshipsPlaceholderPage from './pages/app/InternshipsPlaceholderPage'
 import CoverLetterPlaceholderPage from './pages/app/CoverLetterPlaceholderPage'
 import ProfilePage from './pages/app/ProfilePage'
@@ -63,7 +63,7 @@ export default function App() {
               element={<AppShell isDark={isDark} onThemeToggle={handleThemeToggle} />}
             >
               <Route index element={<OverviewPage />} />
-              <Route path="resume" element={<ResumePlaceholderPage />} />
+              <Route path="resume" element={<ResumePage />} />
               <Route path="internships" element={<InternshipsPlaceholderPage />} />
               <Route path="cover-letters" element={<CoverLetterPlaceholderPage />} />
               <Route path="profile" element={<ProfilePage />} />
