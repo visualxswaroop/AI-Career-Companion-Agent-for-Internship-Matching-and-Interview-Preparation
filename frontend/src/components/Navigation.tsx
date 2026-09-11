@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
-import { BRAND_NAME, NAV_LINKS } from '../config'
+import { NAV_LINKS } from '../config'
 import { useAuth } from '../context/AuthContext'
 import ThemeToggle from './ThemeToggle'
 import Button from './Button'
