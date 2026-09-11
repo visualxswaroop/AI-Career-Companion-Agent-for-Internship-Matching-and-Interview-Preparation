@@ -24,6 +24,18 @@ export default defineConfig({
         target: 'http://127.0.0.1:8000',
         changeOrigin: true,
       },
+      '/career-assistant': {
+        target: 'http://127.0.0.1:8000',
+        changeOrigin: true,
+      },
+      '/interview-agent': {
+        target: 'http://127.0.0.1:8000',
+        changeOrigin: true,
+      },
+      '/voice-resume': {
+        target: 'http://127.0.0.1:8000',
+        changeOrigin: true,
+      },
     },
   },
 })

@@ -1,71 +1,101 @@
-# 📄 Resume Parser API
+# 🎓 CareerForge AI
 
-A robust, high-performance RESTful API built with **FastAPI**, **SQLAlchemy**, and **Python** that automatically parses resumes in **PDF** and **DOCX** formats. It extracts key candidate information—including personal details, contact information, education, work experience, skills, certifications, and portfolio links—and stores them systematically in a database.
+An AI-powered career assistance platform for students, fresh graduates, and early-career professionals. Career Companion combines resume parsing, intelligent internship matching, cover letter generation, and a **RAG-based Career Assistant chatbot** into a single integrated system.
 
 ---
 
 ## ✨ Features
 
 - **🔐 User Authentication & Security**
-  - JWT-based authentication (Register, Login, Password Reset token flow).
-  - Password hashing using `passlib` / `bcrypt`.
-  - Protected API routes requiring Bearer Token verification.
+  - JWT-based authentication (Register, Login, Password Reset token flow)
+  - Password hashing using `passlib` / `bcrypt`
+  - Protected API routes requiring Bearer Token verification
 
-- **📄 Document Text Extraction**
-  - Multi-format support: **PDF** (`pdfplumber`) and **DOCX** (`python-docx`).
-  - File extension and MIME validation (magic byte checks for PDF and ZIP-based DOCX).
-  - Maximum upload size enforcement (5 MB limit).
+- **📄 Resume Upload & Parsing**
+  - Multi-format support: **PDF** (`pdfplumber`) and **DOCX** (`python-docx`)
+  - AI-powered structured extraction of skills, education, projects, experience, certifications, and more
 
-- **🧠 Intelligent Resume Parsing**
-  - Regular expression and heuristic-based entity extraction.
-  - **Contact Information**: Full Name, Email Address, Phone Number, LinkedIn, GitHub, Location.
-  - **Career & Skills**: Skill categorization, Work Experience, Education history, Certifications, Projects, and Summary.
+- **🔍 Internship Recommendation**
+  - Semantic embedding using `sentence-transformers/all-MiniLM-L6-v2`
+  - Cosine similarity search via FAISS vector database
+  - Skill analysis, education compatibility, and match rating (Excellent/Good/Moderate/Fair)
+  - AI-generated match explanations via Groq LLM
 
-- **💾 Data Management & Profile Systems**
-  - User profiles and account details management.
-  - Database persistence with SQLite and SQLAlchemy ORM.
-  - Dedicated CRUD endpoints for listing, viewing, downloading, and deleting parsed resumes.
+- **✉️ Personalized Cover Letter Generation**
+  - Tailored cover letters using resume data + internship details
+  - Groq `llama-3.3-70b-versatile` LLM with heuristic fallback
 
-- **✉️ Personalized Cover Letters**
-  - Generate a grounded cover letter from an authenticated user's parsed resume and a selected internship.
-  - Uses Groq when configured and a fact-only local fallback when it is unavailable.
+- **💬 Career Assistant (RAG-based Chatbot)**
+  - Retrieval-Augmented Generation (RAG) pipeline
+  - FAISS vector search over career knowledge base
+  - Personalized responses using authenticated user's resume/profile
+  - Conversation memory within session
+  - Grounded answers: platform-specific queries use knowledge base, not hallucination
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [FastAPI](https://fastapi.tiangolo.com/)
-- **Database & ORM**: [SQLAlchemy](https://www.sqlalchemy.org/) (SQLite default)
-- **Data Validation & Schemas**: [Pydantic v2](https://docs.pydantic.dev/)
-- **Authentication**: JWT (`python-jose`), `passlib`
-- **Document Processing**: `pdfplumber`, `python-docx`
-- **Server**: [Uvicorn](https://www.uvicorn.org/)
+| Layer | Technology |
+|---|---|
+| Backend | FastAPI, Python 3.9+ |
+| Database | SQLite + SQLAlchemy ORM |
+| Auth | JWT (`python-jose`), `passlib`/`bcrypt` |
+| AI/Embeddings | `sentence-transformers/all-MiniLM-L6-v2` |
+| Vector Store | FAISS (separate indexes: internships + RAG) |
+| LLM | Groq `llama-3.3-70b-versatile` |
+| Frontend | Vite + React 19 + TypeScript + Tailwind CSS 4 |
+| Routing | React Router 7 |
 
 ---
 
 ## 📁 Directory Structure
 
 ```text
-Resume_parser_api/
+careerforgeAI/
 ├── app/
-│   ├── __init__.py
-│   ├── main.py            # FastAPI entrypoint & router configuration
-│   ├── auth.py            # JWT token creation & helper functions
-│   ├── database.py        # SQLAlchemy database engine & base session setup
-│   ├── dependencies.py    # FastAPI dependency injections (DB session, current user)
-│   ├── models.py          # SQLAlchemy ORM models (User, Resume, Profile)
-│   ├── schemas.py         # Pydantic data schemas & request/response models
-│   ├── parser.py          # PDF & DOCX text extraction engines
-│   ├── resume_parser.py   # Regex & heuristic extraction logic for resume fields
-│   ├── utils.py           # Password hashing & verification utilities
+│   ├── main.py                    # FastAPI entrypoint & router config
+│   ├── auth.py                    # JWT token helpers
+│   ├── database.py                # SQLAlchemy engine & session
+│   ├── dependencies.py            # FastAPI DI: DB session, current user
+│   ├── models.py                  # ORM models (User, Resume, Profile, etc.)
+│   ├── schemas.py                 # Pydantic schemas (request/response)
+│   ├── resume_parser.py           # Regex/heuristic resume field extraction
+│   ├── internship_index.py        # FAISS internship similarity search
+│   ├── cover_letter_service.py    # Cover letter generation service
+│   ├── rag/                       # ← RAG system for Career Assistant
+│   │   ├── __init__.py
+│   │   ├── ingest.py              # Document ingestion pipeline
+│   │   ├── retriever.py           # FAISS retrieval with embedding model
+│   │   └── generator.py          # LLM prompt construction & generation
 │   └── routers/
-│       ├── auth.py        # Auth endpoints (/auth/register, /auth/login, etc.)
-│       ├── profile.py     # Profile endpoints (/profile)
-│       └── resume.py      # Resume upload, parse, list, download, & delete endpoints
-├── uploads/               # Local storage directory for uploaded resume files
-├── requirements.txt       # Python project dependencies
-├── .gitignore             # Git ignore configuration
-└── README.md              # Project documentation
+│       ├── auth.py
+│       ├── profile.py
+│       ├── resume.py
+│       ├── cover_letter.py
+│       └── career_assistant.py    # ← Career Assistant endpoints
+│
+├── knowledge_base/
+│   └── career_companion_knowledge.md   # ← Primary RAG knowledge source
+│
+├── data/
+│   ├── internship_index.faiss     # Internship embedding index
+│   ├── internship_metadata.json   # Internship metadata
+│   └── rag/
+│       ├── index.faiss            # RAG knowledge base index (generated)
+│       └── metadata.json         # RAG chunk metadata (generated)
+│
+├── frontend/                      # Vite + React frontend
+│   └── src/
+│       ├── pages/app/
+│       │   └── CareerAssistantPage.tsx
+│       └── api/
+│           └── careerAssistant.ts
+│
+├── uploads/                       # Uploaded resume files
+├── requirements.txt
+├── .env                           # GROQ_API_KEY (not committed)
+└── .env.example
 ```
 
 ---
@@ -74,42 +104,88 @@ Resume_parser_api/
 
 ### Prerequisites
 
-- **Python 3.9+** installed on your system.
+- Python 3.9+ installed
+- Node.js 18+ installed (for frontend)
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/visualxswaroop/resume_parser_api.git
-cd resume_parser_api
+cd careerforgeAI
 ```
 
 ### 2. Create and Activate a Virtual Environment
 
-- **On Windows (PowerShell):**
-  ```powershell
-  python -m venv venv
-  .\venv\Scripts\Activate
-  ```
+```powershell
+# Windows PowerShell
+python -m venv venv
+.\venv\Scripts\Activate
+```
 
-- **On macOS / Linux:**
-  ```bash
-  python3 -m venv venv
-  source venv/bin/activate
-  ```
+```bash
+# macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+```
 
-### 3. Install Dependencies
+### 3. Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the API Server
+### 4. Configure Environment Variables
+
+Copy `.env.example` to `.env` and fill in your API key:
+
+```bash
+cp .env.example .env
+```
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+Get a free Groq API key at: https://console.groq.com
+
+### 5. Build the RAG Index (Career Assistant)
+
+This step generates embeddings from the knowledge base and creates the FAISS vector index:
+
+```bash
+python -m app.rag.ingest
+```
+
+Expected output:
+```
+[ingest] Starting RAG ingestion pipeline...
+[ingest] Loaded 1 document(s)
+[ingest] 'career_companion_knowledge.md' -> N chunks
+[ingest] Loading embedding model...
+[ingest] Encoding N chunks...
+[ingest] FAISS index built with N vectors
+[ingest] ✓ Ingestion complete!
+```
+
+The index is saved to `data/rag/index.faiss` and `data/rag/metadata.json`.
+
+### 6. Start the Backend Server
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-The application will start at `http://127.0.0.1:8000`.
+The API starts at: `http://127.0.0.1:8000`
+
+### 7. Start the Frontend (Development)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend starts at: `http://localhost:5173`
 
 ---
 
@@ -117,7 +193,7 @@ The application will start at `http://127.0.0.1:8000`.
 
 ### Authentication (`/auth`)
 | Method | Endpoint | Description |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | `POST` | `/auth/register` | Register a new user account |
 | `POST` | `/auth/login` | Authenticate user and receive JWT access token |
 | `POST` | `/auth/forgot-password` | Request password reset token |
@@ -125,54 +201,152 @@ The application will start at `http://127.0.0.1:8000`.
 
 ### Profile (`/profile`)
 | Method | Endpoint | Description |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | `GET` | `/profile/` | Fetch current authenticated user's profile |
 | `PUT` | `/profile/update` | Update user profile information |
 
-### Resume Operations (`/resume`)
+### Resume (`/resume`)
 | Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `POST` | `/resume/upload` | Upload `.pdf` or `.docx` resume and trigger automatic parsing |
-| `GET` | `/resume/list` | List all parsed resumes uploaded by the authenticated user |
-| `GET` | `/resume/{resume_id}` | Retrieve specific parsed resume details by ID |
-| `GET` | `/resume/{resume_id}/download` | Download original uploaded resume file |
-| `DELETE` | `/resume/{resume_id}` | Delete a parsed resume record and associated file |
+|:---|:---|:---|
+| `POST` | `/resume/upload` | Upload `.pdf` or `.docx` resume; triggers AI parsing |
+| `GET` | `/resume/list` | List all parsed resumes for the authenticated user |
+| `GET` | `/resume/{resume_id}` | Retrieve specific parsed resume details |
+| `GET` | `/resume/{resume_id}/download` | Download original resume file |
+| `DELETE` | `/resume/{resume_id}` | Delete a resume record and file |
 
 ### Cover Letter (`/cover-letter`)
 | Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `POST` | `/cover-letter/generate` | Generate a personalized cover letter for one of the user's resumes and an internship in `app/internships.json` |
+|:---|:---|:---|
+| `POST` | `/cover-letter/generate` | Generate personalized cover letter |
 
-Send a Bearer token and use the internship's UUID from the authoritative dataset (or a matching result):
+### Career Assistant (`/career-assistant`)
+| Method | Endpoint | Description |
+|:---|:---|:---|
+| `POST` | `/career-assistant/chat` | RAG-based chat (authenticated) |
+| `GET` | `/career-assistant/status` | Check if RAG index is initialized |
+
+#### Chat Request
 
 ```json
+POST /career-assistant/chat
+Authorization: Bearer <jwt_token>
+
 {
-  "resume_id": 1,
-  "internship_id": "66065b09-9c2a-4cc2-a378-11f2e18bc4b1"
+  "message": "How can I improve my resume?",
+  "conversation_history": [
+    { "role": "user", "content": "What skills should I learn for ML?" },
+    { "role": "assistant", "content": "For ML, start with Python, NumPy..." }
+  ]
 }
 ```
 
-Example response:
+#### Chat Response
 
 ```json
 {
-  "resume_id": 1,
-  "internship_id": "66065b09-9c2a-4cc2-a378-11f2e18bc4b1",
-  "company": "Basecrest Ventures Inc",
-  "role_title": "Application Security Intern",
-  "cover_letter": "Dear Hiring Team, ...",
-  "generation_method": "llm"
+  "answer": "To improve your resume, focus on quantifying achievements...",
+  "sources": [
+    { "section": "Resume Guidance", "topic": "Resume Writing Principles", "source": "career_companion_knowledge.md", "score": 0.87 }
+  ],
+  "retrieval_used": true,
+  "generation_method": "rag_llm"
 }
 ```
 
 ---
 
+## 💬 Career Assistant — RAG Architecture
+
+```
+User Question
+     ↓
+Embed with sentence-transformers/all-MiniLM-L6-v2 (384-dim)
+     ↓
+FAISS cosine similarity search (data/rag/index.faiss)
+     ↓
+Top-5 relevant knowledge chunks (threshold: 0.25)
+     ↓
+Prompt construction:
+  [SYSTEM PROMPT] + [RETRIEVED KNOWLEDGE] + [USER CONTEXT] + [CONVERSATION HISTORY] + [QUESTION]
+     ↓
+Groq LLM (llama-3.3-70b-versatile)
+     ↓
+Grounded answer + source metadata
+```
+
+### Knowledge Base
+
+The knowledge base is a single comprehensive Markdown document:
+
+```
+knowledge_base/career_companion_knowledge.md
+```
+
+It covers:
+- Career Companion platform overview and workflow
+- Authentication, profiles, resume parsing
+- Internship recommendation system
+- Cover letter generation
+- Career Assistant itself
+- Resume writing guidance and common mistakes
+- ATS concepts and optimization
+- Internship strategies
+- Skill development (technical and soft skills)
+- AI/ML career path (Python → ML → Deep Learning → NLP/CV → MLOps)
+- Software development career path
+- Interview preparation (DSA, behavioral, STAR method)
+- Cover letter writing
+- Comprehensive FAQ (platform + career)
+- Platform limitations
+
+### Updating the Knowledge Base
+
+1. Edit `knowledge_base/career_companion_knowledge.md`
+2. Rebuild the RAG index:
+
+```bash
+python -m app.rag.ingest
+```
+
+3. Restart the backend server (to reload the in-memory index).
+
+### Keeping RAG Separate from Internship Index
+
+The internship FAISS index (`data/internship_index.faiss`) and the RAG knowledge base index (`data/rag/index.faiss`) are **completely separate** and do not interfere with each other.
+
+---
+
+## 🌐 Frontend Routes
+
+| Route | Component | Auth Required |
+|:---|:---|:---|
+| `/` | LandingPage | No |
+| `/register` | RegisterPage | No |
+| `/login` | LoginPage | No |
+| `/app` | Overview Dashboard | Yes |
+| `/app/resume` | Resume Analysis | Yes |
+| `/app/internships` | Internship Recommendations | Yes |
+| `/app/cover-letters` | Cover Letter Generator | Yes |
+| `/app/career-assistant` | **Career Assistant chatbot** | Yes |
+| `/app/profile` | Profile & Settings | Yes |
+
+---
+
 ## 📖 Interactive API Documentation
 
-Once the application is running, you can access the interactive Swagger UI and ReDoc documentation:
+Once the backend is running:
 
-- **Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-- **ReDoc**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+- **Swagger UI**: http://127.0.0.1:8000/docs
+- **ReDoc**: http://127.0.0.1:8000/redoc
+
+---
+
+## 🔒 Security Notes
+
+- JWT tokens are blacklisted on logout (stored in DB)
+- All career assistant endpoints derive the authenticated user from the JWT — no user-provided IDs are trusted
+- Resume data is scoped per user; cross-user access is impossible
+- API keys are never exposed in responses or logs
 
 ---
 

@@ -174,3 +174,118 @@ export interface CoverLetterResponse {
   cover_letter: string
   generation_method: string
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Career Assistant Types
+// ─────────────────────────────────────────────────────────────────────────────
+
+export interface ChatMessage {
+  role: 'user' | 'assistant'
+  content: string
+}
+
+export interface ChatRequest {
+  message: string
+  conversation_history?: ChatMessage[]
+}
+
+export interface ChatSource {
+  section: string
+  topic: string
+  source: string
+  score: number
+}
+
+export interface ChatResponse {
+  answer: string
+  sources: ChatSource[]
+  retrieval_used: boolean
+  generation_method: string
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Interview Agent Types (Phase A & B)
+// ─────────────────────────────────────────────────────────────────────────────
+
+export interface InterviewDocumentResponse {
+  id: number
+  filename: string
+  file_type: string
+  chunk_count: number
+  text_length?: number | null
+  uploaded_at?: string | null
+  is_active: boolean
+}
+
+export interface InterviewChatRequest {
+  message: string
+  target_role?: string
+  conversation_history?: ChatMessage[]
+}
+
+export interface InterviewMilestone {
+  period: string
+  title: string
+  focus: string[]
+}
+
+export interface InterviewRoadmapData {
+  role: string
+  duration: string
+  milestones: InterviewMilestone[]
+}
+
+export interface InterviewChatResponse {
+  answer: string
+  target_role?: string
+  has_resume: boolean
+  has_document?: boolean
+  active_document?: InterviewDocumentResponse | null
+  generation_method: string
+  roadmap_data?: InterviewRoadmapData | null
+}
+
+export interface InterviewAgentContextResponse {
+  has_resume: boolean
+  candidate_name?: string
+  skills_count: number
+  skills: string[]
+  projects_count: number
+  projects: string[]
+  recommended_roles: string[]
+  target_role?: string
+  has_document?: boolean
+  active_document?: InterviewDocumentResponse | null
+}
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Voice Resume Types
+// ─────────────────────────────────────────────────────────────────────────────
+
+export interface VoiceResumeExtractRequest {
+  transcript: string
+  /** Reuses ChatMessage — same shape as career assistant history */
+  conversation_history?: ChatMessage[]
+  language_hint?: string
+}
+
+export interface VoiceResumeExtractResponse {
+  extracted_data: ResumeData
+  missing_fields: string[]
+  follow_up_question: string | null
+  is_complete: boolean
+  detected_language: string
+}
+
+export interface VoiceResumeGenerateRequest {
+  extracted_data: ResumeData
+  /** "auto" | "technical" | "blue-collar" */
+  template_hint?: string
+}
+
+export interface VoiceResumeGenerateResponse {
+  resume_text: string
+  template_used: string
+  generation_method: string
+}

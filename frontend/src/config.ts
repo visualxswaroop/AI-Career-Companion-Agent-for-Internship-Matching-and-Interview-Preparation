@@ -3,17 +3,17 @@
 // Change BRAND_NAME here to update the product name everywhere on the site.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const BRAND_NAME = 'TO BE DECIDED'
+export const BRAND_NAME = 'CareerForge AI'
 
-export const SITE_TAGLINE = 'Your next move, clearly.'
+export const SITE_TAGLINE = 'Your career, spoken into shape.'
 
 export const SITE_DESCRIPTION =
-  'Build a career plan around your strengths, find opportunities worth applying for, and turn your experience into applications that actually sound like you.'
+  'Build a career plan around your strengths, speak your story into an executive ATS resume, and find high-conviction opportunities tailored for you.'
 
 export const NAV_LINKS = [
   { label: 'Explore Careers', href: '#careers' },
+  { label: 'Voice Resume', href: '#voice-resume' },
+  { label: 'Resume Parser', href: '#resume' },
   { label: 'Internships', href: '#internships' },
-  { label: 'Resume', href: '#resume' },
   { label: 'Cover Letters', href: '#cover-letters' },
-  { label: 'Resources', href: '#resources' },
 ]

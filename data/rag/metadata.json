@@ -1,0 +1,954 @@
+[
+  {
+    "chunk_id": "53d1a743-6f13-441d-88bd-721a51f8f4b5",
+    "source": "career_companion_knowledge.md",
+    "section": "Career Companion Knowledge Base",
+    "topic": "Career Companion Knowledge Base",
+    "text": "> This document is the primary knowledge source for the Career Assistant RAG system.\n> Update this file and rebuild the RAG index to reflect new information.\n> Rebuild command: `python -m app.rag.ingest`"
+  },
+  {
+    "chunk_id": "ad445384-23f2-416a-83d9-e581d4b00b1b",
+    "source": "career_companion_knowledge.md",
+    "section": "1. Platform Overview",
+    "topic": "Platform Overview",
+    "text": "Career Companion Agent is an AI-powered career assistance platform designed to help students, fresh graduates, and early-career professionals accelerate their career journeys. The platform combines resume parsing, intelligent internship matching, cover letter generation, and an AI-powered career chatbot into a single, integrated system."
+  },
+  {
+    "chunk_id": "d1aec76e-be10-46ff-bc03-66f0e484b662",
+    "source": "career_companion_knowledge.md",
+    "section": "What Career Companion Does",
+    "topic": "What Career Companion Does",
+    "text": "Career Companion helps users:\n\n- Upload and parse their resume automatically using AI\n- Understand what information their resume contains\n- Discover relevant internships matched to their skills and background\n- Generate personalized cover letters for specific internships\n- Get career guidance, resume advice, and interview preparation tips through the Career Assistant chatbot\n- Track their career profile in one place"
+  },
+  {
+    "chunk_id": "0fc6fcf3-d277-492c-b101-203bb8e8183f",
+    "source": "career_companion_knowledge.md",
+    "section": "Target Users",
+    "topic": "Target Users",
+    "text": "Career Companion is designed for:\n\n- Students in their 2nd year or above looking for internships\n- Fresh graduates entering the job market\n- Early-career professionals looking to switch domains\n- Anyone who wants AI-powered guidance on resume building and career planning"
+  },
+  {
+    "chunk_id": "e789a74b-98e7-4ab9-b11b-f9289d7e8dbc",
+    "source": "career_companion_knowledge.md",
+    "section": "Technology Stack",
+    "topic": "Technology Stack",
+    "text": "Career Companion uses modern AI technologies:\n\n- Resume parsing powered by large language models\n- Semantic internship matching using sentence transformers and vector similarity\n- Cover letter generation using Groq's LLM (llama-3.3-70b-versatile)\n- RAG-based career chatbot using FAISS vector search and LLM generation\n- Secure authentication using JWT tokens"
+  },
+  {
+    "chunk_id": "e6109aa0-8230-4b94-aa3c-af30a8e34f07",
+    "source": "career_companion_knowledge.md",
+    "section": "2. User Workflow",
+    "topic": "User Workflow",
+    "text": "The recommended workflow for using Career Companion is:"
+  },
+  {
+    "chunk_id": "e97f7c44-7543-41ab-9a16-29cbbc882eff",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 1: Create Account",
+    "topic": "Step 1: Create Account",
+    "text": "Register on the platform by providing your name, email, and password. Your data is stored securely."
+  },
+  {
+    "chunk_id": "8072bfd1-1b73-4126-baea-aaa7cc49ecea",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 2: Complete Profile",
+    "topic": "Step 2: Complete Profile",
+    "text": "After registration, complete your onboarding profile. This includes optional information such as your phone number, LinkedIn profile URL, GitHub profile URL, and a professional summary. Your profile helps personalize recommendations."
+  },
+  {
+    "chunk_id": "e06f8a9f-119b-4c8b-9058-078eb112b49b",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 3: Upload Your Resume",
+    "topic": "Step 3: Upload Your Resume",
+    "text": "Navigate to the Resume Analysis section. Upload your resume as a PDF or DOCX file (maximum 5MB). The system automatically parses the document."
+  },
+  {
+    "chunk_id": "639cb065-6116-4df2-9455-d6e83ab9fba6",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 4: Resume Gets Parsed",
+    "topic": "Step 4: Resume Gets Parsed",
+    "text": "The AI parser extracts key information from your resume:\n- Full name, contact details (email, phone, address)\n- LinkedIn and GitHub URLs\n- Professional summary\n- Skills (technical skills, soft skills)\n- Education (degrees, institutions, years)\n- Work experience entries\n- Projects\n- Certifications\n- Languages\n- Achievements"
+  },
+  {
+    "chunk_id": "d3e618ea-ef14-4dbc-b32d-a37712eecc14",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 5: View Resume Information",
+    "topic": "Step 5: View Resume Information",
+    "text": "After parsing, review the extracted data in the Resume Analysis section. You can see all sections of your parsed resume and verify the extraction accuracy."
+  },
+  {
+    "chunk_id": "4b723a49-f389-4d28-9ebd-970dc4282049",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 6: Find Relevant Internships",
+    "topic": "Step 6: Find Relevant Internships",
+    "text": "Navigate to the Internships section. Select your uploaded resume and request internship recommendations. The system semantically matches your resume against the internship database and returns the top matching opportunities with scores and explanations."
+  },
+  {
+    "chunk_id": "43728aa9-f45e-4ac4-8b13-a073185aa941",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 7: Analyze Career Requirements",
+    "topic": "Step 7: Analyze Career Requirements",
+    "text": "Review the internship matches. Each match shows skill alignment, gaps, match rating (Excellent/Good/Moderate/Fair), and an AI-generated explanation. Use this to understand what skills you need to develop."
+  },
+  {
+    "chunk_id": "07e0bfb2-b5b3-4aa6-8815-0dbe240a9785",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 8: Generate Cover Letters",
+    "topic": "Step 8: Generate Cover Letters",
+    "text": "In the Cover Letters section, select a resume and an internship to generate a personalized cover letter. The system uses your resume data and internship details to create a tailored cover letter."
+  },
+  {
+    "chunk_id": "601a5c78-5bf3-4650-b053-43b6f3f88cfe",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 9: Use Career Assistant",
+    "topic": "Step 9: Use Career Assistant",
+    "text": "Open the Career Assistant from the sidebar. Ask questions about your career path, resume improvement, interview preparation, skills to learn, or how to use Career Companion's features. The assistant provides grounded answers using the knowledge base."
+  },
+  {
+    "chunk_id": "5c940894-a72b-4fbb-9065-930c8a9300ee",
+    "source": "career_companion_knowledge.md",
+    "section": "Step 10: Prepare for Interviews",
+    "topic": "Step 10: Prepare for Interviews",
+    "text": "Use the Career Assistant to get interview preparation tips, understand common question types, learn the STAR method for behavioral questions, and prepare for technical rounds relevant to your target role."
+  },
+  {
+    "chunk_id": "c84e1ff0-c49b-43bd-91ce-27330eb66b40",
+    "source": "career_companion_knowledge.md",
+    "section": "Registration",
+    "topic": "Registration",
+    "text": "To create an account on Career Companion:\n1. Visit the Register page\n2. Enter your full name, email address, and a strong password\n3. Submit the form\n4. Your account is created immediately\n\nPassword requirements: The system stores passwords securely using bcrypt hashing. Choose a password with at least 8 characters."
+  },
+  {
+    "chunk_id": "1f33bde2-85c7-4f9e-a625-b972a319d1c4",
+    "source": "career_companion_knowledge.md",
+    "section": "Login",
+    "topic": "Login",
+    "text": "To log in:\n1. Visit the Login page\n2. Enter your registered email and password\n3. Upon success, you receive a JWT access token\n4. This token is stored securely in your browser's local storage"
+  },
+  {
+    "chunk_id": "d153b1f3-abfd-446d-8318-6fb5b00e89e7",
+    "source": "career_companion_knowledge.md",
+    "section": "Authentication Mechanism",
+    "topic": "Authentication Mechanism",
+    "text": "Career Companion uses JWT (JSON Web Token) based authentication:\n- Tokens are issued at login\n- Tokens are sent as Bearer tokens in the Authorization header for all API requests\n- Tokens can be revoked at logout (blacklisted in the database)\n- After logout, the token becomes invalid even if not expired"
+  },
+  {
+    "chunk_id": "f9be90ef-3750-4b79-ab24-3f1a92c8f281",
+    "source": "career_companion_knowledge.md",
+    "section": "Protected Pages",
+    "topic": "Protected Pages",
+    "text": "The following pages require authentication:\n- /app (Overview Dashboard)\n- /app/resume (Resume Analysis)\n- /app/internships (Internship Recommendations)\n- /app/cover-letters (Cover Letter Generator)\n- /app/career-assistant (Career Assistant chatbot)\n- /app/profile (Profile and Settings)\n\nUnauthenticated users are automatically redirected to the login page."
+  },
+  {
+    "chunk_id": "1e76f6dc-36bc-4118-b9e7-720ea8629037",
+    "source": "career_companion_knowledge.md",
+    "section": "User Session",
+    "topic": "User Session",
+    "text": "Your session persists via the JWT token stored in local storage. Refreshing the page does not log you out. Clicking \"Sign Out\" from the sidebar revokes your token and clears your session."
+  },
+  {
+    "chunk_id": "f602b3f2-250d-46d8-a0a8-f65f80082cf5",
+    "source": "career_companion_knowledge.md",
+    "section": "What the Profile Contains",
+    "topic": "What the Profile Contains",
+    "text": "The Profile section allows you to store additional personal information beyond your account credentials:\n\n- **Phone number**: Your contact phone number\n- **Address**: Your location or city\n- **LinkedIn URL**: Link to your LinkedIn profile\n- **GitHub URL**: Link to your GitHub profile\n- **Professional Summary**: A brief description of your background and goals"
+  },
+  {
+    "chunk_id": "f9d0c8ff-06ad-44cc-8948-864a532e5786",
+    "source": "career_companion_knowledge.md",
+    "section": "How Profile Information Is Used",
+    "topic": "How Profile Information Is Used",
+    "text": "Your profile information complements your resume data. The Career Assistant can use your profile information to personalize career advice. For example, if your profile mentions your target role or current city, the assistant can tailor recommendations accordingly."
+  },
+  {
+    "chunk_id": "96a2aaad-db5e-4548-9112-481ca63d0bf7",
+    "source": "career_companion_knowledge.md",
+    "section": "Updating Your Profile",
+    "topic": "Updating Your Profile",
+    "text": "Navigate to Profile & Settings from the sidebar. You can update any profile field and save changes. The profile is created during onboarding and can be updated at any time."
+  },
+  {
+    "chunk_id": "3a064f0b-4617-474e-8f47-5de32444b540",
+    "source": "career_companion_knowledge.md",
+    "section": "Supported File Formats",
+    "topic": "Supported File Formats",
+    "text": "Career Companion accepts:\n- **PDF** files (.pdf)\n- **DOCX** files (.docx)\n\nMaximum file size: 5MB per upload."
+  },
+  {
+    "chunk_id": "bc4cbefa-ce29-4eda-a0db-990ccec379fe",
+    "source": "career_companion_knowledge.md",
+    "section": "How Resume Parsing Works",
+    "topic": "How Resume Parsing Works",
+    "text": "When you upload a resume:\n\n1. The file is stored securely on the server\n2. Text is extracted from the document\n3. A large language model analyzes the extracted text\n4. Structured data is identified and separated into categories\n5. The parsed data is stored in your account and displayed on the Resume Analysis page"
+  },
+  {
+    "chunk_id": "735d438b-e5fc-4610-9a8b-b2b7466a010f",
+    "source": "career_companion_knowledge.md",
+    "section": "What Gets Extracted",
+    "topic": "What Gets Extracted",
+    "text": "The parser identifies:\n\n- **Personal Information**: Full name, email, phone number, address\n- **Online Profiles**: LinkedIn URL, GitHub URL\n- **Professional Summary**: Career objective or summary statement\n- **Skills**: Combined list of all skills mentioned\n- **Technical Skills**: Programming languages, frameworks, tools, technologies\n- **Soft Skills**: Communication, leadership, teamwork, etc.\n- **Education**: Degree names, institutions, graduation years\n- **Work Experience**: Previous jobs and roles\n- **Projects**: Personal or academic projects with descriptions"
+  },
+  {
+    "chunk_id": "4cd692c4-f1e0-43c7-b890-7d768b6b5291",
+    "source": "career_companion_knowledge.md",
+    "section": "What Gets Extracted",
+    "topic": "What Gets Extracted",
+    "text": "perience**: Previous jobs and roles\n- **Projects**: Personal or academic projects with descriptions\n- **Certifications**: Professional certifications and courses\n- **Internships**: Previous internship experiences\n- **Languages**: Programming or spoken languages\n- **Achievements**: Awards, honors, accomplishments"
+  },
+  {
+    "chunk_id": "f4cf73df-bab6-45e6-b2b6-dd4a85eb7827",
+    "source": "career_companion_knowledge.md",
+    "section": "Multiple Resumes",
+    "topic": "Multiple Resumes",
+    "text": "You can upload multiple versions of your resume. Each version is parsed and stored separately. When requesting internship recommendations or generating cover letters, you select which resume to use."
+  },
+  {
+    "chunk_id": "5cb08462-510e-40ab-8a5a-8914716a4d6b",
+    "source": "career_companion_knowledge.md",
+    "section": "Resume Usage Throughout the Platform",
+    "topic": "Resume Usage Throughout the Platform",
+    "text": "Your parsed resume data powers multiple features:\n\n- **Internship Matching**: Your skills and education are compared against internship requirements\n- **Cover Letter Generation**: Your work history, skills, and projects are used to personalize the cover letter\n- **Career Assistant**: The chatbot can use your resume data to give personalized career advice"
+  },
+  {
+    "chunk_id": "2ef38474-582b-4a17-ae1c-e56037092b6d",
+    "source": "career_companion_knowledge.md",
+    "section": "How Internship Matching Works",
+    "topic": "How Internship Matching Works",
+    "text": "Career Companion uses a two-stage semantic matching pipeline to recommend relevant internships:\n\n**Stage 1: Semantic Similarity Search**\n\nYour resume is converted into a numerical vector (embedding) using the `sentence-transformers/all-MiniLM-L6-v2` model. This model converts text into 384-dimensional vectors that capture the semantic meaning of your skills, experience, and background."
+  },
+  {
+    "chunk_id": "bd453910-514a-44fd-8b7b-3c9b07f470ce",
+    "source": "career_companion_knowledge.md",
+    "section": "How Internship Matching Works",
+    "topic": "How Internship Matching Works",
+    "text": "-dimensional vectors that capture the semantic meaning of your skills, experience, and background.\n\nEach internship in the database is also represented as an embedding. The system performs a cosine similarity search using FAISS (Facebook AI Similarity Search) to find the internships whose embeddings are closest to your resume embedding.\n\n**Stage 2: Skill Analysis and Adjustment**\n\nThe top candidates from Stage 1 undergo a detailed skill analysis:\n\n- Required skills coverage: What percentage of the internship's required skills you already have"
+  },
+  {
+    "chunk_id": "ed03beb2-27e1-40e2-88bc-0af28392f8bf",
+    "source": "career_companion_knowledge.md",
+    "section": "How Internship Matching Works",
+    "topic": "How Internship Matching Works",
+    "text": ":\n\n- Required skills coverage: What percentage of the internship's required skills you already have\n- Preferred skills coverage: What percentage of preferred/bonus skills you have\n- Skill gap: Which required skills you are missing\n- Education compatibility: Whether your education level meets the minimum requirement\n\nThe similarity score is adjusted based on skill analysis to produce a final ranking."
+  },
+  {
+    "chunk_id": "46f667eb-ead3-4a6a-ba3c-39c15eeb0804",
+    "source": "career_companion_knowledge.md",
+    "section": "Match Rating",
+    "topic": "Match Rating",
+    "text": "Each internship receives a match rating:\n- **Excellent Match**: Adjusted score ≥ 0.75\n- **Good Match**: Adjusted score ≥ 0.60\n- **Moderate Match**: Adjusted score ≥ 0.45\n- **Fair Match**: Below 0.45"
+  },
+  {
+    "chunk_id": "c77f8abf-5b7b-4211-9275-826a5bac8103",
+    "source": "career_companion_knowledge.md",
+    "section": "Understanding Your Recommendations",
+    "topic": "Understanding Your Recommendations",
+    "text": "Each recommendation includes:\n- **Rank**: Position in the ranked list\n- **Internship Details**: Company, role, domain, location, mode, duration, stipend\n- **Similarity Score**: Raw semantic similarity (0 to 1)\n- **Adjusted Score**: Final score after skill analysis adjustment\n- **Skill Analysis**: Matched and missing skills\n- **Match Explanation**: AI-generated narrative explaining why this internship suits you"
+  },
+  {
+    "chunk_id": "88da2894-53ea-4b4b-8237-195f36e12f92",
+    "source": "career_companion_knowledge.md",
+    "section": "Why a Particular Internship Is Recommended",
+    "topic": "Why a Particular Internship Is Recommended",
+    "text": "An internship appears in your recommendations because:\n1. Your resume text has high semantic similarity to the internship description\n2. Your skills overlap significantly with the required and preferred skills\n3. Your education meets or exceeds the minimum requirement\n\nThe more precisely your resume describes your skills, projects, and experience using relevant technical terminology, the better the matching accuracy."
+  },
+  {
+    "chunk_id": "f38d4579-53ed-4c88-8a6c-c5b532b94692",
+    "source": "career_companion_knowledge.md",
+    "section": "Internship Database",
+    "topic": "Internship Database",
+    "text": "Career Companion maintains a curated database of technology internships covering domains including:\n- Artificial Intelligence / Machine Learning\n- Software Development\n- Data Science\n- Cloud Computing / DevOps\n- Cybersecurity\n- Business Analysis\n- Full-Stack Development\n- And more"
+  },
+  {
+    "chunk_id": "dc5826cc-ffe4-43cd-beb6-38be81f52729",
+    "source": "career_companion_knowledge.md",
+    "section": "What a Cover Letter Is",
+    "topic": "What a Cover Letter Is",
+    "text": "A cover letter is a professional document that accompanies your resume when applying for a position. Unlike a resume (which lists your qualifications), a cover letter:\n\n- Introduces you personally to the employer\n- Explains why you are interested in this specific role and company\n- Highlights how your specific skills and experiences make you an excellent fit\n- Demonstrates your communication abilities\n- Shows enthusiasm and motivation"
+  },
+  {
+    "chunk_id": "21054d76-5e2a-4f95-af56-98f290ebae05",
+    "source": "career_companion_knowledge.md",
+    "section": "How Career Companion Generates Cover Letters",
+    "topic": "How Career Companion Generates Cover Letters",
+    "text": "When you request a cover letter:\n\n1. You select a resume and a target internship from the available matches\n2. The system retrieves your parsed resume data (skills, experience, education, projects)\n3. The system retrieves the internship details (role, company, domain, requirements)\n4. An LLM generates a personalized cover letter that:\n   - Addresses the specific company and role\n   - References your relevant skills from your resume\n   - Connects your experience to the internship requirements\n   - Maintains a professional, enthusiastic tone"
+  },
+  {
+    "chunk_id": "a762f22f-640f-4b8e-8aaa-d8c92eed4603",
+    "source": "career_companion_knowledge.md",
+    "section": "Generation Method",
+    "topic": "Generation Method",
+    "text": "Cover letters are generated using:\n- **LLM Method**: Groq's llama-3.3-70b-versatile model generates a full personalized cover letter\n- **Heuristic Method**: A template-based fallback if the LLM is unavailable"
+  },
+  {
+    "chunk_id": "8787a3ee-3c67-46ed-a57d-d597dfa2fe80",
+    "source": "career_companion_knowledge.md",
+    "section": "Customizing the Generated Cover Letter",
+    "topic": "Customizing the Generated Cover Letter",
+    "text": "The generated cover letter is a starting point. You should:\n\n1. Review the letter carefully for accuracy\n2. Add specific details about why you want to work at this particular company\n3. Reference any projects or experiences most relevant to this role\n4. Personalize the opening and closing to match your voice\n5. Proofread for grammar and style before submitting"
+  },
+  {
+    "chunk_id": "c81c7980-f1e3-44d9-ac2a-9832f93e8958",
+    "source": "career_companion_knowledge.md",
+    "section": "What the Career Assistant Is",
+    "topic": "What the Career Assistant Is",
+    "text": "Career Assistant is an AI-powered chatbot built into Career Companion that uses Retrieval-Augmented Generation (RAG) to provide grounded, contextual career guidance.\n\nUnlike a simple chatbot, Career Assistant:\n- Retrieves relevant information from the Career Companion knowledge base before responding\n- Provides answers grounded in actual career guidance documents\n- Can personalize advice using your resume and profile information\n- Maintains conversation context to understand follow-up questions"
+  },
+  {
+    "chunk_id": "dcf7d16f-5426-4107-93ff-ff15463274c2",
+    "source": "career_companion_knowledge.md",
+    "section": "What You Can Ask the Career Assistant",
+    "topic": "What You Can Ask the Career Assistant",
+    "text": "Career Assistant can answer questions about:\n\n**Platform-Specific Questions:**\n- How to use Career Companion features\n- How internship matching works\n- How to upload and manage resumes\n- How to generate cover letters\n- What the Career Assistant can and cannot do\n- Platform limitations and known issues\n\n**Career Guidance Questions:**\n- How to improve your resume\n- How to make your resume ATS-friendly\n- What skills to learn for specific domains (AI/ML, software development, etc.)\n- How to prepare for technical and HR interviews\n- How to choose and approach internship opportunities"
+  },
+  {
+    "chunk_id": "3a19163f-766c-431d-a07f-5e0c95bf9618",
+    "source": "career_companion_knowledge.md",
+    "section": "What You Can Ask the Career Assistant",
+    "topic": "What You Can Ask the Career Assistant",
+    "text": "ow to prepare for technical and HR interviews\n- How to choose and approach internship opportunities\n- How to write strong cover letters\n- Career path planning and learning roadmaps"
+  },
+  {
+    "chunk_id": "6abf5d0f-3878-4603-a2e0-e8f1d0dd90e2",
+    "source": "career_companion_knowledge.md",
+    "section": "How the Career Assistant Works",
+    "topic": "How the Career Assistant Works",
+    "text": "When you send a message:\n\n1. Your question is converted into an embedding vector\n2. The system searches the Career Companion knowledge base using FAISS vector similarity\n3. The most relevant knowledge chunks are retrieved\n4. A prompt is constructed containing: system instructions + retrieved context + your profile context + conversation history + your question\n5. Groq's LLM generates a grounded response using the retrieved context\n6. The response is returned with source metadata indicating which knowledge sections were used"
+  },
+  {
+    "chunk_id": "94d001f8-1ad4-49c4-92c1-48112c6a973d",
+    "source": "career_companion_knowledge.md",
+    "section": "Limitations of Career Assistant",
+    "topic": "Limitations of Career Assistant",
+    "text": "- The Career Assistant knows only what is in its knowledge base and your personal career data. It does not have access to the internet.\n- It cannot access real-time job postings, company-specific information, or current events.\n- It cannot guarantee job placement, salary outcomes, or admission results.\n- Highly time-sensitive information (deadlines, current openings, recent policy changes) should always be verified from official sources.\n- The assistant provides guidance based on general best practices. Your results may vary based on individual circumstances."
+  },
+  {
+    "chunk_id": "f769270a-daed-4ec5-973d-fd1f8384652f",
+    "source": "career_companion_knowledge.md",
+    "section": "Limitations of Career Assistant",
+    "topic": "Limitations of Career Assistant",
+    "text": "guidance based on general best practices. Your results may vary based on individual circumstances.\n- The assistant does not store conversation history between sessions in Phase 3C; each new session starts fresh."
+  },
+  {
+    "chunk_id": "91e39086-681a-4472-946f-5be0964abda4",
+    "source": "career_companion_knowledge.md",
+    "section": "Interacting with the Career Assistant",
+    "topic": "Interacting with the Career Assistant",
+    "text": "Tips for getting the best results:\n- Be specific in your questions (\"What Python libraries should I learn for an NLP internship?\" works better than \"What should I learn?\")\n- Ask follow-up questions — the assistant maintains context within a session\n- If the answer does not fully address your question, rephrase or ask for more detail\n- Use the suggested starter questions if you are unsure where to begin"
+  },
+  {
+    "chunk_id": "97d949b0-d288-4b15-b29c-94db9b07b50c",
+    "source": "career_companion_knowledge.md",
+    "section": "Resume Structure",
+    "topic": "Resume Structure",
+    "text": "A strong resume for tech/internship applications should have these sections in roughly this order:\n\n1. **Header**: Name, email, phone, LinkedIn, GitHub, city\n2. **Professional Summary** (optional but helpful): 2-3 sentences summarizing your background\n3. **Skills**: Technical skills, programming languages, frameworks, tools\n4. **Education**: Degree, institution, graduation year, GPA (if strong)\n5. **Projects**: 2-4 relevant projects with descriptions and technologies used\n6. **Work Experience / Internships**: Any relevant work experience"
+  },
+  {
+    "chunk_id": "21dea3d2-cbac-4f66-9adf-259d9683db32",
+    "source": "career_companion_knowledge.md",
+    "section": "Resume Structure",
+    "topic": "Resume Structure",
+    "text": "scriptions and technologies used\n6. **Work Experience / Internships**: Any relevant work experience\n7. **Certifications**: Professional certifications and online courses\n8. **Achievements** (optional): Awards, hackathon wins, competitive programming rankings"
+  },
+  {
+    "chunk_id": "3ae702f9-ffcc-4234-91e6-d50a56278d77",
+    "source": "career_companion_knowledge.md",
+    "section": "Resume Writing Principles",
+    "topic": "Resume Writing Principles",
+    "text": "**Be Specific and Quantifiable**\n- Instead of \"Improved application performance\", write \"Reduced API response time by 40% by implementing Redis caching\"\n- Instead of \"Worked on ML model\", write \"Built a sentiment analysis model achieving 87% accuracy on a 50,000-sample dataset\"\n- Numbers, percentages, and scales make accomplishments concrete and memorable\n\n**Use Strong Action Verbs**\nBegin bullet points with powerful verbs:\n- Built, Developed, Implemented, Designed, Architected\n- Optimized, Reduced, Improved, Increased, Accelerated\n- Led, Collaborated, Mentored, Presented, Managed"
+  },
+  {
+    "chunk_id": "777b2543-4f64-4f33-9b97-035e5ab7e180",
+    "source": "career_companion_knowledge.md",
+    "section": "Resume Writing Principles",
+    "topic": "Resume Writing Principles",
+    "text": "imized, Reduced, Improved, Increased, Accelerated\n- Led, Collaborated, Mentored, Presented, Managed\n- Analyzed, Researched, Evaluated, Tested, Validated\n- Deployed, Containerized, Automated, Integrated, Migrated\n\n**Write Strong Bullet Points**\nGood bullet point structure: Action verb + What you did + Technologies used + Result/Impact\nExample: \"Developed a real-time stock price prediction dashboard using Python, Streamlit, and LSTM neural networks, reducing manual analysis time by 60%\"\n\n**Tailor to the Job**\n- Read the job description carefully"
+  },
+  {
+    "chunk_id": "b25d7336-5586-463d-ab29-c60f7d523f86",
+    "source": "career_companion_knowledge.md",
+    "section": "Resume Writing Principles",
+    "topic": "Resume Writing Principles",
+    "text": ", reducing manual analysis time by 60%\"\n\n**Tailor to the Job**\n- Read the job description carefully\n- Mirror the exact terminology used (e.g., if they say \"REST APIs\", use \"REST APIs\" not \"web services\")\n- Prioritize the skills and experiences most relevant to that specific role\n- Move the most relevant projects and experiences to the top"
+  },
+  {
+    "chunk_id": "8d501c6b-00b3-4824-91ba-a5793f4561be",
+    "source": "career_companion_knowledge.md",
+    "section": "Projects Section",
+    "topic": "Projects Section",
+    "text": "Projects are crucial for students and fresh graduates who lack work experience.\n\nA strong project entry should include:\n- **Project Name** with a clear, descriptive title\n- **Technologies Used**: List all technologies, frameworks, and tools\n- **Description**: What the project does (1-2 sentences)\n- **Key Contributions**: What you built or implemented specifically\n- **Impact or Result**: Users, accuracy, performance improvement, or deployment status\n- **Links** (if applicable): GitHub repo URL or live demo URL\n\n**How Many Projects?**"
+  },
+  {
+    "chunk_id": "30005b09-a2a7-47a1-80f9-2ac1411d44fb",
+    "source": "career_companion_knowledge.md",
+    "section": "Projects Section",
+    "topic": "Projects Section",
+    "text": "oyment status\n- **Links** (if applicable): GitHub repo URL or live demo URL\n\n**How Many Projects?**\nAim for 2-4 well-described projects rather than 8 barely-described ones. Quality beats quantity. Recruiters spend 6-10 seconds on a first scan.\n\n**What Makes a Strong Project?**\n- Solves a real problem, even if simple\n- Uses industry-relevant technologies\n- Has a working implementation (not just theory)\n- Demonstrates clear technical depth\n- Includes measurable outcomes where possible"
+  },
+  {
+    "chunk_id": "82330cb6-d837-42c4-96cc-5818e3ffd3d2",
+    "source": "career_companion_knowledge.md",
+    "section": "Common Resume Mistakes",
+    "topic": "Common Resume Mistakes",
+    "text": "- **Too long**: Keep your resume to 1 page if you have less than 3 years of experience\n- **Generic objective statement**: Replace with a skills-focused professional summary\n- **Responsibilities instead of achievements**: Focus on what you accomplished, not just what your job duties were\n- **No quantification**: Numbers make accomplishments believable and memorable\n- **Inconsistent formatting**: Use consistent fonts, bullet styles, and date formats\n- **Typos and grammar errors**: Always proofread; errors signal carelessness"
+  },
+  {
+    "chunk_id": "9feae216-e275-4a1d-a7c2-b511acd3d6c9",
+    "source": "career_companion_knowledge.md",
+    "section": "Common Resume Mistakes",
+    "topic": "Common Resume Mistakes",
+    "text": "yles, and date formats\n- **Typos and grammar errors**: Always proofread; errors signal carelessness\n- **Missing technical keywords**: Include the exact technologies from the job description\n- **Irrelevant information**: Remove school clubs and activities unrelated to tech unless they demonstrate leadership\n- **Poor email address**: Use a professional email; avoid nicknames or numbers\n- **No GitHub or portfolio link**: For tech roles, these are essential"
+  },
+  {
+    "chunk_id": "62680cda-712d-4890-a217-6896414df57b",
+    "source": "career_companion_knowledge.md",
+    "section": "What ATS Means",
+    "topic": "What ATS Means",
+    "text": "ATS stands for Applicant Tracking System. These are software platforms used by companies (especially large ones) to manage job applications, screen resumes, and track candidates through the hiring process."
+  },
+  {
+    "chunk_id": "aafa8a56-05d2-4428-8a00-e89606decc06",
+    "source": "career_companion_knowledge.md",
+    "section": "How ATS Systems Generally Work",
+    "topic": "How ATS Systems Generally Work",
+    "text": "When you submit a resume to a company using ATS:\n1. Your resume is parsed and converted to searchable text\n2. The system extracts skills, experience, education, and other fields\n3. Recruiters search the ATS using keywords related to the job\n4. Resumes matching the search criteria appear in the results\n5. Resumes that do not match relevant keywords may not be seen by a human reviewer"
+  },
+  {
+    "chunk_id": "fbbcdef9-f735-477b-8ab8-9fc9ffe1a9cc",
+    "source": "career_companion_knowledge.md",
+    "section": "How ATS Systems Generally Work",
+    "topic": "How ATS Systems Generally Work",
+    "text": "in the results\n5. Resumes that do not match relevant keywords may not be seen by a human reviewer\n\nNote: ATS behavior varies significantly across different platforms (Workday, Greenhouse, Lever, Taleo, etc.). No single ATS scoring standard exists. The goal is to ensure your resume contains the relevant terminology in a parseable format."
+  },
+  {
+    "chunk_id": "07f97e64-33dd-403d-8df2-8eacd7b2d576",
+    "source": "career_companion_knowledge.md",
+    "section": "Keywords and Job Description Matching",
+    "topic": "Keywords and Job Description Matching",
+    "text": "The most important ATS optimization strategy is keyword matching:\n- Read the job description carefully\n- Identify technical skills explicitly mentioned (Python, React, SQL, Docker, etc.)\n- Identify non-technical requirements (communication skills, team collaboration, etc.)\n- Include these exact terms in your resume, naturally integrated into your experience and skills sections\n- Do not stuff keywords artificially — context and natural usage matter"
+  },
+  {
+    "chunk_id": "b34ab83e-0ff6-4cd0-b5df-cb17087d6310",
+    "source": "career_companion_knowledge.md",
+    "section": "ATS-Friendly Formatting",
+    "topic": "ATS-Friendly Formatting",
+    "text": "Use these formatting practices to ensure ATS parses your resume correctly:\n- **Standard fonts**: Arial, Calibri, Garamond, or similar readable fonts\n- **Simple layouts**: Avoid multi-column formats, tables, and text boxes\n- **No headers/footers**: ATS systems often skip content in page headers and footers\n- **No graphics or images**: ATS cannot read text embedded in images\n- **Standard section headings**: \"Work Experience\", \"Education\", \"Skills\" — not creative alternatives\n- **Consistent date formats**: Use \"January 2024 – May 2024\" or \"Jan 2024 – May 2024\""
+  },
+  {
+    "chunk_id": "1885dc91-4c78-465c-8a9d-40f0fc844ec1",
+    "source": "career_companion_knowledge.md",
+    "section": "ATS-Friendly Formatting",
+    "topic": "ATS-Friendly Formatting",
+    "text": "alternatives\n- **Consistent date formats**: Use \"January 2024 – May 2024\" or \"Jan 2024 – May 2024\"\n- **Readable file formats**: PDF is generally safe; DOCX is also widely supported\n- **No special characters**: Avoid using decorative bullets or Unicode symbols"
+  },
+  {
+    "chunk_id": "2e186dd8-6bbe-4fdb-83fa-2780006e8450",
+    "source": "career_companion_knowledge.md",
+    "section": "Why Keyword Stuffing Is Bad",
+    "topic": "Why Keyword Stuffing Is Bad",
+    "text": "Stuffing your resume with keywords disconnected from your actual experience is counterproductive:\n1. Human reviewers who read your resume after ATS screening will notice the inconsistency\n2. Modern ATS systems use semantic analysis that values context, not just keyword count\n3. It damages your credibility with recruiters\n4. It may technically match but lead to rejection in interviews if you cannot back up the claims\n\nInstead, honestly describe your experience using the correct technical terminology."
+  },
+  {
+    "chunk_id": "6ce51a75-9f0f-4111-95e3-01f0f4c80d38",
+    "source": "career_companion_knowledge.md",
+    "section": "How to Tailor a Resume",
+    "topic": "How to Tailor a Resume",
+    "text": "For each application:\n1. Save a base version of your resume\n2. Compare the job description's required skills with your skills section\n3. Add any missing skills you genuinely have\n4. Reorder your skills to put the most relevant ones first\n5. Update your professional summary to mention the role/domain\n6. Move the most relevant project or experience to be prominently featured\n7. Save the tailored version with a clear filename before applying"
+  },
+  {
+    "chunk_id": "7c4ed03a-54ef-44ef-8e2a-df1cdc9cc1c2",
+    "source": "career_companion_knowledge.md",
+    "section": "Finding Internships",
+    "topic": "Finding Internships",
+    "text": "Sources for internship opportunities:\n- **LinkedIn**: Use filters for \"Internship\" positions in your domain\n- **Internshala**: Largest platform for Indian internships (tech, marketing, finance)\n- **Indeed**: Good for hybrid/remote internships\n- **Company career pages**: Top tech companies (Google, Microsoft, Amazon, Flipkart, etc.) post directly\n- **GitHub Jobs / Remote OK**: Good for open-source adjacent roles\n- **College placement cell**: Many on-campus roles come through placement offices\n- **Network**: Professors, alumni connections, and LinkedIn connections often share opportunities"
+  },
+  {
+    "chunk_id": "85c2ae17-5b10-40b1-8f99-df503ff0feb2",
+    "source": "career_companion_knowledge.md",
+    "section": "Choosing the Right Internship",
+    "topic": "Choosing the Right Internship",
+    "text": "Consider these factors:\n- **Domain alignment**: Does the role match your target career path?\n- **Technology stack**: Will you work with technologies you want to learn?\n- **Learning environment**: Is there a mentor or experienced team?\n- **Company reputation**: Will this internship strengthen your resume?\n- **Duration**: Longer internships (8-24 weeks) provide deeper learning\n- **Mode**: Remote vs. in-office based on your preference\n- **Stipend**: Relevant if financial sustainability is a concern"
+  },
+  {
+    "chunk_id": "8835521b-1050-4876-9243-adc83bed54d8",
+    "source": "career_companion_knowledge.md",
+    "section": "Internship Application Strategy",
+    "topic": "Internship Application Strategy",
+    "text": "1. Apply to multiple positions (20+ is not unusual)\n2. Tailor your resume for each role category\n3. Write a personalized cover letter for each application\n4. Research the company before applying (understand their product/business)\n5. Use LinkedIn to connect with employees at target companies before applying\n6. Follow up politely 1 week after applying if no response"
+  },
+  {
+    "chunk_id": "764eeddd-bd0f-4647-ad7d-e8c18c12e90e",
+    "source": "career_companion_knowledge.md",
+    "section": "Building Relevant Projects Before Applying",
+    "topic": "Building Relevant Projects Before Applying",
+    "text": "If you lack directly relevant experience:\n- Build a project in the domain you are targeting\n- Use the technologies mentioned in the internship job description\n- Document the project clearly on GitHub with a README\n- Deploy the project (even a free Vercel/Render/Heroku deployment counts)\n- Write about it on LinkedIn to show activity"
+  },
+  {
+    "chunk_id": "0f3a683d-873d-4445-99d2-15f1db5a99f8",
+    "source": "career_companion_knowledge.md",
+    "section": "Preparing for Technical Rounds",
+    "topic": "Preparing for Technical Rounds",
+    "text": "- Practice Data Structures and Algorithms on LeetCode (Easy/Medium level)\n- Review the specific technologies mentioned in the job description\n- Prepare to walk through your projects in detail\n- Know the time and space complexity of common algorithms\n- Be ready to code in a shared environment (no autocomplete)\n- Practice explaining your thought process while coding"
+  },
+  {
+    "chunk_id": "1e4ae42f-44b5-4965-b91c-ae4332d6b510",
+    "source": "career_companion_knowledge.md",
+    "section": "Technical Skills",
+    "topic": "Technical Skills",
+    "text": "**Programming Fundamentals**\n- Master at least one language deeply before spreading too thin\n- Python is the most versatile choice for AI/ML, data science, automation, and backend\n- JavaScript is essential for web development (frontend and Node.js backend)\n- Java or C++ are strong choices for systems programming and competitive programming\n\n**Core Computer Science Skills**\n- Data Structures: Arrays, linked lists, stacks, queues, trees, graphs, hash maps\n- Algorithms: Sorting, searching, recursion, dynamic programming, graph traversal"
+  },
+  {
+    "chunk_id": "5a6f4e18-faab-43b5-aca1-aa732fb5e5cc",
+    "source": "career_companion_knowledge.md",
+    "section": "Technical Skills",
+    "topic": "Technical Skills",
+    "text": "graphs, hash maps\n- Algorithms: Sorting, searching, recursion, dynamic programming, graph traversal\n- Complexity Analysis: Big-O notation, time and space trade-offs\n- Databases: SQL (relational) and at least one NoSQL database (MongoDB)\n- Git and GitHub: Version control, branching, pull requests, collaboration\n\n**Soft Skills**\nEqually important and often undervalued:\n- **Communication**: Explaining technical concepts clearly in writing and verbally\n- **Problem solving**: Breaking complex problems into manageable components"
+  },
+  {
+    "chunk_id": "c68991f0-bd86-452f-b36c-529588723176",
+    "source": "career_companion_knowledge.md",
+    "section": "Technical Skills",
+    "topic": "Technical Skills",
+    "text": "in writing and verbally\n- **Problem solving**: Breaking complex problems into manageable components\n- **Collaboration**: Working effectively in teams, using tools like Jira or Trello\n- **Time management**: Delivering on deadlines, estimating effort accurately\n- **Continuous learning**: Staying current with rapidly evolving technologies"
+  },
+  {
+    "chunk_id": "c06ba956-13b0-4056-bcfe-367e3981cd6a",
+    "source": "career_companion_knowledge.md",
+    "section": "Skill Prioritization",
+    "topic": "Skill Prioritization",
+    "text": "Instead of learning everything at once:\n1. Identify your target domain (AI/ML, web dev, data science, etc.)\n2. Research 5 recent job descriptions in that domain\n3. List the skills mentioned most frequently — these are your priorities\n4. Master these core skills before branching out\n5. Build at least one project using each major skill you claim"
+  },
+  {
+    "chunk_id": "88ebde2a-560a-4c23-825c-b969fff39241",
+    "source": "career_companion_knowledge.md",
+    "section": "Portfolio Development",
+    "topic": "Portfolio Development",
+    "text": "A strong portfolio includes:\n- **GitHub Profile**: Active profile with projects, clean code, good READMEs\n- **LinkedIn Profile**: Complete profile with skills, education, projects, and a professional photo\n- **Projects**: 2-4 complete, deployable projects relevant to your target domain\n- **Certifications**: Relevant certifications from Coursera, edX, Google, AWS, etc.\n- **Contributions**: Open-source contributions demonstrate real-world collaboration skills"
+  },
+  {
+    "chunk_id": "b101a7fd-996c-40b7-bce0-7a7c07c8f12f",
+    "source": "career_companion_knowledge.md",
+    "section": "Learning Resources",
+    "topic": "Learning Resources",
+    "text": "**Free Platforms**\n- Coursera (audit for free): Google, Stanford, deeplearning.ai courses\n- edX: MIT, Harvard courses\n- fast.ai: Practical deep learning\n- Kaggle: Data science and ML competitions and courses\n- CS50 (Harvard): Excellent intro to programming fundamentals\n- The Odin Project: Full-stack web development\n- freeCodeCamp: Web development curriculum\n\n**Practice Platforms**\n- LeetCode: Coding interview preparation (DSA)\n- HackerRank: Multi-language competitive programming\n- Kaggle: ML datasets and competitions\n- GitHub: Build and share real projects"
+  },
+  {
+    "chunk_id": "fbbf237c-cac2-43b1-a1f0-dc325e3c2043",
+    "source": "career_companion_knowledge.md",
+    "section": "Overview",
+    "topic": "Overview",
+    "text": "An AI/ML career path includes several layers of skills. Build them progressively; do not try to master everything simultaneously."
+  },
+  {
+    "chunk_id": "7aa630cc-639b-47aa-85be-3577c0c8428c",
+    "source": "career_companion_knowledge.md",
+    "section": "Foundation Layer (Start Here)",
+    "topic": "Foundation Layer (Start Here)",
+    "text": "**Python Programming**\nPython is the standard language for AI/ML. Master:\n- Data types, functions, OOP basics\n- File I/O and error handling\n- Virtual environments and package management (pip, conda)\n\n**Mathematics and Statistics**\n- Linear algebra: Vectors, matrices, matrix multiplication, eigenvalues\n- Calculus: Derivatives, gradient descent intuition\n- Probability and statistics: Distributions, Bayes theorem, hypothesis testing\n- You do not need PhD-level math to start building models, but the fundamentals help\n\n**Data Manipulation**\n- **NumPy**: Numerical computing with arrays"
+  },
+  {
+    "chunk_id": "adca7c44-161f-4fd0-bff5-1e2fb0d2b54e",
+    "source": "career_companion_knowledge.md",
+    "section": "Foundation Layer (Start Here)",
+    "topic": "Foundation Layer (Start Here)",
+    "text": "dels, but the fundamentals help\n\n**Data Manipulation**\n- **NumPy**: Numerical computing with arrays\n- **Pandas**: Data cleaning, transformation, analysis\n- **Matplotlib / Seaborn**: Data visualization\n- **SQL**: Querying structured databases (essential for any data role)"
+  },
+  {
+    "chunk_id": "4cc3a5ca-fe16-4790-a673-11680b879adb",
+    "source": "career_companion_knowledge.md",
+    "section": "Intermediate Layer",
+    "topic": "Intermediate Layer",
+    "text": "**Machine Learning Fundamentals**\n- Supervised learning: Linear regression, logistic regression, decision trees, random forests, SVMs\n- Unsupervised learning: K-means clustering, PCA\n- Model evaluation: Train/test split, cross-validation, bias-variance tradeoff\n- Recommended: Scikit-learn library for hands-on practice\n- Recommended course: Andrew Ng's Machine Learning (Coursera)\n\n**Deep Learning**\n- Neural network fundamentals: Perceptrons, backpropagation, activation functions\n- Frameworks: TensorFlow/Keras or PyTorch (both are valuable)"
+  },
+  {
+    "chunk_id": "7aa14d86-c256-41ae-b65e-f80e599c2af2",
+    "source": "career_companion_knowledge.md",
+    "section": "Intermediate Layer",
+    "topic": "Intermediate Layer",
+    "text": "backpropagation, activation functions\n- Frameworks: TensorFlow/Keras or PyTorch (both are valuable)\n- Common architectures: CNNs (Computer Vision), RNNs/LSTMs (sequences), Transformers (NLP)\n- Recommended: fast.ai Practical Deep Learning course"
+  },
+  {
+    "chunk_id": "56d3e4cd-5f7a-4ab5-8118-b2702c6febd5",
+    "source": "career_companion_knowledge.md",
+    "section": "Specialized Domains",
+    "topic": "Specialized Domains",
+    "text": "**Natural Language Processing (NLP)**\n- Text preprocessing: Tokenization, stop words, stemming, lemmatization\n- Word embeddings: Word2Vec, GloVe, FastText\n- Transformer models: BERT, RoBERTa, GPT architecture\n- Libraries: Hugging Face Transformers, spaCy, NLTK\n\n**Computer Vision (CV)**\n- Image processing basics\n- CNNs: LeNet, VGG, ResNet, EfficientNet\n- Tasks: Image classification, object detection (YOLO), segmentation\n- Libraries: OpenCV, torchvision, albumentations\n\n**Generative AI and LLMs**\n- Understanding Transformer architecture\n- Prompt engineering techniques"
+  },
+  {
+    "chunk_id": "7842bb22-8834-4720-8a7a-e88ab7075a0b",
+    "source": "career_companion_knowledge.md",
+    "section": "Specialized Domains",
+    "topic": "Specialized Domains",
+    "text": "**Generative AI and LLMs**\n- Understanding Transformer architecture\n- Prompt engineering techniques\n- Fine-tuning and transfer learning\n- RAG (Retrieval-Augmented Generation): Using vector databases with LLMs\n- Popular models: GPT-4, LLaMA, Mistral, Claude, Gemini"
+  },
+  {
+    "chunk_id": "5a6d37fb-68c4-401f-b87f-40939c365eaf",
+    "source": "career_companion_knowledge.md",
+    "section": "Advanced / MLOps",
+    "topic": "Advanced / MLOps",
+    "text": "**Model Deployment**\n- REST APIs for model serving (FastAPI, Flask)\n- Docker containerization\n- Cloud deployment (AWS SageMaker, Google Vertex AI, Azure ML)\n- Monitoring model performance in production\n\n**MLOps Tools**\n- MLflow for experiment tracking\n- DVC for data versioning\n- Airflow or Prefect for workflow orchestration"
+  },
+  {
+    "chunk_id": "22332dfc-2b5f-4af3-8be3-3a7153de3e66",
+    "source": "career_companion_knowledge.md",
+    "section": "Suggested Learning Sequence for AI/ML Internship",
+    "topic": "Suggested Learning Sequence for AI/ML Internship",
+    "text": "1. Python fundamentals (2-4 weeks)\n2. NumPy and Pandas (2-3 weeks)\n3. Statistics and math basics (2-3 weeks)\n4. Scikit-learn ML basics (3-4 weeks)\n5. Build an ML project (2-3 weeks)\n6. Deep Learning basics with PyTorch or TensorFlow (4-6 weeks)\n7. Specialize in NLP or CV based on your interest (4-8 weeks)\n8. Build a deployed project (2-4 weeks)\n\nTotal rough timeline: 5-8 months of dedicated learning alongside college coursework."
+  },
+  {
+    "chunk_id": "6d8edb48-d35c-4ef5-be8b-0e6da03c8ece",
+    "source": "career_companion_knowledge.md",
+    "section": "Programming Fundamentals",
+    "topic": "Programming Fundamentals",
+    "text": "Before specializing, master:\n- At least one language (Python, Java, or JavaScript recommended)\n- Object-oriented programming principles\n- Clean code practices (meaningful names, small functions, DRY principle)\n- Version control with Git and GitHub (branching, merging, pull requests)"
+  },
+  {
+    "chunk_id": "b8a3988e-a2a0-4c4a-be18-daeecc1b12db",
+    "source": "career_companion_knowledge.md",
+    "section": "Data Structures and Algorithms (DSA)",
+    "topic": "Data Structures and Algorithms (DSA)",
+    "text": "Essential for technical interviews at most companies:\n- Arrays and strings\n- Linked lists (singly, doubly, circular)\n- Stacks and queues\n- Trees (binary trees, BSTs, tries)\n- Graphs (BFS, DFS, shortest path)\n- Hash maps and sets\n- Sorting algorithms and their complexities\n- Dynamic programming fundamentals\n\nPractice on LeetCode: Start with Easy problems, progress to Medium."
+  },
+  {
+    "chunk_id": "a037cb59-0679-4cab-8ade-cb2c90d3a656",
+    "source": "career_companion_knowledge.md",
+    "section": "Backend Development",
+    "topic": "Backend Development",
+    "text": "Core backend skills:\n- REST API design principles\n- HTTP methods (GET, POST, PUT, DELETE)\n- Authentication (JWT, OAuth basics)\n- Databases: SQL (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis)\n- ORM frameworks (SQLAlchemy for Python, Hibernate for Java, Sequelize for Node)\n- Frameworks: FastAPI or Django (Python), Spring Boot (Java), Express.js (Node.js)\n- Error handling, input validation, and logging\n- Testing: Unit tests, integration tests"
+  },
+  {
+    "chunk_id": "7682514b-021d-4bcf-8618-26c14c9cf14d",
+    "source": "career_companion_knowledge.md",
+    "section": "Frontend Development",
+    "topic": "Frontend Development",
+    "text": "Core frontend skills:\n- HTML semantics and accessibility\n- CSS: Flexbox, Grid, responsive design, animations\n- JavaScript: ES6+, DOM manipulation, async/await, fetch API\n- React or Vue.js (React is the most in-demand)\n- State management (React useState, Context API, Redux basics)\n- TypeScript: Static typing improves code reliability at scale"
+  },
+  {
+    "chunk_id": "8c223fee-6147-47aa-93d9-4bab22dd5382",
+    "source": "career_companion_knowledge.md",
+    "section": "Full-Stack Development",
+    "topic": "Full-Stack Development",
+    "text": "After learning backend and frontend basics:\n- Connect frontend to backend via REST APIs\n- Handle authentication flow end-to-end\n- Deploy a full-stack app (Vercel for frontend, Render or Railway for backend)\n- Use Docker to containerize your application\n- Learn basics of CI/CD (GitHub Actions)"
+  },
+  {
+    "chunk_id": "f7af72a4-60d0-4b29-ab89-39fc82c4860e",
+    "source": "career_companion_knowledge.md",
+    "section": "Databases",
+    "topic": "Databases",
+    "text": "- **SQL**: PostgreSQL or MySQL — joins, indexes, transactions, stored procedures\n- **NoSQL**: MongoDB for document storage, Redis for caching\n- **Database design**: Normalization, foreign keys, migrations\n- **ORM**: Using an ORM vs raw SQL; understanding the trade-offs"
+  },
+  {
+    "chunk_id": "39ac51a2-ce46-4645-909f-4c83dd716114",
+    "source": "career_companion_knowledge.md",
+    "section": "Testing",
+    "topic": "Testing",
+    "text": "- Unit testing: Testing individual functions/components in isolation\n- Integration testing: Testing how components work together\n- Tools: pytest (Python), Jest (JavaScript), Postman (API testing)"
+  },
+  {
+    "chunk_id": "c6714461-e7b4-4d48-8b93-25ba71860163",
+    "source": "career_companion_knowledge.md",
+    "section": "Deployment and DevOps Basics",
+    "topic": "Deployment and DevOps Basics",
+    "text": "- Git workflows (feature branches, pull requests, code reviews)\n- Docker: Containers, Dockerfiles, docker-compose\n- Cloud basics: AWS (EC2, S3, RDS), Heroku, Render, Vercel\n- CI/CD basics: Automated testing and deployment on push"
+  },
+  {
+    "chunk_id": "8f7e02e7-ff43-423b-a94f-c1ddc2740826",
+    "source": "career_companion_knowledge.md",
+    "section": "Types of Interviews",
+    "topic": "Types of Interviews",
+    "text": "Most tech internship interview processes include:\n\n1. **Resume Screening**: Recruiter reviews your resume\n2. **OA (Online Assessment)**: Timed coding test (2-3 DSA problems, 60-90 minutes)\n3. **Technical Interview**: 1-2 rounds with engineers; coding + conceptual questions\n4. **HR / Behavioral Interview**: Background, motivation, culture fit questions"
+  },
+  {
+    "chunk_id": "00293143-30cd-46e2-a9b9-ace2a3f5fdf8",
+    "source": "career_companion_knowledge.md",
+    "section": "Technical Interview Preparation",
+    "topic": "Technical Interview Preparation",
+    "text": "**DSA Problems**\n- Practice consistently: 1-2 problems per day for 2-3 months\n- Focus on patterns: Two pointers, sliding window, BFS/DFS, backtracking, DP\n- Learn to code without IDE help or autocomplete\n- Practice on LeetCode's \"Company Tag\" filter to see company-specific questions\n\n**System Design (for senior internships)**\n- Understand basic concepts: Load balancing, caching, databases, microservices\n- Not usually required for fresher internships but knowledge is a differentiator\n\n**Project Deep Dive**\nBe ready to explain every project on your resume in depth:\n- What problem did you solve?"
+  },
+  {
+    "chunk_id": "33fb6f1b-9152-4729-a4da-9231415c1dc0",
+    "source": "career_companion_knowledge.md",
+    "section": "Technical Interview Preparation",
+    "topic": "Technical Interview Preparation",
+    "text": "eep Dive**\nBe ready to explain every project on your resume in depth:\n- What problem did you solve?\n- What technologies did you use and why?\n- What were the technical challenges?\n- What would you do differently?\n- Can you walk me through the code architecture?\n\n**CS Fundamentals**\n- Operating systems: Processes, threads, memory management\n- Computer networks: HTTP, TCP/IP, DNS basics\n- DBMS: Transactions, ACID properties, indexing, normalization\n- Object-Oriented Design: SOLID principles, common design patterns"
+  },
+  {
+    "chunk_id": "69f13bda-63f5-429d-b551-6a99b48c94f2",
+    "source": "career_companion_knowledge.md",
+    "section": "Behavioral Interview Preparation",
+    "topic": "Behavioral Interview Preparation",
+    "text": "**The STAR Method**\n\nUse the STAR method for all behavioral questions:\n- **Situation**: Set the context. Where were you? What was the project?\n- **Task**: What was your specific responsibility?\n- **Action**: What did you personally do to address it?\n- **Result**: What was the measurable outcome?\n\n**Common Behavioral Questions**\n- Tell me about yourself (keep it to 90 seconds, career-focused)\n- Why do you want to intern at [company]?\n- Tell me about a challenging project you worked on\n- Describe a time you worked in a team and faced a conflict\n- What is your greatest technical weakness?"
+  },
+  {
+    "chunk_id": "c92ed7a9-128b-4483-9e00-5c53c188b191",
+    "source": "career_companion_knowledge.md",
+    "section": "Behavioral Interview Preparation",
+    "topic": "Behavioral Interview Preparation",
+    "text": "scribe a time you worked in a team and faced a conflict\n- What is your greatest technical weakness?\n- Where do you see yourself in 5 years?\n- Why did you choose [your field/domain]?\n\n**Preparation Strategy**\n- Prepare 5-6 STAR stories from your projects and academic experience\n- Each story should demonstrate different qualities: leadership, problem-solving, collaboration, persistence, technical depth\n- Practice telling each story aloud until it flows naturally (2-3 minutes each)"
+  },
+  {
+    "chunk_id": "15c3f1e1-2e6f-40c5-80f9-afb36de2a90e",
+    "source": "career_companion_knowledge.md",
+    "section": "Communication Tips",
+    "topic": "Communication Tips",
+    "text": "- Think before speaking; a brief pause to organize thoughts is fine\n- If you do not understand a question, ask for clarification\n- Explain your thought process as you solve problems — interviewers value reasoning\n- Be honest about what you do not know; explain what you do know and how you would find out the rest\n- Show enthusiasm for the company and role; research them beforehand"
+  },
+  {
+    "chunk_id": "63ba5596-6b9c-4774-94fa-b7d3abc79406",
+    "source": "career_companion_knowledge.md",
+    "section": "Common Interview Mistakes",
+    "topic": "Common Interview Mistakes",
+    "text": "- Not explaining your thought process while coding\n- Jumping to code without clarifying the problem\n- Giving up on a problem instead of thinking aloud\n- Not asking any questions at the end of the interview\n- Memorized answers that sound scripted — be authentic\n- Lying or exaggerating about skills or experience\n- Not knowing your own resume — every line should be something you can discuss in depth"
+  },
+  {
+    "chunk_id": "4b986b5c-7217-4ed8-8ef1-d45fef5de41e",
+    "source": "career_companion_knowledge.md",
+    "section": "Purpose of a Cover Letter",
+    "topic": "Purpose of a Cover Letter",
+    "text": "A cover letter is your opportunity to:\n- Tell your professional story in a way a resume cannot\n- Demonstrate genuine interest in the specific company and role\n- Connect your specific background to the specific role's requirements\n- Show your communication skills and personality\n- Stand out from applicants who only submit a resume"
+  },
+  {
+    "chunk_id": "4f619c34-4baa-40ed-a7a6-a7af4977c007",
+    "source": "career_companion_knowledge.md",
+    "section": "Cover Letter Structure",
+    "topic": "Cover Letter Structure",
+    "text": "**Header**\nYour name, email, phone, date, company name, hiring manager's name (if known).\n\n**Opening Paragraph**\n- State the role you are applying for and where you found it\n- Open with a specific hook that shows you have researched the company\n- Express genuine enthusiasm without generic phrases like \"I am excited to apply\"\n\n**Body (1-2 paragraphs)**\n- Connect 2-3 specific experiences or projects to the role's requirements\n- Use specific examples and numbers\n- Show how your background uniquely positions you for this role"
+  },
+  {
+    "chunk_id": "ed0af64f-e882-4873-adc5-f97854220c68",
+    "source": "career_companion_knowledge.md",
+    "section": "Cover Letter Structure",
+    "topic": "Cover Letter Structure",
+    "text": "- Use specific examples and numbers\n- Show how your background uniquely positions you for this role\n- Reference specific company projects, products, or values where authentic\n\n**Closing Paragraph**\n- Reiterate your enthusiasm and fit\n- State your call to action (looking forward to discussing further)\n- Thank the reader for their time\n\n**Signature**\nProfessional closing (Sincerely, Best regards) + Your name."
+  },
+  {
+    "chunk_id": "13b0c609-bdc3-48c2-b892-f13ab8463e42",
+    "source": "career_companion_knowledge.md",
+    "section": "Common Cover Letter Mistakes",
+    "topic": "Common Cover Letter Mistakes",
+    "text": "- Generic template without personalization (\"I am applying for any suitable position\")\n- Repeating the resume verbatim — a cover letter should add, not repeat\n- Focusing on what the company will do for you rather than what you bring\n- Excessive length (more than one page)\n- Spelling the company name incorrectly\n- Using the wrong company's name (copy-paste errors)\n- Clichés: \"I am a quick learner\", \"team player\", \"hardworking individual\"\n- No specific examples; only vague claims about abilities"
+  },
+  {
+    "chunk_id": "f1fb7a44-b121-4dcb-85b4-acae6ae31df0",
+    "source": "career_companion_knowledge.md",
+    "section": "Customization",
+    "topic": "Customization",
+    "text": "For each application:\n- Research the company: their products, recent news, culture, values\n- Identify which of your experiences is most relevant to this specific role\n- Reference something specific about the company or role that genuinely interests you\n- Adjust tone: startups often prefer a more direct, informal tone; large corporations may prefer formal"
+  },
+  {
+    "chunk_id": "a9bbcbe1-2deb-48f3-8e22-0d6925cfd7ae",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "**Q: What is Career Companion?**\nA: Career Companion is an AI-powered career platform for students and early-career professionals. It helps you upload and parse your resume, find relevant internships using semantic AI matching, generate personalized cover letters, and get career guidance through the Career Assistant chatbot.\n\n**Q: How do I upload my resume?**\nA: Log in and navigate to \"Resume Analysis\" in the sidebar. Click the upload area and select your PDF or DOCX file (max 5MB). The system will automatically parse it.\n\n**Q: What happens after uploading my resume?**"
+  },
+  {
+    "chunk_id": "ef9b0ad5-a62b-40e0-bf80-1d90a1239daf",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "(max 5MB). The system will automatically parse it.\n\n**Q: What happens after uploading my resume?**\nA: The system parses your resume using AI and extracts structured information: skills, education, work experience, projects, certifications, and contact information. You can view this parsed data on the Resume Analysis page. This data is then used for internship matching, cover letter generation, and Career Assistant personalization.\n\n**Q: How are internships recommended?**"
+  },
+  {
+    "chunk_id": "98ba7e02-00a8-4249-a9e4-7fcab35023c2",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "r letter generation, and Career Assistant personalization.\n\n**Q: How are internships recommended?**\nA: The system uses a two-stage AI pipeline. First, it converts your resume into a semantic embedding using sentence-transformers and performs cosine similarity search against all internship embeddings using FAISS. Then, it performs skill analysis to adjust scores based on skill coverage. The final ranked list shows your best matches.\n\n**Q: How do I generate a cover letter?**"
+  },
+  {
+    "chunk_id": "d4c56681-b763-4a87-83a1-9219e2506e9d",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "coverage. The final ranked list shows your best matches.\n\n**Q: How do I generate a cover letter?**\nA: Go to the Cover Letters section, select your resume and an internship, and click Generate. The AI will create a personalized cover letter based on your resume data and the internship details. Review and customize it before using it.\n\n**Q: What is Career Assistant?**"
+  },
+  {
+    "chunk_id": "0cfbafff-4f7a-4e27-a07a-012890b45164",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "the internship details. Review and customize it before using it.\n\n**Q: What is Career Assistant?**\nA: Career Assistant is the RAG-powered AI chatbot in Career Companion. It retrieves relevant information from the career knowledge base and uses an LLM to answer your questions about career development, resume building, interview preparation, and how to use Career Companion.\n\n**Q: What can I ask the Career Assistant?**"
+  },
+  {
+    "chunk_id": "1e81685b-4ae3-44c5-b075-4078a5f6e811",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "nterview preparation, and how to use Career Companion.\n\n**Q: What can I ask the Career Assistant?**\nA: You can ask about: how to use Career Companion, how to improve your resume, what skills to learn for specific domains, how to prepare for interviews, how internship matching works, cover letter writing tips, career path advice, and general career development questions.\n\n**Q: How does the Career Assistant work?**"
+  },
+  {
+    "chunk_id": "6c32205a-0015-4039-9fed-9d9a5739a9ba",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "path advice, and general career development questions.\n\n**Q: How does the Career Assistant work?**\nA: When you ask a question, the system embeds it using sentence-transformers, searches the knowledge base using FAISS similarity search, retrieves the top relevant text chunks, and combines them with your profile context and conversation history into a prompt sent to the LLM. The response is grounded in the retrieved knowledge.\n\n**Q: Can the Career Assistant access my resume?**"
+  },
+  {
+    "chunk_id": "872fb058-7ced-41d3-8cb1-98cfe7c455ce",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "response is grounded in the retrieved knowledge.\n\n**Q: Can the Career Assistant access my resume?**\nA: Yes, when you are authenticated, the Career Assistant can access your most recent resume's parsed data to personalize advice. For example, it can see your listed skills when answering questions about what to learn next.\n\n**Q: Can the Career Assistant give personalized career advice?**"
+  },
+  {
+    "chunk_id": "1fc34092-3b28-458d-9d29-f4251319550e",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "estions about what to learn next.\n\n**Q: Can the Career Assistant give personalized career advice?**\nA: Yes, within limits. When you are logged in, the assistant uses your profile and resume data to personalize responses. It can comment on your listed skills, education level, and career interests when relevant. However, it cannot access the internet or real-time job market data.\n\n**Q: What should I do after uploading my resume?**"
+  },
+  {
+    "chunk_id": "119c0dfd-8050-4408-b387-996fbfd9c79b",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "cess the internet or real-time job market data.\n\n**Q: What should I do after uploading my resume?**\nA: After uploading: (1) Review the parsed data for accuracy, (2) Go to Internships and request recommendations, (3) Review your top matches and understand the skill gaps, (4) Generate a cover letter for your best match, (5) Use Career Assistant to plan your skill development.\n\n**Q: Can I upload multiple resumes?**\nA: Yes, you can upload multiple resumes. Each is stored and parsed separately. You select which resume to use when requesting internship recommendations or generating cover letters."
+  },
+  {
+    "chunk_id": "176ba09b-a57e-4ec5-b696-6ed4fec08d70",
+    "source": "career_companion_knowledge.md",
+    "section": "Platform FAQs",
+    "topic": "Platform FAQs",
+    "text": "select which resume to use when requesting internship recommendations or generating cover letters.\n\n**Q: Is my data private?**\nA: Yes. Your resume data, profile information, and conversations are private. Only you can access your own data through authenticated API calls."
+  },
+  {
+    "chunk_id": "4b3216d8-92fa-4365-9abb-f51d799ecf53",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "**Q: How should I improve my resume?**\nA: Key improvements: (1) Quantify all achievements with numbers and percentages, (2) Use strong action verbs at the start of every bullet point, (3) Add relevant technical skills and match the job description's keywords, (4) Describe projects clearly with technologies, your role, and the outcome, (5) Keep it to 1 page, (6) Proofread for typos and formatting inconsistencies.\n\n**Q: How do I make my resume ATS-friendly?**"
+  },
+  {
+    "chunk_id": "290cf9c5-d67c-46bb-a0fa-502eb116b445",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": ") Proofread for typos and formatting inconsistencies.\n\n**Q: How do I make my resume ATS-friendly?**\nA: Use standard fonts and simple layouts without tables or multi-column formats. Use standard section headings. Include the exact technical keywords from job descriptions in context. Avoid putting text in headers, footers, or images. Save as PDF or DOCX.\n\n**Q: How do I choose which skills to learn?**"
+  },
+  {
+    "chunk_id": "78ed9e92-f909-4b06-a899-7fef055c84ff",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "in headers, footers, or images. Save as PDF or DOCX.\n\n**Q: How do I choose which skills to learn?**\nA: (1) Identify your target domain and role, (2) Collect 5-10 recent job descriptions for that role, (3) List the skills mentioned most frequently, (4) Prioritize the top 3-5 skills you lack, (5) Find a structured course or project to learn each one.\n\n**Q: How do I prepare for internships?**"
+  },
+  {
+    "chunk_id": "19729561-80c0-4843-8299-6ac8bd55bfdc",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "5) Find a structured course or project to learn each one.\n\n**Q: How do I prepare for internships?**\nA: Build at least 2-3 relevant projects. Practice DSA on LeetCode. Learn the core technologies mentioned in internship descriptions. Prepare your STAR behavioral stories. Research target companies. Prepare to walk through all your projects in detail.\n\n**Q: How many projects should I have?**\nA: Aim for 2-4 complete, well-documented projects rather than many incomplete ones. Each project should be something you can explain in detail and demonstrate the relevant technologies."
+  },
+  {
+    "chunk_id": "d1a21fcf-c13c-4d2b-9f6f-5edb3c517f16",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "h project should be something you can explain in detail and demonstrate the relevant technologies.\n\n**Q: How should I describe projects on my resume?**\nA: Format: \"Developed [what it is] using [technologies] that [achieved/enabled something], resulting in [measurable outcome].\" Include a GitHub link if the code is public. Mention deployment if the project is live.\n\n**Q: How do I prepare for interviews?**"
+  },
+  {
+    "chunk_id": "63121f54-41c4-49e6-a085-0f0fb9b1e622",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "code is public. Mention deployment if the project is live.\n\n**Q: How do I prepare for interviews?**\nA: (1) Practice DSA daily on LeetCode (Easy/Medium), (2) Review all projects deeply — expect detailed questions, (3) Prepare STAR stories for behavioral questions, (4) Study the company before each interview, (5) Practice explaining your thought process out loud while coding.\n\n**Q: What should I learn for an AI/ML internship?**"
+  },
+  {
+    "chunk_id": "b51411e0-2aa9-4e09-b927-ddfa6ebda70b",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "ng your thought process out loud while coding.\n\n**Q: What should I learn for an AI/ML internship?**\nA: Priority order: Python → NumPy and Pandas → Statistics basics → Scikit-learn ML → PyTorch or TensorFlow → Build and deploy an ML project → Specialize in NLP or CV based on the role. Also brush up on SQL and basic data visualization.\n\n**Q: How do I prepare for a software engineering internship?**"
+  },
+  {
+    "chunk_id": "6640b6d7-7bcb-4484-9338-23fdbf814d09",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "n SQL and basic data visualization.\n\n**Q: How do I prepare for a software engineering internship?**\nA: Focus on: (1) DSA practice (LeetCode Easy/Medium), (2) Pick one backend framework and build a full project with a database, (3) Learn Git workflows thoroughly, (4) Know at least one language deeply (Python or Java), (5) Understand REST APIs and basic HTTP, (6) Prepare STAR behavioral stories.\n\n**Q: How do I write good resume bullet points?**"
+  },
+  {
+    "chunk_id": "4db23325-015c-45ea-8d09-c6b6d3c45a25",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "basic HTTP, (6) Prepare STAR behavioral stories.\n\n**Q: How do I write good resume bullet points?**\nA: Structure: [Action verb] + [what you did] + [technology used] + [result/impact]. Example: \"Implemented a recommendation engine using collaborative filtering (Python, Scikit-learn) that improved user engagement by 22%.\"\n\n**Q: How do I tailor my resume to a specific job?**"
+  },
+  {
+    "chunk_id": "6ffd6cad-f3bd-4303-aa29-85b33bb38041",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "-learn) that improved user engagement by 22%.\"\n\n**Q: How do I tailor my resume to a specific job?**\nA: (1) Identify the 10 most relevant skills/requirements in the job description, (2) Ensure those exact terms appear in your resume where honest, (3) Move the most relevant project or experience to appear first, (4) Update your professional summary to mention the specific role or domain, (5) Save the tailored version with a specific filename.\n\n**Q: What is the difference between skills and projects?**"
+  },
+  {
+    "chunk_id": "8c7cf5e0-4686-492e-8fd4-f5aae5c59e41",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "lored version with a specific filename.\n\n**Q: What is the difference between skills and projects?**\nA: Skills are technologies and competencies you claim proficiency in. Projects are implementations that prove you can use those skills. Skills without projects are difficult to verify; projects are evidence of skills. Both are important — skills get you past ATS, projects convince human reviewers.\n\n**Q: What should I do if I do not have internship experience?**"
+  },
+  {
+    "chunk_id": "fa926ded-2480-4716-9cf3-5b9301c07501",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "projects convince human reviewers.\n\n**Q: What should I do if I do not have internship experience?**\nA: Focus on projects: (1) Build 2-4 projects that demonstrate domain-relevant skills, (2) Contribute to open-source projects on GitHub, (3) Take relevant online certifications, (4) Participate in hackathons, (5) Create technical content (blog posts, tutorials) that demonstrates expertise. Projects can compensate significantly for lack of internship experience at the fresher level.\n\n**Q: How can I improve my technical profile?**"
+  },
+  {
+    "chunk_id": "a61f0aec-79b3-4bc2-aa73-2bedbd79e62e",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "lack of internship experience at the fresher level.\n\n**Q: How can I improve my technical profile?**\nA: (1) Build projects that solve real problems in your target domain, (2) Contribute to open-source repositories, (3) Earn certifications from recognized providers (Google, AWS, Coursera), (4) Write about what you build on LinkedIn or a blog, (5) Engage in competitive programming on LeetCode or HackerRank, (6) Attend tech meetups or hackathons.\n\n**Q: What is the difference between technical and behavioral interviews?**"
+  },
+  {
+    "chunk_id": "8e89599e-4f6f-4b12-8398-343d7243c785",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "meetups or hackathons.\n\n**Q: What is the difference between technical and behavioral interviews?**\nA: Technical interviews assess coding ability, problem-solving, and domain knowledge. Behavioral interviews assess soft skills, cultural fit, teamwork, and how you handle challenges. Most companies conduct both. Prepare for each type separately.\n\n**Q: How long does it take to get an internship?**"
+  },
+  {
+    "chunk_id": "ade62771-b956-4086-9b64-aa5e10d08efb",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "conduct both. Prepare for each type separately.\n\n**Q: How long does it take to get an internship?**\nA: There is no universal timeline. It depends on your skills, applications sent, timing, and the market. Typically: 1-3 months of active job searching. Start applying 3-4 months before your target start date to account for long hiring processes.\n\n**Q: What makes a good GitHub profile?**"
+  },
+  {
+    "chunk_id": "d12a135a-d20c-4d8b-bb39-19b7b3edfa74",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "r target start date to account for long hiring processes.\n\n**Q: What makes a good GitHub profile?**\nA: (1) Pinned repositories for your best projects, (2) Clear, descriptive READMEs with project description, setup instructions, screenshots, and live demo links, (3) Organized, readable code with meaningful commit messages, (4) Consistent activity (shows ongoing learning), (5) Professional username and profile photo, (6) Bio mentioning your domain and target role.\n\n**Q: How important is GPA?**"
+  },
+  {
+    "chunk_id": "d0fd044c-10e6-48d1-9cb0-d5114d10b781",
+    "source": "career_companion_knowledge.md",
+    "section": "Career FAQs",
+    "topic": "Career FAQs",
+    "text": "me and profile photo, (6) Bio mentioning your domain and target role.\n\n**Q: How important is GPA?**\nA: Many tech companies have GPA cutoffs (typically 6.0/10 or 3.0/4.0 for screening). Strong GPA opens doors. However, for internships especially, strong projects and skills often matter more than GPA once you clear the screening threshold. If your GPA is low, compensate with an exceptionally strong projects section."
+  },
+  {
+    "chunk_id": "0e0aaee6-98cf-40c3-a71a-b8f851b63055",
+    "source": "career_companion_knowledge.md",
+    "section": "Current Limitations",
+    "topic": "Current Limitations",
+    "text": "- **No internet access**: The Career Assistant cannot browse the web or access real-time information\n- **No real-time job data**: Internship listings in the database are periodically updated, not live\n- **No email sending**: The platform does not send career alerts or email notifications\n- **No resume improvement AI**: The platform parses resumes but does not automatically rewrite them\n- **Session-based chat**: Career Assistant conversation history is not persisted between browser sessions in the current version"
+  },
+  {
+    "chunk_id": "8876cb78-c836-43c1-9cb4-d8f2115f17cb",
+    "source": "career_companion_knowledge.md",
+    "section": "Current Limitations",
+    "topic": "Current Limitations",
+    "text": "eer Assistant conversation history is not persisted between browser sessions in the current version\n- **File types**: Only PDF and DOCX are supported; PNG, JPG image resumes are not supported\n- **Knowledge cutoff**: The knowledge base is a static document. Information about very recent technologies or trends should be verified from current sources."
+  },
+  {
+    "chunk_id": "b49e2f8c-cdf5-4ce7-b304-6f9467ee8965",
+    "source": "career_companion_knowledge.md",
+    "section": "Disclaimer",
+    "topic": "Disclaimer",
+    "text": "Career Companion provides AI-generated recommendations and guidance for educational and informational purposes. It does not guarantee internship placements, job offers, salary outcomes, or admission results. All advice should be used as a starting point and supplemented with research from official company websites, updated learning resources, and guidance from human career advisors."
+  }
+]

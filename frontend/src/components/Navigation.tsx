@@ -38,15 +38,63 @@ export default function Navigation({ isDark, onThemeToggle }: NavigationProps) {
           <Link
             to="/"
             style={{
-              fontFamily: 'var(--font-serif)',
-              fontSize: '1.05rem',
-              fontWeight: 600,
-              color: 'var(--text)',
-              letterSpacing: '-0.01em',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              textDecoration: 'none',
               flexShrink: 0,
             }}
           >
-            {BRAND_NAME}
+            <div
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '8px',
+                background: 'linear-gradient(135deg, #4f2ee8 0%, #3114cf 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#fff',
+                fontWeight: 800,
+                fontSize: '0.9rem',
+                boxShadow: '0 4px 12px rgba(49, 20, 207, 0.28)',
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#fff" stroke="rgba(255,255,255,0.4)" strokeWidth="1" strokeLinejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', lineHeight: 1.1 }}>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontSize: '1.08rem',
+                    fontWeight: 800,
+                    color: 'var(--text)',
+                    letterSpacing: '-0.025em',
+                  }}
+                >
+                  CareerForge
+                </span>
+                <span
+                  style={{
+                    background: 'var(--accent-bg)',
+                    color: 'var(--accent)',
+                    padding: '1px 6px',
+                    borderRadius: '5px',
+                    fontSize: '0.68rem',
+                    fontWeight: 800,
+                    letterSpacing: '0.04em',
+                  }}
+                >
+                  AI
+                </span>
+              </div>
+              <div style={{ fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 500, letterSpacing: '0.01em' }}>
+                Your career, spoken into shape.
+              </div>
+            </div>
           </Link>
 
           {/* Desktop nav links */}

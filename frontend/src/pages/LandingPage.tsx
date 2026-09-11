@@ -1,5 +1,6 @@
 import HeroSection from '../sections/HeroSection'
 import HowItWorksSection from '../sections/HowItWorksSection'
+import VoiceResumeSection from '../sections/VoiceResumeSection'
 import ResumeAnalysisSection from '../sections/ResumeAnalysisSection'
 import InternshipSection from '../sections/InternshipSection'
 import CoverLetterSection from '../sections/CoverLetterSection'
@@ -12,6 +13,7 @@ export default function LandingPage() {
     <main>
       <HeroSection />
       <HowItWorksSection />
+      <VoiceResumeSection />
       <ResumeAnalysisSection />
       <InternshipSection />
       <CoverLetterSection />

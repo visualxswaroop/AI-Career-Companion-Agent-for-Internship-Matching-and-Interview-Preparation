@@ -6,7 +6,7 @@ export default function FinalCTASection() {
     <section
       id="get-started"
       style={{
-        backgroundColor: 'var(--accent)',
+        background: 'linear-gradient(135deg, #3114cf 0%, #1c0a85 100%)',
         padding: '96px 0',
       }}
     >
@@ -20,9 +20,9 @@ export default function FinalCTASection() {
         >
           <h2
             style={{
-              fontFamily: 'var(--font-serif)',
+              fontFamily: 'var(--font-sans)',
               fontSize: 'clamp(2rem, 4.5vw, 3.6rem)',
-              fontWeight: 500,
+              fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: '-0.02em',
               color: '#fff',
@@ -34,15 +34,14 @@ export default function FinalCTASection() {
 
           <p
             style={{
-              fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontSize: 'clamp(1.2rem, 2.5vw, 1.8rem)',
-              color: 'rgba(255,255,255,0.8)',
+              fontFamily: 'var(--font-sans)',
+              fontSize: 'clamp(1.1rem, 2.2vw, 1.5rem)',
+              color: 'rgba(255,255,255,0.85)',
               marginBottom: '40px',
               lineHeight: 1.3,
             }}
           >
-            Just a clearer next step.
+            Just a clearer next step, forged with AI.
           </p>
 
           <div
@@ -56,29 +55,30 @@ export default function FinalCTASection() {
             <Link to="/register">
               <button
                 style={{
-                  padding: '14px 32px',
-                  borderRadius: 'var(--radius)',
+                  padding: '14px 34px',
+                  borderRadius: 'var(--radius-pill)',
                   fontFamily: 'var(--font-sans)',
                   fontSize: '0.9375rem',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   backgroundColor: '#fff',
-                  color: 'var(--accent)',
+                  color: '#3114cf',
                   border: 'none',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
+                  boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
                 }}
                 onMouseEnter={e => {
                   const el = e.currentTarget as HTMLButtonElement
                   el.style.transform = 'translateY(-2px)'
-                  el.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)'
+                  el.style.boxShadow = '0 10px 28px rgba(0,0,0,0.25)'
                 }}
                 onMouseLeave={e => {
                   const el = e.currentTarget as HTMLButtonElement
                   el.style.transform = 'translateY(0)'
-                  el.style.boxShadow = ''
+                  el.style.boxShadow = '0 6px 20px rgba(0,0,0,0.18)'
                 }}
               >
                 Start building your path →

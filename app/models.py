@@ -5,10 +5,10 @@ from sqlalchemy import (
     Integer,
     String,
     ForeignKey,
-    DateTime
+    DateTime,
+    Boolean,
+    Text
 )
-
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from .database import Base
 
 
@@ -103,3 +103,28 @@ class Resume(Base):
         DateTime,
         default=datetime.utcnow
     )
+
+
+class InterviewDocument(Base):
+    __tablename__ = "interview_documents"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    filename = Column(String, nullable=False)
+    file_path = Column(String, nullable=False)
+    file_type = Column(String, nullable=False)
+    extracted_text = Column(Text, nullable=False)
+    chunk_count = Column(Integer, default=0)
+    is_active = Column(Boolean, default=True)
+    uploaded_at = Column(DateTime, default=datetime.utcnow)
+
+
+class InterviewDocumentChunk(Base):
+    __tablename__ = "interview_document_chunks"
+
+    id = Column(Integer, primary_key=True, index=True)
+    document_id = Column(Integer, ForeignKey("interview_documents.id"), nullable=False, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    chunk_index = Column(Integer, nullable=False)
+    chunk_text = Column(Text, nullable=False)
+    embedding = Column(Text, nullable=True)  # JSON-serialized list of floats

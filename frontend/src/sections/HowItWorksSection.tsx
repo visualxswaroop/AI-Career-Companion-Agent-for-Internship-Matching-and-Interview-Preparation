@@ -1,24 +1,22 @@
 const steps = [
   {
     number: '01',
-    title: 'Understand your resume',
+    title: 'Speak or Upload Your Resume',
     description:
-      'AI-assisted tools for resume breakdown that lay your resume to life and create your resume profile.',
+      'Answer conversational voice prompts to generate an executive resume from scratch, or upload an existing PDF for AI parsing.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14,2 14,8 20,8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-        <polyline points="10,9 9,9 8,9" />
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+        <line x1="12" y1="19" x2="12" y2="22" />
       </svg>
     ),
   },
   {
     number: '02',
-    title: 'Find internships that fit',
+    title: 'Discover High-Match Roles',
     description:
-      'Personalised internship matching based on your internship matching, homed around and focused on your skills and interests.',
+      'Intelligent TF-IDF and LLaMA ranking scores live internships against your actual skills and projects.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="11" cy="11" r="8" />
@@ -28,9 +26,9 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Write applications without sounding robotic',
+    title: 'Tailor Cover Letters & Answers',
     description:
-      'Generate tailored cover letters for a signed generate tailored letters and create machert cover letters armcatans.',
+      'Generate company-specific cover letters and interview talking points grounded in your genuine background.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
@@ -39,9 +37,9 @@ const steps = [
   },
   {
     number: '04',
-    title: 'Know what to improve next',
+    title: 'AI Mock Interviews & Next Steps',
     description:
-      'Provides skill recommendations and providing skill recommendations to custom increment interests and skills recommendations.',
+      'Simulate technical and behavioral interviews with real-time feedback and actionable skill gap recommendations.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17" />

@@ -2,13 +2,10 @@ from datetime import datetime, timedelta, timezone
 import secrets
 from jose import jwt
 
-# Secret key used to sign JWT tokens
 SECRET_KEY = "swaroop-secret-key"
 
-# Algorithm used for signing
 ALGORITHM = "HS256"
 
-# Token validity
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 

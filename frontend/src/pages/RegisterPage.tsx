@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router'
-import { BRAND_NAME } from '../config'
 import { useAuth } from '../context/AuthContext'
 import { formatErrorMessage } from '../api/client'
 import Button from '../components/Button'
@@ -79,17 +78,41 @@ export default function RegisterPage() {
         <Link
           to="/"
           style={{
-            fontFamily: 'var(--font-serif)',
-            fontSize: '1.2rem',
-            fontWeight: 600,
-            color: 'var(--text)',
-            letterSpacing: '-0.01em',
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '8px',
+            gap: '10px',
+            textDecoration: 'none',
           }}
         >
-          <span>←</span> {BRAND_NAME}
+          <div
+            style={{
+              width: '32px',
+              height: '32px',
+              borderRadius: '8px',
+              background: 'linear-gradient(135deg, #4f2ee8 0%, #3114cf 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 12px rgba(49, 20, 207, 0.28)',
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#fff" stroke="rgba(255,255,255,0.6)" strokeWidth="1" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', lineHeight: 1.1 }}>
+              <span style={{ fontFamily: 'var(--font-sans)', fontSize: '1.05rem', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.025em' }}>
+                CareerForge
+              </span>
+              <span style={{ background: 'var(--accent-bg)', color: 'var(--accent)', padding: '1px 6px', borderRadius: '5px', fontSize: '0.68rem', fontWeight: 800, letterSpacing: '0.04em' }}>
+                AI
+              </span>
+            </div>
+            <div style={{ fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 500 }}>
+              Your career, spoken into shape.
+            </div>
+          </div>
         </Link>
       </div>
 

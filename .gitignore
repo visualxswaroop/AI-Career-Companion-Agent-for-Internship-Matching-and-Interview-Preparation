@@ -35,7 +35,7 @@ uploads/*
 .DS_Store
 Thumbs.db
 
-# Testing & Coverage
-.pytest_cache/
-.coverage
-htmlcov/
+# Frontend dependencies & builds
+node_modules/
+dist/
+test_out.txt

@@ -3877,5 +3877,446 @@
       "Deep Learning"
     ],
     "description": "Accelerate your career in Software Development. Join us for an internship that combines learning with practical application. Work on challenging projects with a supportive team."
+  },
+  {
+    "id": "b4d8e21a-3f5c-4b9e-8a2d-7c1f6e9d0a4b",
+    "company": "L&T Construction",
+    "role_title": "Plumbing Apprentice",
+    "domain": "Plumbing & Pipefitting",
+    "location": "Hyderabad, India",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 8500,
+    "min_education": "ITI Certificate in Plumbing",
+    "required_skills": [
+      "Pipe Fitting",
+      "Leak Detection & Repair",
+      "Blueprint Reading",
+      "Hand Tools",
+      "Water Supply Systems"
+    ],
+    "preferred_skills": [
+      "Drainage System Design",
+      "Solar Water Heater Installation"
+    ],
+    "description": "Support licensed plumbers on residential and commercial construction sites, learning pipe installation, repair, and inspection under real project timelines."
+  },
+  {
+    "id": "9e2a7c14-5d8b-4f3e-b1a0-6c9d2e4f8a7b",
+    "company": "Godrej Interio",
+    "role_title": "Carpentry Trainee",
+    "domain": "Woodworking & Furniture",
+    "location": "Bengaluru, India",
+    "mode": "On-site",
+    "duration_weeks": 20,
+    "stipend_inr_per_month": 9000,
+    "min_education": "ITI Certificate in Carpentry",
+    "required_skills": [
+      "Wood Cutting & Shaping",
+      "Furniture Assembly",
+      "Measurement & Layout",
+      "Power Tools Operation"
+    ],
+    "preferred_skills": [
+      "CNC Woodworking Machines",
+      "Polishing & Finishing"
+    ],
+    "description": "Learn furniture fabrication and finishing in a factory setting, working with experienced carpenters on custom and mass-production orders."
+  },
+  {
+    "id": "1f6b9d3e-7a2c-4e5f-9b8d-3a1c7e6f2d9a",
+    "company": "Voltas Ltd.",
+    "role_title": "HVAC Technician Trainee",
+    "domain": "HVAC & Refrigeration",
+    "location": "Chennai, India",
+    "mode": "On-site",
+    "duration_weeks": 20,
+    "stipend_inr_per_month": 10500,
+    "min_education": "Diploma in Mechanical/HVAC",
+    "required_skills": [
+      "AC Installation & Repair",
+      "Refrigerant Handling",
+      "Ductwork Maintenance",
+      "Electrical Wiring Basics"
+    ],
+    "preferred_skills": [
+      "Central Cooling Systems",
+      "Energy Efficiency Auditing"
+    ],
+    "description": "Install, service, and repair air conditioning and refrigeration units for residential and commercial clients under senior technician supervision."
+  },
+  {
+    "id": "5c8a1e7d-2f4b-4d6e-a3c9-8b7f1d5e4c2a",
+    "company": "Larsen Toubro Metro Rail",
+    "role_title": "Welding Trainee",
+    "domain": "Metal Fabrication",
+    "location": "Hyderabad, India",
+    "mode": "On-site",
+    "duration_weeks": 24,
+    "stipend_inr_per_month": 10000,
+    "min_education": "ITI Certificate in Welding",
+    "required_skills": [
+      "Arc Welding",
+      "MIG/TIG Welding",
+      "Metal Cutting",
+      "Safety Gear Compliance"
+    ],
+    "preferred_skills": [
+      "Structural Steel Fabrication",
+      "Welding Inspection"
+    ],
+    "description": "Work on infrastructure fabrication projects, gaining hands-on welding experience across multiple techniques under certified welders."
+  },
+  {
+    "id": "7d2f9b4a-6e1c-4a8d-b5f3-9c2e7a1d6f4b",
+    "company": "Ola Fleet Technologies",
+    "role_title": "Commercial Driver Trainee",
+    "domain": "Transportation & Logistics",
+    "location": "Pune, India",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 12000,
+    "min_education": "Commercial Driving License",
+    "required_skills": [
+      "Defensive Driving",
+      "Route Navigation",
+      "Vehicle Maintenance Checks",
+      "Traffic Regulations"
+    ],
+    "preferred_skills": [
+      "GPS Fleet Systems",
+      "Customer Service"
+    ],
+    "description": "Drive company fleet vehicles on assigned routes while learning fleet safety protocols, vehicle upkeep, and passenger service standards."
+  },
+  {
+    "id": "3a7e1d9c-4f2b-4c6e-8a9d-1f5c7b3e6d2a",
+    "company": "DTDC Express",
+    "role_title": "Warehouse Associate",
+    "domain": "Warehousing & Logistics",
+    "location": "Hyderabad, India",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 8000,
+    "min_education": "10th Pass / ITI",
+    "required_skills": [
+      "Inventory Sorting",
+      "Forklift Operation",
+      "Package Handling",
+      "Barcode Scanning"
+    ],
+    "preferred_skills": [
+      "Warehouse Management Systems",
+      "Team Coordination"
+    ],
+    "description": "Handle receiving, sorting, and dispatching of shipments in a high-volume warehouse, ensuring accuracy and timely order fulfillment."
+  },
+  {
+    "id": "8c1f4a2e-9d6b-4e3f-a7c1-2e8d5f9b3a6c",
+    "company": "Urban Company",
+    "role_title": "Beautician & Salon Services Trainee",
+    "domain": "Personal Care Services",
+    "location": "Hyderabad, India",
+    "mode": "Field-based",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 9500,
+    "min_education": "Diploma in Beauty & Wellness",
+    "required_skills": [
+      "Hair Styling",
+      "Skincare Treatments",
+      "Makeup Application",
+      "Hygiene & Sanitation Practices"
+    ],
+    "preferred_skills": [
+      "Bridal Makeup",
+      "Client Consultation"
+    ],
+    "description": "Provide at-home salon and grooming services to clients, building technique and clientele under a structured mentorship program."
+  },
+  {
+    "id": "2e9d6a1f-7b3c-4d8e-9a2f-6c1e4d7b9a3e",
+    "company": "Taj Hotels",
+    "role_title": "Kitchen Commis / Cook Trainee",
+    "domain": "Culinary Services",
+    "location": "Mumbai, India",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 10000,
+    "min_education": "Diploma in Culinary Arts",
+    "required_skills": [
+      "Food Prep & Cooking",
+      "Kitchen Hygiene Standards",
+      "Inventory Handling",
+      "Recipe Following"
+    ],
+    "preferred_skills": [
+      "Continental Cuisine",
+      "Bakery & Pastry Basics"
+    ],
+    "description": "Train under experienced chefs in a professional kitchen, learning food preparation, plating, and hygiene standards for hospitality-grade service."
+  },
+  {
+    "id": "4b8f2d7e-1a9c-4f5b-8e3d-7c2a6f1d9b4e",
+    "company": "Reliance Retail",
+    "role_title": "Security Guard",
+    "domain": "Security Services",
+    "location": "Hyderabad, India",
+    "mode": "On-site",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 7500,
+    "min_education": "10th Pass, Security Training Certificate",
+    "required_skills": [
+      "Access Control",
+      "CCTV Monitoring",
+      "Emergency Response",
+      "Patrolling"
+    ],
+    "preferred_skills": [
+      "First Aid Certification",
+      "Conflict De-escalation"
+    ],
+    "description": "Monitor store premises, manage entry/exit points, and ensure safety compliance across shifts at a retail facility."
+  },
+  {
+    "id": "6f3a9c2d-8e1b-4a7f-9c5d-3b8e2f6a1d7c",
+    "company": "Xiaomi Service Center",
+    "role_title": "Mobile Repair Technician Trainee",
+    "domain": "Electronics Repair",
+    "location": "Hyderabad, India",
+    "mode": "On-site",
+    "duration_weeks": 14,
+    "stipend_inr_per_month": 9000,
+    "min_education": "ITI/Diploma in Electronics",
+    "required_skills": [
+      "Soldering",
+      "Circuit Board Diagnosis",
+      "Screen Replacement",
+      "Component Testing"
+    ],
+    "preferred_skills": [
+      "Data Recovery Basics",
+      "Battery Diagnostics"
+    ],
+    "description": "Diagnose and repair mobile phone hardware issues at an authorized service center, learning brand-specific repair procedures."
+  },
+  {
+    "id": "1d7c4a9e-2f6b-4e8d-a3c7-9b1e5d2f8a6c",
+    "company": "Mahindra & Mahindra",
+    "role_title": "Diesel Mechanic Apprentice",
+    "domain": "Heavy Vehicle Maintenance",
+    "location": "Nagpur, India",
+    "mode": "On-site",
+    "duration_weeks": 24,
+    "stipend_inr_per_month": 10500,
+    "min_education": "ITI Certificate in Diesel Mechanics",
+    "required_skills": [
+      "Engine Overhaul",
+      "Hydraulic Systems",
+      "Diagnostic Tool Usage",
+      "Preventive Maintenance"
+    ],
+    "preferred_skills": [
+      "Tractor Repair",
+      "Fuel Injection Systems"
+    ],
+    "description": "Service and repair diesel engines for commercial and agricultural vehicles under supervision of certified mechanics."
+  },
+  {
+    "id": "9a2f7c4e-3d8b-4f1e-b6a9-7c3d1e8f4a2b",
+    "company": "Asian Paints",
+    "role_title": "Painter & Surface Finisher Trainee",
+    "domain": "Construction Finishing",
+    "location": "Ahmedabad, India",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 8000,
+    "min_education": "10th Pass / Trade Training",
+    "required_skills": [
+      "Surface Preparation",
+      "Spray & Roller Painting",
+      "Color Mixing",
+      "Waterproofing Basics"
+    ],
+    "preferred_skills": [
+      "Texture & Decorative Finishes",
+      "Site Safety"
+    ],
+    "description": "Learn professional painting and surface-finishing techniques on residential and commercial project sites under a supervisor's guidance."
+  },
+  {
+    "id": "5e1d8a3f-6c9b-4a2e-8f7d-1b4e9a6c3d8f",
+    "company": "Big Basket",
+    "role_title": "Delivery Executive",
+    "domain": "Last-Mile Delivery",
+    "location": "Hyderabad, India",
+    "mode": "Field-based",
+    "duration_weeks": 8,
+    "stipend_inr_per_month": 11500,
+    "min_education": "10th Pass, Two-Wheeler License",
+    "required_skills": [
+      "Route Planning",
+      "Timely Delivery",
+      "Customer Handling",
+      "Order Verification"
+    ],
+    "preferred_skills": [
+      "Mobile App Navigation",
+      "Cash Handling"
+    ],
+    "description": "Deliver customer orders across assigned zones, maintaining delivery timelines and handling last-mile customer interactions professionally."
+  },
+  {
+    "id": "3c9e6a1d-4f7b-4d2e-9a8c-6e1d3f9b7a4c",
+    "company": "John Deere India",
+    "role_title": "Farm Equipment Operator Trainee",
+    "domain": "Agricultural Machinery",
+    "location": "Guntur, India",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 8500,
+    "min_education": "10th Pass / ITI in Agri Machinery",
+    "required_skills": [
+      "Tractor Operation",
+      "Harvester Handling",
+      "Basic Machine Maintenance",
+      "Field Safety Practices"
+    ],
+    "preferred_skills": [
+      "Irrigation Equipment",
+      "GPS-Guided Farming Tools"
+    ],
+    "description": "Operate and maintain agricultural machinery on partner farms, learning modern farm equipment handling and basic troubleshooting."
+  },
+  {
+    "id": "7b4a1e9d-8c2f-4b6e-a3d7-2f9e6c1d4a8b",
+    "company": "ITC Hotels",
+    "role_title": "Housekeeping Supervisor Trainee",
+    "domain": "Hospitality Housekeeping",
+    "location": "Hyderabad, India",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 9000,
+    "min_education": "Diploma in Hotel Management",
+    "required_skills": [
+      "Room Inspection Standards",
+      "Staff Scheduling",
+      "Inventory Management",
+      "Guest Service Protocols"
+    ],
+    "preferred_skills": [
+      "Laundry Operations Management",
+      "Housekeeping Software"
+    ],
+    "description": "Oversee daily housekeeping operations at a hotel property, coordinating staff and ensuring service quality meets brand standards."
+  },
+  {
+    "id": "2f8d4a1c-9b6e-4a3f-8d2c-7a1e4f9b6c3d",
+    "company": "Bombay Dyeing",
+    "role_title": "Tailoring & Garment Trainee",
+    "domain": "Textile & Apparel",
+    "location": "Surat, India",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 8500,
+    "min_education": "ITI Certificate in Tailoring",
+    "required_skills": [
+      "Pattern Cutting",
+      "Sewing Machine Operation",
+      "Measurement Taking",
+      "Fabric Handling"
+    ],
+    "preferred_skills": [
+      "Embroidery Techniques",
+      "Industrial Sewing Machines"
+    ],
+    "description": "Learn garment construction and finishing techniques in a production unit, working alongside experienced tailors on bulk orders."
+  },
+  {
+    "id": "6a3e9c7d-1f4b-4e8a-b2d6-9c7e3a1f4d8b",
+    "company": "Havells India",
+    "role_title": "Electrical Panel Technician Trainee",
+    "domain": "Electrical Manufacturing",
+    "location": "Noida, India",
+    "mode": "On-site",
+    "duration_weeks": 18,
+    "stipend_inr_per_month": 9500,
+    "min_education": "ITI Certificate in Electrical Trade",
+    "required_skills": [
+      "Panel Assembly",
+      "Wiring Diagrams",
+      "Testing & Calibration",
+      "Quality Inspection"
+    ],
+    "preferred_skills": [
+      "PLC Panel Basics",
+      "Switchgear Assembly"
+    ],
+    "description": "Assemble and test electrical distribution panels on a factory production line, learning manufacturing quality standards."
+  },
+  {
+    "id": "8d1c6a3f-7e9b-4f2d-a4c8-3b6e1d9f7a2c",
+    "company": "NTPC Limited",
+    "role_title": "Boiler Maintenance Technician Trainee",
+    "domain": "Power Plant Operations",
+    "location": "Ramagundam, India",
+    "mode": "On-site",
+    "duration_weeks": 24,
+    "stipend_inr_per_month": 11000,
+    "min_education": "ITI/Diploma in Mechanical Trade",
+    "required_skills": [
+      "Boiler Inspection",
+      "Pipe & Valve Maintenance",
+      "Safety Protocols",
+      "Preventive Maintenance"
+    ],
+    "preferred_skills": [
+      "Turbine Systems Basics",
+      "Industrial Safety Certification"
+    ],
+    "description": "Assist senior technicians in maintaining boiler and turbine systems at a power generation facility, following strict safety and operational protocols."
+  },
+  {
+    "id": "4e7a1c9f-2d6b-4a8e-9f3c-1e7d4a2f9c6b",
+    "company": "Amazon India Fulfillment",
+    "role_title": "Packing & Sorting Associate",
+    "domain": "Fulfillment Center Operations",
+    "location": "Hyderabad, India",
+    "mode": "On-site",
+    "duration_weeks": 12,
+    "stipend_inr_per_month": 8200,
+    "min_education": "10th Pass",
+    "required_skills": [
+      "Order Packing",
+      "Conveyor Belt Operation",
+      "Quality Checking",
+      "Scanner Usage"
+    ],
+    "preferred_skills": [
+      "Shift Coordination",
+      "Basic Inventory Software"
+    ],
+    "description": "Pack and sort customer orders at a fulfillment center, meeting throughput and accuracy targets across rotating shifts."
+  },
+  {
+    "id": "9c2e5a8f-3d7b-4e1a-b6f9-4c2e8a5d1f7b",
+    "company": "Blue Star Ltd.",
+    "role_title": "Refrigeration Repair Trainee",
+    "domain": "Cold Storage & Refrigeration",
+    "location": "Hyderabad, India",
+    "mode": "On-site",
+    "duration_weeks": 16,
+    "stipend_inr_per_month": 9200,
+    "min_education": "ITI Certificate in Refrigeration & AC",
+    "required_skills": [
+      "Compressor Repair",
+      "Refrigerant Recharging",
+      "Cold Storage Maintenance",
+      "Fault Diagnosis"
+    ],
+    "preferred_skills": [
+      "Industrial Cold Chain Systems",
+      "Energy Efficiency Basics"
+    ],
+    "description": "Service and repair commercial refrigeration and cold storage units, gaining hands-on training across diverse client sites."
   }
 ]

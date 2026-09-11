@@ -14,6 +14,8 @@ import OverviewPage from './pages/app/OverviewPage'
 import ResumePage from './pages/app/ResumePage'
 import InternshipsPlaceholderPage from './pages/app/InternshipsPlaceholderPage'
 import CoverLetterPlaceholderPage from './pages/app/CoverLetterPlaceholderPage'
+import InterviewAgentPage from './pages/app/InterviewAgentPage'
+import VoiceResumePage from './pages/app/VoiceResumePage'
 import ProfilePage from './pages/app/ProfilePage'
 
 function LandingLayout({ isDark, onThemeToggle }: { isDark: boolean; onThemeToggle: () => void }) {
@@ -66,6 +68,10 @@ export default function App() {
               <Route path="resume" element={<ResumePage />} />
               <Route path="internships" element={<InternshipsPlaceholderPage />} />
               <Route path="cover-letters" element={<CoverLetterPlaceholderPage />} />
+              <Route path="interview-agent" element={<InterviewAgentPage />} />
+              <Route path="voice-resume" element={<VoiceResumePage />} />
+              <Route path="voice_resume" element={<VoiceResumePage />} />
+              <Route path="career-assistant" element={<Navigate to="/app" replace />} />
               <Route path="profile" element={<ProfilePage />} />
             </Route>
           </Route>

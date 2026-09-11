@@ -28,31 +28,31 @@ function DashboardMockup() {
         {/* Sidebar */}
         <div
           style={{
-            width: '110px',
+            width: '118px',
             flexShrink: 0,
-            borderRight: '1px solid var(--border)',
-            padding: '12px 10px',
+            borderRight: '1px solid var(--sidebar-border)',
+            padding: '12px 8px',
             display: 'flex',
             flexDirection: 'column',
             gap: '4px',
-            backgroundColor: 'var(--bg-alt)',
+            backgroundColor: 'var(--sidebar-bg)',
+            color: 'var(--sidebar-text)',
           }}
         >
-          <div style={{ marginBottom: '8px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
-              <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '9px', fontWeight: 600 }}>GS</div>
-              <span style={{ color: 'var(--text)', fontWeight: 500, fontSize: '10px' }}>Garima Saxena</span>
+          <div style={{ marginBottom: '10px', padding: '0 4px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+              <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: 'var(--sidebar-active-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sidebar-active-text)', fontSize: '9px', fontWeight: 800 }}>C</div>
+              <span style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '10px' }}>CareerForge</span>
             </div>
-            <div style={{ color: 'var(--text-subtle)', fontSize: '9px' }}>Computer Science Student</div>
+            <div style={{ color: 'var(--sidebar-text-sub)', fontSize: '8px' }}>Garima • CS Student</div>
           </div>
 
           {[
-            { icon: '▦', label: 'Overview', active: true },
-            { icon: '⊙', label: 'My Profile' },
-            { icon: '◈', label: 'Career Plan' },
+            { icon: '▦', label: 'Dashboard', active: true },
+            { icon: '⊙', label: 'Voice Resume' },
+            { icon: '◈', label: 'Search Roles' },
             { icon: '⟵', label: 'Applications' },
-            { icon: '⊡', label: 'Documents' },
-            { icon: '☆', label: 'Saved' },
+            { icon: '⊡', label: 'Cover Letters' },
           ].map(item => (
             <div
               key={item.label}
@@ -60,12 +60,14 @@ function DashboardMockup() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
-                padding: '5px 6px',
-                borderRadius: '4px',
-                backgroundColor: item.active ? 'var(--surface-alt)' : 'transparent',
-                color: item.active ? 'var(--text)' : 'var(--text-muted)',
+                padding: '5px 8px',
+                borderRadius: 'var(--radius-pill)',
+                backgroundColor: item.active ? 'var(--sidebar-active-bg)' : 'transparent',
+                color: item.active ? 'var(--sidebar-active-text)' : 'var(--sidebar-text-sub)',
                 fontSize: '10px',
+                fontWeight: item.active ? 700 : 400,
                 cursor: 'pointer',
+                boxShadow: item.active ? '0 2px 6px rgba(0, 0, 0, 0.12)' : 'none',
               }}
             >
               <span style={{ fontSize: '9px', width: '12px', textAlign: 'center' }}>{item.icon}</span>
@@ -166,9 +168,24 @@ export default function HeroSection() {
         >
           {/* Left — copy */}
           <div style={{ maxWidth: '520px' }}>
-            <p className="label-accent" style={{ marginBottom: '20px' }}>
-              Career Intelligence Platform
-            </p>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
+              <p className="label-accent" style={{ margin: 0 }}>
+                CareerForge AI • Career Intelligence
+              </p>
+              <span
+                style={{
+                  fontSize: '0.72rem',
+                  fontWeight: 600,
+                  padding: '2px 8px',
+                  borderRadius: '999px',
+                  backgroundColor: 'var(--accent-bg)',
+                  color: 'var(--accent)',
+                  border: '1px solid var(--border-alt)',
+                }}
+              >
+                🎙️ Voice Resume Live
+              </span>
+            </div>
 
             <h1
               className="headline-xl"
@@ -179,56 +196,24 @@ export default function HeroSection() {
 
             <p
               className="body-lg"
-              style={{ marginBottom: '36px', maxWidth: '420px' }}
+              style={{ marginBottom: '36px', maxWidth: '440px' }}
             >
-              Build a career plan around your strengths, find opportunities
-              worth applying for, and turn your experience into applications
-              that actually sound like you.
+              Build a career plan around your strengths, speak your story into an
+              executive ATS-scored resume, and find high-conviction opportunities
+              tailored specifically for you.
             </p>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <Link to="/register">
                 <Button variant="primary" showArrow>
-                  Build My Career Path
+                  Get Started Free
                 </Button>
               </Link>
-              <a href="#how-it-works">
+              <a href="#voice-resume">
                 <Button variant="ghost" showArrow>
-                  See how it works
+                  Try Voice Resume
                 </Button>
               </a>
-            </div>
-
-            {/* Social proof micro-line */}
-            <div style={{ marginTop: '40px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ display: 'flex' }}>
-                {['PM', 'MF', 'AS', 'RK'].map((initials, i) => (
-                  <div
-                    key={initials}
-                    style={{
-                      width: '28px',
-                      height: '28px',
-                      borderRadius: '50%',
-                      backgroundColor: i % 2 === 0 ? 'var(--accent-bg)' : 'var(--surface-alt)',
-                      border: '2px solid var(--bg)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '9px',
-                      fontWeight: 600,
-                      color: 'var(--text-muted)',
-                      marginLeft: i > 0 ? '-8px' : 0,
-                    }}
-                  >
-                    {initials}
-                  </div>
-                ))}
-              </div>
-              <p className="body-sm" style={{ fontSize: '0.8125rem' }}>
-                Join{' '}
-                <strong style={{ color: 'var(--text)', fontWeight: 600 }}>2,400+</strong>{' '}
-                students mapping their path
-              </p>
             </div>
           </div>
 

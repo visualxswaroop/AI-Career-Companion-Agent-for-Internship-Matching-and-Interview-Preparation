@@ -198,3 +198,105 @@ class CoverLetterResponse(BaseModel):
     role_title: str
     cover_letter: str
     generation_method: str
+
+
+# =========================================================
+# CAREER ASSISTANT SCHEMAS
+# =========================================================
+
+class ChatMessage(BaseModel):
+    role: str  # "user" | "assistant"
+    content: str
+
+
+class ChatRequest(BaseModel):
+    message: str
+    conversation_history: Optional[List[ChatMessage]] = None
+
+
+class ChatSource(BaseModel):
+    section: str
+    topic: str
+    source: str
+    score: float
+
+
+class ChatResponse(BaseModel):
+    answer: str
+    sources: List[ChatSource] = []
+    retrieval_used: bool = False
+    generation_method: str = "unknown"
+
+
+# =========================================================
+# INTERVIEW AGENT SCHEMAS (PHASE A & B)
+# =========================================================
+
+class InterviewDocumentResponse(BaseModel):
+    id: int
+    filename: str
+    file_type: str
+    chunk_count: int = 0
+    text_length: Optional[int] = None
+    uploaded_at: Optional[datetime] = None
+    is_active: bool = True
+
+
+class InterviewChatRequest(BaseModel):
+    message: str
+    target_role: Optional[str] = None
+    conversation_history: Optional[List[ChatMessage]] = None
+
+
+class InterviewChatResponse(BaseModel):
+    answer: str
+    target_role: Optional[str] = None
+    has_resume: bool = False
+    has_document: bool = False
+    active_document: Optional[Dict[str, Any]] = None
+    generation_method: str = "llm"
+    roadmap_data: Optional[Dict[str, Any]] = None
+
+
+class InterviewAgentContextResponse(BaseModel):
+    has_resume: bool
+    candidate_name: Optional[str] = None
+    skills_count: int = 0
+    skills: List[str] = []
+    projects_count: int = 0
+    projects: List[str] = []
+    recommended_roles: List[str] = []
+    target_role: Optional[str] = None
+    has_document: bool = False
+    active_document: Optional[Dict[str, Any]] = None
+
+
+# =========================================================
+# VOICE RESUME SCHEMAS
+# =========================================================
+
+class VoiceResumeExtractRequest(BaseModel):
+    transcript: str
+    # Reuses ChatMessage (defined above) for conversation history turns
+    conversation_history: Optional[List[ChatMessage]] = None
+    language_hint: Optional[str] = None
+
+
+class VoiceResumeExtractResponse(BaseModel):
+    extracted_data: ResumeData
+    missing_fields: List[str]
+    follow_up_question: Optional[str] = None
+    is_complete: bool
+    detected_language: str
+
+
+class VoiceResumeGenerateRequest(BaseModel):
+    extracted_data: ResumeData
+    # "auto" lets the LLM decide; "technical" or "blue-collar" forces a template
+    template_hint: Optional[str] = "auto"
+
+
+class VoiceResumeGenerateResponse(BaseModel):
+    resume_text: str
+    template_used: str
+    generation_method: str
