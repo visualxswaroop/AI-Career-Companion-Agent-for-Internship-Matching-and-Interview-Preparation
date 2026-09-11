@@ -91,20 +91,17 @@ export default function VoiceResumePage() {
 
   // Video-to-audio state
   const [videoMode, setVideoMode] = useState(false)
-  const [videoSupported, setVideoSupported] = useState(false)
+  const [videoSupported, setVideoSupported] = useState(true)
+  const [processingStatus, setProcessingStatus] = useState<string | null>(null)
   const videoInputRef = useRef<HTMLInputElement>(null)
 
   const recognitionRef = useRef<any>(null)
   const transcriptRef = useRef('')
   const silenceTimerRef = useRef<any>(null)
 
-  // Check browser video decode support on mount
+  // Audio/video transcription via AI Whisper is supported across all browsers
   useEffect(() => {
-    setVideoSupported(
-      typeof AudioContext !== 'undefined' &&
-        typeof MediaRecorder !== 'undefined' &&
-        SpeechRecognitionAPI !== null,
-    )
+    setVideoSupported(true)
   }, [])
 
   // ── Speech recognition helpers ────────────────────────────────
@@ -282,56 +279,105 @@ export default function VoiceResumePage() {
   // ── Video file handler ─────────────────────────────────────────
 
   const handleVideoFile = useCallback(
-    (file: File) => {
-      if (!videoSupported) return
+    async (file: File) => {
+      if (!token) {
+        setError('Please sign in to process video audio.')
+        return
+      }
 
       setError(null)
-      setStage('recording')
+      setIsProcessing(true)
+      setStage('processing')
+      setProcessingStatus('🎬 Extracting audio track from video...')
 
-      const reader = new FileReader()
-      reader.onload = async e => {
+      let blobToSend: Blob = file
+      let filenameToSend = file.name
+
+      // Step 1: Extract audio into a lightweight 16kHz mono WAV using Web Audio
+      if (typeof AudioContext !== 'undefined') {
         try {
-          const arrayBuffer = e.target?.result as ArrayBuffer
+          const arrayBuffer = await file.arrayBuffer()
           const audioCtx = new AudioContext()
           const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer)
-
+          const targetSampleRate = 16000
           const offline = new OfflineAudioContext(
             1,
-            audioBuffer.length,
-            audioBuffer.sampleRate,
+            Math.ceil(audioBuffer.duration * targetSampleRate),
+            targetSampleRate,
           )
           const source = offline.createBufferSource()
           source.buffer = audioBuffer
           source.connect(offline.destination)
           source.start()
           const renderedBuffer = await offline.startRendering()
-
-          const wavBlob = audioBufferToWavBlob(renderedBuffer)
-          const blobUrl = URL.createObjectURL(wavBlob)
-          const audio = new Audio(blobUrl)
-
-          const notice =
-            'Playing video audio. Please keep your microphone unmuted to transcribe.'
-          speak(notice, language)
-
-          setTimeout(() => {
-            audio.play()
-            startRecognition(handleTranscriptReady)
-            audio.onended = () => {
-              setTimeout(() => stopRecognition(), 1500)
-            }
-          }, 2500)
-        } catch (err) {
-          console.error('[video decode]', err)
-          setError(
-            'Could not decode audio from this video file. Try converting it to MP3/WAV, or use microphone directly.',
-          )
-          setStage('idle')
+          blobToSend = audioBufferToWavBlob(renderedBuffer)
+          filenameToSend = 'extracted_audio.wav'
+        } catch (audioErr) {
+          console.warn('[video decode] AudioContext decode failed, falling back to direct upload:', audioErr)
+          blobToSend = file
+          filenameToSend = file.name
         }
       }
-      reader.readAsArrayBuffer(file)
+
+      try {
+        // Step 2: Transcribe speech to text using Groq Whisper
+        setProcessingStatus('🎙️ Transcribing speech with AI Whisper...')
+        const transcribeRes = await voiceResumeApi.transcribe(
+          blobToSend,
+          filenameToSend,
+          language.split('-')[0],
+          token,
+        )
+
+        const speechText = (transcribeRes.transcript || '').trim()
+        if (!speechText) {
+          setError('No audible speech was detected in this file. Please upload a recording with clear spoken words.')
+          setStage('idle')
+          return
+        }
+
+        // Step 3: Populate transcript and editable text
+        setTranscript(speechText)
+        transcriptRef.current = speechText
+
+        // Step 4: Extract structured resume profile
+        setProcessingStatus('🧠 Extracting skills, experience, and profile details...')
+        const extRes = await voiceResumeApi.extract(
+          {
+            transcript: speechText,
+            language_hint: language.split('-')[0],
+          },
+          token,
+        )
+
+        const extracted = extRes.extracted_data
+        setExtractedData(extracted)
+
+        // Step 5: Automatically generate executive ATS resume from speech
+        setProcessingStatus('✨ Generating your executive ATS resume...')
+        const genRes = await voiceResumeApi.generate(
+          {
+            extracted_data: extracted,
+            template_hint: templateHint,
+          },
+          token,
+        )
+
+        setGeneratedResume(genRes.resume_text)
+        setTemplateUsed(genRes.template_used)
+        setGenerationMethod(genRes.generation_method)
+        setStage('generated')
+        speak('Your video has been transcribed and your resume is ready!', language)
+      } catch (err) {
+        console.error('[video transcribe]', err)
+        setError(formatErrorMessage(err))
+        setStage('idle')
+      } finally {
+        setIsProcessing(false)
+        setProcessingStatus(null)
+      }
     },
-    [videoSupported, language, startRecognition, handleTranscriptReady, stopRecognition],
+    [token, language, templateHint],
   )
 
   // ── Generate resume (Unblocked & Flexible) ─────────────────────
@@ -911,52 +957,82 @@ export default function VoiceResumePage() {
         )}
 
         {/* Video file input */}
-        {videoMode && stage === 'idle' && videoSupported && (
+        {videoMode && stage !== 'generated' && (
           <div
             style={{
               borderTop: '1px solid var(--border)',
-              padding: '20px 24px',
+              padding: '24px',
               backgroundColor: 'var(--surface)',
               borderRadius: '0 0 var(--radius-lg) var(--radius-lg)',
+              textAlign: 'center',
             }}
           >
-            <p
-              style={{
-                fontSize: '0.875rem',
-                color: 'var(--text-muted)',
-                marginBottom: '12px',
-              }}
-            >
-              Upload a video file to extract audio track for transcription:
-            </p>
-            <input
-              id="vr-video-input"
-              ref={videoInputRef}
-              type="file"
-              accept="video/*"
-              style={{ display: 'none' }}
-              onChange={e => {
-                const file = e.target.files?.[0]
-                if (file) handleVideoFile(file)
-                if (e.target) e.target.value = ''
-              }}
-            />
-            <button
-              type="button"
-              onClick={() => videoInputRef.current?.click()}
-              style={{
-                padding: '10px 20px',
-                borderRadius: 'var(--radius)',
-                border: '1px solid var(--border)',
-                backgroundColor: 'var(--bg)',
-                color: 'var(--text)',
-                fontSize: '0.875rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-              }}
-            >
-              📁 Choose Video File
-            </button>
+            <div style={{ maxWidth: '520px', margin: '0 auto' }}>
+              <p
+                style={{
+                  fontSize: '0.92rem',
+                  fontWeight: 600,
+                  color: 'var(--text)',
+                  marginBottom: '6px',
+                }}
+              >
+                📹 Upload Video / Audio to Generate Resume
+              </p>
+              <p
+                style={{
+                  fontSize: '0.82rem',
+                  color: 'var(--text-muted)',
+                  marginBottom: '16px',
+                  lineHeight: 1.5,
+                }}
+              >
+                Upload any video or audio clip (.mp4, .webm, .mov, .m4a, .mp3, .wav). AI Whisper transcribes your speech and automatically extracts your experience to build an ATS resume.
+              </p>
+              <input
+                id="vr-video-input"
+                ref={videoInputRef}
+                type="file"
+                accept="video/*,audio/*,.mp4,.webm,.mov,.mkv,.avi,.mp3,.wav,.m4a"
+                style={{ display: 'none' }}
+                onChange={e => {
+                  const file = e.target.files?.[0]
+                  if (file) void handleVideoFile(file)
+                  if (e.target) e.target.value = ''
+                }}
+              />
+              <button
+                type="button"
+                disabled={isProcessing}
+                onClick={() => videoInputRef.current?.click()}
+                style={{
+                  padding: '11px 24px',
+                  borderRadius: 'var(--radius-pill)',
+                  border: 'none',
+                  background: 'linear-gradient(135deg, #4f2ee8 0%, #3114cf 100%)',
+                  color: '#fff',
+                  fontSize: '0.9rem',
+                  fontWeight: 700,
+                  cursor: isProcessing ? 'not-allowed' : 'pointer',
+                  opacity: isProcessing ? 0.7 : 1,
+                  boxShadow: '0 4px 14px rgba(49, 20, 207, 0.28)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}
+              >
+                <span>📁</span>
+                <span>{isProcessing ? 'Processing Video...' : 'Choose Video or Audio File'}</span>
+              </button>
+
+              {isProcessing && processingStatus && (
+                <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+                  <div className="spinner" style={{ width: '16px', height: '16px' }} />
+                  <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--accent-text)' }}>
+                    {processingStatus}
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
         )}
 

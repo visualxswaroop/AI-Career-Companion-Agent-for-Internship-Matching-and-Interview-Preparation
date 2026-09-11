@@ -16,12 +16,12 @@ NOTE — Future work:
       for environments where the Web Speech API is unavailable.
 """
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, File, UploadFile, Form
 from sqlalchemy.orm import Session
 
 from app import models, schemas
 from app.dependencies import get_current_user, get_db
-from app.voice_resume_service import extract_resume_fields, generate_resume_document
+from app.voice_resume_service import extract_resume_fields, generate_resume_document, transcribe_audio_file
 
 
 router = APIRouter(
@@ -112,3 +112,50 @@ def generate_voice_resume(
     )
 
     return result
+
+
+# ──────────────────────────────────────────────────────────────────
+# POST /voice-resume/transcribe
+# ──────────────────────────────────────────────────────────────────
+
+@router.post(
+    "/transcribe",
+    response_model=schemas.VoiceResumeTranscribeResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Transcribe speech from an uploaded audio or video file via AI Whisper",
+)
+async def transcribe_voice_resume(
+    file: UploadFile = File(...),
+    language_hint: str = Form(None),
+    current_user: models.User = Depends(get_current_user),
+):
+    """
+    Accepts an uploaded video or audio file (.mp4, .webm, .wav, .mp3, .m4a),
+    extracts the speech, and returns the transcribed text using Groq Whisper.
+    """
+    if not file.filename:
+        raise HTTPException(status_code=400, detail="No file uploaded.")
+
+    content = await file.read()
+    if len(content) == 0:
+        raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+
+    # Max 25 MB limit for Whisper
+    if len(content) > 25 * 1024 * 1024:
+        raise HTTPException(
+            status_code=413,
+            detail="File exceeds 25 MB limit. Please upload a shorter clip or compress the audio.",
+        )
+
+    try:
+        result = transcribe_audio_file(
+            file_bytes=content,
+            filename=file.filename,
+            language_hint=language_hint,
+        )
+        return result
+    except ValueError as ve:
+        raise HTTPException(status_code=503, detail=str(ve))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Speech transcription failed: {str(e)}")
+

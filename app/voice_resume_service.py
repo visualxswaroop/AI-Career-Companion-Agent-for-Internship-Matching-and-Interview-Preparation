@@ -552,3 +552,50 @@ def _generate_fallback_resume(extracted: Dict[str, Any], template: str) -> str:
         lines.append("")
 
     return "\n".join(lines).strip()
+
+
+def transcribe_audio_file(
+    file_bytes: bytes,
+    filename: str,
+    language_hint: Optional[str] = None,
+) -> Dict[str, Any]:
+    """
+    Transcribes speech from an audio or video file using Groq Whisper.
+    Supports .mp4, .webm, .wav, .mp3, .m4a, .ogg, .flac, etc.
+    """
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        raise ValueError("GROQ_API_KEY is not configured on the server.")
+
+    from groq import Groq
+    client = Groq(api_key=api_key)
+
+    lang = None
+    if language_hint:
+        clean_lang = language_hint.split("-")[0].lower().strip()
+        supported_langs = [
+            "en", "hi", "te", "ta", "kn", "ml", "bn", "mr", "gu", "pa",
+            "es", "fr", "de", "zh", "ja", "pt", "ru", "it", "ar", "id"
+        ]
+        if clean_lang in supported_langs:
+            lang = clean_lang
+
+    kwargs: Dict[str, Any] = {
+        "model": "whisper-large-v3-turbo",
+        "file": (filename or "audio.wav", file_bytes),
+        "response_format": "text",
+    }
+    if lang:
+        kwargs["language"] = lang
+
+    try:
+        transcription = client.audio.transcriptions.create(**kwargs)
+        text = str(transcription).strip()
+        return {
+            "transcript": text,
+            "language": lang or "en"
+        }
+    except Exception as e:
+        logger.error(f"[voice_resume] Whisper transcription error: {e}")
+        raise
+

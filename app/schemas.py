@@ -300,3 +300,8 @@ class VoiceResumeGenerateResponse(BaseModel):
     resume_text: str
     template_used: str
     generation_method: str
+
+
+class VoiceResumeTranscribeResponse(BaseModel):
+    transcript: str
+    language: Optional[str] = "en"

@@ -31,4 +31,26 @@ export const voiceResumeApi = {
       body: JSON.stringify(data),
     })
   },
+
+  /**
+   * POST /voice-resume/transcribe
+   * Upload an audio or video file to extract speech into text using AI Whisper.
+   */
+  async transcribe(
+    file: Blob | File,
+    filename: string,
+    languageHint: string,
+    token: string,
+  ): Promise<{ transcript: string; language?: string }> {
+    const formData = new FormData()
+    formData.append('file', file, filename)
+    if (languageHint) {
+      formData.append('language_hint', languageHint)
+    }
+    return request<{ transcript: string; language?: string }>('/voice-resume/transcribe', {
+      method: 'POST',
+      token,
+      body: formData,
+    })
+  },
 }
