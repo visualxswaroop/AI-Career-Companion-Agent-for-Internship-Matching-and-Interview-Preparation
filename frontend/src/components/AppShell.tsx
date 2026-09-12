@@ -333,6 +333,19 @@ export default function AppShell({ isDark, onThemeToggle }: AppShellProps) {
           ))}
         </nav>
 
+        {/* Theme Toggle above user card */}
+        <div
+          style={{
+            padding: isSidebarCollapsed ? '10px 8px' : '10px 18px',
+            borderTop: '1px solid var(--sidebar-border)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: isSidebarCollapsed ? 'center' : 'flex-start',
+          }}
+        >
+          <ThemeToggle isDark={isDark} onToggle={onThemeToggle} />
+        </div>
+
         {/* User Card at bottom */}
         <div
           style={{
