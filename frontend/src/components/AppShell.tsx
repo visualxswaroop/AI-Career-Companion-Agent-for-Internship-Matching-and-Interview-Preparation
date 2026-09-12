@@ -667,7 +667,7 @@ export default function AppShell({ isDark, onThemeToggle }: AppShellProps) {
         </div>
       )}
 
-      {/* Main Content Column with Sticky Nav Bar */}
+      {/* Main Content Column */}
       <div
         style={{
           flex: 1,
@@ -681,152 +681,7 @@ export default function AppShell({ isDark, onThemeToggle }: AppShellProps) {
         }}
         className="app-main-column"
       >
-        {/* Sticky Top Navigation Bar */}
-        <header
-          id="app-sticky-navbar"
-          style={{
-            position: 'sticky',
-            top: 0,
-            zIndex: 35,
-            height: '64px',
-            backgroundColor: 'var(--surface)',
-            borderBottom: '1px solid var(--border)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '0 32px',
-            boxShadow: 'var(--shadow-sm)',
-            flexShrink: 0,
-            transition: 'background-color 0.3s ease, border-color 0.3s ease',
-          }}
-          className="app-sticky-navbar"
-        >
-          {/* Left: Product Name & Tagline */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px', minWidth: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <img
-                src="/logo.png"
-                alt="Logo"
-                style={{
-                  width: '30px',
-                  height: '30px',
-                  borderRadius: '7px',
-                  objectFit: 'contain',
-                  flexShrink: 0,
-                  boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)',
-                }}
-              />
-              <div style={{ lineHeight: 1.25 }}>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '0.78rem',
-                    fontWeight: 800,
-                    color: 'var(--text)',
-                    letterSpacing: '-0.01em',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  AI-Career Companion Agent
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '0.62rem',
-                    fontWeight: 500,
-                    color: 'var(--text-muted)',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  for Internship Matching &amp; Interview Preparation
-                </div>
-              </div>
-            </div>
 
-          </div>
-
-
-          {/* Right: Theme Toggle, User Profile Capsule & Logout Button */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
-            <ThemeToggle isDark={isDark} onToggle={onThemeToggle} />
-
-            {/* User Capsule */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '4px 12px 4px 6px',
-                borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'var(--bg)',
-                border: '1px solid var(--border)',
-              }}
-            >
-              <div
-                style={{
-                  width: '26px',
-                  height: '26px',
-                  borderRadius: '50%',
-                  backgroundColor: 'var(--accent)',
-                  color: '#fff',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '0.74rem',
-                  fontWeight: 700,
-                }}
-              >
-                {userInitials}
-              </div>
-              <span style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text)' }}>
-                {user?.name?.split(' ')[0] || 'User'}
-              </span>
-            </div>
-
-            {/* Logout Button */}
-            <button
-              type="button"
-              onClick={handleLogout}
-              id="sticky-nav-logout-btn"
-              title="Sign out of AI-Career Companion Agent"
-              aria-label="Logout"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                padding: '7px 16px',
-                borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'transparent',
-                border: '1.5px solid var(--border)',
-                color: 'var(--text-muted)',
-                fontFamily: 'var(--font-sans)',
-                fontSize: '0.82rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'all 0.18s cubic-bezier(0.16, 1, 0.3, 1)',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.borderColor = '#ef4444'
-                e.currentTarget.style.color = '#ef4444'
-                e.currentTarget.style.backgroundColor = 'rgba(239, 68, 68, 0.08)'
-                e.currentTarget.style.transform = 'translateY(-1px)'
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.borderColor = 'var(--border)'
-                e.currentTarget.style.color = 'var(--text-muted)'
-                e.currentTarget.style.backgroundColor = 'transparent'
-                e.currentTarget.style.transform = 'translateY(0)'
-              }}
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-                <polyline points="16 17 21 12 16 7" />
-                <line x1="21" y1="12" x2="9" y2="12" />
-              </svg>
-              Logout
-            </button>
-          </div>
-        </header>
 
         {/* Scrollable Page Content */}
         <main
@@ -854,13 +709,9 @@ export default function AppShell({ isDark, onThemeToggle }: AppShellProps) {
           from { transform: translateX(100%); }
           to { transform: translateX(0); }
         }
-        @media (max-width: 900px) {
-          .sticky-nav-tagline { display: none !important; }
-        }
         @media (max-width: 768px) {
           .app-sidebar-desktop { display: none !important; }
           .app-mobile-header { display: flex !important; }
-          .app-sticky-navbar { display: none !important; }
           .app-main-content {
             padding: 72px 14px 24px !important;
           }

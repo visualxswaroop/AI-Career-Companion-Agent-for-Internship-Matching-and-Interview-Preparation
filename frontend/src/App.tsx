@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router'
 import { AuthProvider } from './context/AuthContext'
-import Navigation from './components/Navigation'
 import ProtectedRoute from './components/ProtectedRoute'
 import AppShell from './components/AppShell'
 
@@ -18,14 +17,6 @@ import InterviewAgentPage from './pages/app/InterviewAgentPage'
 import VoiceResumePage from './pages/app/VoiceResumePage'
 import ProfilePage from './pages/app/ProfilePage'
 
-function LandingLayout({ isDark, onThemeToggle }: { isDark: boolean; onThemeToggle: () => void }) {
-  return (
-    <>
-      <Navigation isDark={isDark} onThemeToggle={onThemeToggle} />
-      <LandingPage />
-    </>
-  )
-}
 
 export default function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -48,7 +39,7 @@ export default function App() {
           {/* Public Landing Page */}
           <Route
             path="/"
-            element={<LandingLayout isDark={isDark} onThemeToggle={handleThemeToggle} />}
+            element={<LandingPage />}
           />
 
           {/* Authentication Routes */}
