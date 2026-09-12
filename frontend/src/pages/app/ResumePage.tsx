@@ -129,7 +129,7 @@ function ATSScorePanel({ data }: { data: ResumeData }) {
 
   return (
     <div style={{
-      marginTop: '28px', padding: '28px',
+      marginTop: '0', padding: '28px',
       backgroundColor: 'var(--surface)',
       border: '1px solid var(--border)',
       borderRadius: 'var(--radius-lg)',
@@ -844,10 +844,17 @@ export default function ResumePage() {
 
             {!detailLoading && !detailError && selectedResume && (
               <>
-                <ResumeAnalysis resume={selectedResume} onFindMatches={() => navigate('/app/internships')} />
+                {/* 1. Key Intelligence Features First: ATS Compatibility Score */}
                 <ATSScorePanel data={selectedResume.extracted_data} />
+
+                {/* 2. Skill Gap Analyzer for Target Roles */}
                 <div style={{ marginTop: '24px' }}>
                   <SkillGapAnalyzer data={selectedResume.extracted_data} />
+                </div>
+
+                {/* 3. Full Parsed Resume Content Data */}
+                <div style={{ marginTop: '32px' }}>
+                  <ResumeAnalysis resume={selectedResume} onFindMatches={() => navigate('/app/internships')} />
                 </div>
               </>
             )}

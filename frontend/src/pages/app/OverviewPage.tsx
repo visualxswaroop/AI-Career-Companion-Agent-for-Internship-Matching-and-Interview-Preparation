@@ -87,7 +87,6 @@ export default function OverviewPage() {
         <div className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
             <span className="label-sm">Resume Parser</span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-subtle)' }}>Phase 3</span>
           </div>
           <div style={{ fontSize: '1.4rem', fontWeight: 700, fontFamily: 'var(--font-serif)', color: 'var(--text)', marginBottom: '4px' }}>
             Ready to Upload
@@ -100,7 +99,6 @@ export default function OverviewPage() {
         <div className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
             <span className="label-sm">Internship Matching</span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-subtle)' }}>Phase 4</span>
           </div>
           <div style={{ fontSize: '1.4rem', fontWeight: 700, fontFamily: 'var(--font-serif)', color: 'var(--text)', marginBottom: '4px' }}>
             AI Semantic Engine

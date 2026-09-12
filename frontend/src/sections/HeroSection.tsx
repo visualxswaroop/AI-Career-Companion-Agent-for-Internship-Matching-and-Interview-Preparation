@@ -41,8 +41,8 @@ function DashboardMockup() {
         >
           <div style={{ marginBottom: '10px', padding: '0 4px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
-              <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: 'var(--sidebar-active-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sidebar-active-text)', fontSize: '9px', fontWeight: 800 }}>C</div>
-              <span style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '10px' }}>CareerForge</span>
+              <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: 'var(--sidebar-active-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sidebar-active-text)', fontSize: '9px', fontWeight: 800 }}>A</div>
+              <span style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '9px', lineHeight: 1.2 }}>AI-Career<br/>Companion</span>
             </div>
             <div style={{ color: 'var(--sidebar-text-sub)', fontSize: '8px' }}>Garima • CS Student</div>
           </div>
@@ -170,7 +170,7 @@ export default function HeroSection() {
           <div style={{ maxWidth: '520px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
               <p className="label-accent" style={{ margin: 0 }}>
-                CareerForge AI • Career Intelligence
+                AI-Career Companion Agent • Career Intelligence
               </p>
               <span
                 style={{

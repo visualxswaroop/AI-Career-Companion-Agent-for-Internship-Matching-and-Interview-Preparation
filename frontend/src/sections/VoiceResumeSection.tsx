@@ -129,7 +129,7 @@ export default function VoiceResumeSection() {
 
           <p className="body-lg" style={{ color: 'var(--text-muted)' }}>
             Ditch writer’s block. Talk naturally about your projects, challenges, and results. 
-            CareerForge AI transcribes your spoken answers, converts them into high-conviction STAR bullet points, 
+            The AI-Career Companion Agent transcribes your spoken answers, converts them into high-conviction STAR bullet points, 
             scores your ATS compatibility, and exports a recruiter-ready executive PDF in seconds.
           </p>
         </div>

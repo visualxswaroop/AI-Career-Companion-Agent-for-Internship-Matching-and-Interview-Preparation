@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import RoadmapVisualCard from './RoadmapVisualCard'
 import type { InterviewRoadmapData } from '../../api/types'
 
@@ -179,6 +179,17 @@ function TypingIndicator() {
   )
 }
 
+function cleanTextForSpeech(text: string): string {
+  return text
+    .replace(/```[\s\S]*?```/g, '') // strip code blocks
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[#*_~>]/g, '')
+    .replace(/\|[^\n]+\|/g, '')
+    .replace(/\n+/g, ' ')
+    .trim()
+}
+
 interface InterviewChatMessageProps {
   message: InterviewMessageItem
   onRetry?: (prompt: string) => void
@@ -187,12 +198,61 @@ interface InterviewChatMessageProps {
 export default function InterviewChatMessage({ message, onRetry }: InterviewChatMessageProps) {
   const isUser = message.role === 'user'
   const [copied, setCopied] = useState(false)
+  const [isSpeaking, setIsSpeaking] = useState(false)
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null)
 
   const handleCopy = () => {
     navigator.clipboard.writeText(message.content)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
+
+  // Speak / Mute toggle — always mute by default until user explicitly clicks Speak
+  const handleToggleSpeech = useCallback(() => {
+    if (typeof window === 'undefined' || !window.speechSynthesis) {
+      alert('Text-to-speech is not supported in this browser.')
+      return
+    }
+
+    if (isSpeaking) {
+      window.speechSynthesis.cancel()
+      setIsSpeaking(false)
+      return
+    }
+
+    // Cancel any active speech before starting
+    window.speechSynthesis.cancel()
+
+    const textToSpeak = cleanTextForSpeech(message.content)
+    if (!textToSpeak) return
+
+    const utterance = new SpeechSynthesisUtterance(textToSpeak)
+    utterance.lang = 'en-US'
+    utterance.rate = 1.0
+
+    utterance.onend = () => {
+      setIsSpeaking(false)
+      utteranceRef.current = null
+    }
+
+    utterance.onerror = () => {
+      setIsSpeaking(false)
+      utteranceRef.current = null
+    }
+
+    utteranceRef.current = utterance
+    setIsSpeaking(true)
+    window.speechSynthesis.speak(utterance)
+  }, [isSpeaking, message.content])
+
+  // Cleanup speech if component unmounts while speaking
+  useEffect(() => {
+    return () => {
+      if (typeof window !== 'undefined' && window.speechSynthesis) {
+        window.speechSynthesis.cancel()
+      }
+    }
+  }, [])
 
   // ───────────────────────────────────────────────
   // User Message (Aligned Right)
@@ -418,45 +478,93 @@ export default function InterviewChatMessage({ message, onRetry }: InterviewChat
               marginTop: '2px',
             }}
           >
-            <button
-              type="button"
-              onClick={handleCopy}
-              title="Copy message to clipboard"
-              aria-label="Copy message to clipboard"
-              style={{
-                background: 'none',
-                border: 'none',
-                color: 'var(--text-muted)',
-                fontSize: '0.72rem',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '5px',
-                padding: '3px 6px',
-                borderRadius: '4px',
-                fontFamily: 'inherit',
-                transition: 'color 0.15s ease',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
-            >
-              {copied ? (
-                <>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  <span>Copied</span>
-                </>
-              ) : (
-                <>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                  </svg>
-                  <span>Copy</span>
-                </>
-              )}
-            </button>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <button
+                type="button"
+                onClick={handleCopy}
+                title="Copy message to clipboard"
+                aria-label="Copy message to clipboard"
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: 'var(--text-muted)',
+                  fontSize: '0.72rem',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '5px',
+                  padding: '3px 6px',
+                  borderRadius: '4px',
+                  fontFamily: 'inherit',
+                  transition: 'color 0.15s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
+              >
+                {copied ? (
+                  <>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Copied</span>
+                  </>
+                ) : (
+                  <>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                    </svg>
+                    <span>Copy</span>
+                  </>
+                )}
+              </button>
+
+              {/* Speak button - ALWAYS MUTED by default, user explicitly triggers speech */}
+              <button
+                type="button"
+                onClick={handleToggleSpeech}
+                title={isSpeaking ? 'Stop speaking (Mute)' : 'Listen to response'}
+                aria-label={isSpeaking ? 'Stop speaking' : 'Speak response'}
+                style={{
+                  background: isSpeaking ? 'color-mix(in srgb, var(--accent) 18%, transparent)' : 'none',
+                  border: isSpeaking ? '1px solid var(--accent)' : 'none',
+                  color: isSpeaking ? 'var(--accent)' : 'var(--text-muted)',
+                  fontSize: '0.72rem',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '5px',
+                  padding: '3px 7px',
+                  borderRadius: '4px',
+                  fontFamily: 'inherit',
+                  transition: 'all 0.15s ease',
+                }}
+                onMouseEnter={(e) => {
+                  if (!isSpeaking) e.currentTarget.style.color = 'var(--text)'
+                }}
+                onMouseLeave={(e) => {
+                  if (!isSpeaking) e.currentTarget.style.color = 'var(--text-muted)'
+                }}
+              >
+                {isSpeaking ? (
+                  <>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="6" y="6" width="12" height="12" rx="2" />
+                    </svg>
+                    <span style={{ fontWeight: 600 }}>Stop</span>
+                  </>
+                ) : (
+                  <>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                      <line x1="23" y1="9" x2="17" y2="15" />
+                      <line x1="17" y1="9" x2="23" y2="15" />
+                    </svg>
+                    <span>Speak</span>
+                  </>
+                )}
+              </button>
+            </div>
 
             <span style={{ fontSize: '0.66rem', color: 'var(--text-subtle)' }}>
               {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}

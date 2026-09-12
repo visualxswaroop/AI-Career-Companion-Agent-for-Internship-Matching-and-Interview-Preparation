@@ -166,89 +166,76 @@ export default function AppShell({ isDark, onThemeToggle }: AppShellProps) {
         {/* Brand & Collapse Toggle */}
         <div
           style={{
-            padding: isSidebarCollapsed ? '20px 12px' : '20px 18px',
+            padding: isSidebarCollapsed ? '20px 12px' : '16px 18px',
             borderBottom: '1px solid var(--sidebar-border)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: isSidebarCollapsed ? 'center' : 'space-between',
             gap: '8px',
-            minHeight: '74px',
+            minHeight: '88px',
           }}
         >
           {!isSidebarCollapsed && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1, minWidth: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', flex: 1, minWidth: 0 }}>
               {/* Professional Logo Emblem */}
-              <div
+              <img
+                src="/logo.png"
+                alt="Logo"
                 style={{
-                  width: '34px',
-                  height: '34px',
-                  borderRadius: '9px',
-                  background: 'linear-gradient(135deg, #ffffff 0%, #e2d9fe 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.22)',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  objectFit: 'contain',
                   flexShrink: 0,
+                  marginTop: '2px',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.25)',
                 }}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
-                    fill="#3114cf"
-                    stroke="#240ea4"
-                    strokeWidth="1.2"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
+              />
 
-              {/* Wordmark and Tagline */}
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', lineHeight: 1.1 }}>
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-sans)',
-                      fontSize: '1.05rem',
-                      fontWeight: 800,
-                      color: '#FFFFFF',
-                      letterSpacing: '-0.025em',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    CareerForge
-                  </span>
-                  <span
-                    style={{
-                      background: 'linear-gradient(135deg, #ede9fe 0%, #c4b5fd 100%)',
-                      color: '#240ea4',
-                      padding: '1px 6px',
-                      borderRadius: '5px',
-                      fontSize: '0.68rem',
-                      fontWeight: 800,
-                      letterSpacing: '0.04em',
-                      lineHeight: 1.2,
-                    }}
-                  >
-                    AI
-                  </span>
+              {/* Stacked product name — intentional multi-line design */}
+              <div style={{ flex: 1, minWidth: 0, lineHeight: 1.25 }}>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontSize: '0.72rem',
+                    fontWeight: 800,
+                    color: '#FFFFFF',
+                    letterSpacing: '-0.005em',
+                  }}
+                >
+                  AI-Career Companion Agent
                 </div>
                 <div
                   style={{
-                    fontSize: '0.67rem',
-                    color: 'rgba(255, 255, 255, 0.72)',
+                    fontFamily: 'var(--font-sans)',
+                    fontSize: '0.62rem',
                     fontWeight: 500,
-                    marginTop: '3px',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    letterSpacing: '0.01em',
+                    color: 'rgba(255, 255, 255, 0.60)',
+                    marginTop: '2px',
+                    lineHeight: 1.3,
+                    letterSpacing: '0em',
                   }}
-                  title="Your career, spoken into shape."
                 >
-                  Your career, spoken into shape.
+                  for Internship Matching &amp;
+                  <br />Interview Preparation
                 </div>
               </div>
             </div>
+          )}
+
+          {isSidebarCollapsed && (
+            <img
+              src="/logo.png"
+              alt="Logo"
+              style={{
+                width: '30px',
+                height: '30px',
+                borderRadius: '7px',
+                objectFit: 'contain',
+                flexShrink: 0,
+                marginBottom: '4px',
+              }}
+            />
           )}
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px', flexShrink: 0 }}>
@@ -461,47 +448,41 @@ export default function AppShell({ isDark, onThemeToggle }: AppShellProps) {
         className="app-mobile-header"
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div
+          <img
+            src="/logo.png"
+            alt="Logo"
             style={{
-              width: '26px',
-              height: '26px',
+              width: '28px',
+              height: '28px',
               borderRadius: '7px',
-              background: 'linear-gradient(135deg, #4f2ee8 0%, #3114cf 100%)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#fff',
-              fontWeight: 800,
-              fontSize: '0.78rem',
+              objectFit: 'contain',
+              flexShrink: 0,
+              boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)',
             }}
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#fff" stroke="rgba(255,255,255,0.4)" strokeWidth="1" strokeLinejoin="round" />
-            </svg>
+          />
+          <div style={{ lineHeight: 1.2 }}>
+            <div
+              style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.72rem',
+                fontWeight: 800,
+                color: 'var(--text)',
+                letterSpacing: '-0.01em',
+              }}
+            >
+              AI-Career Companion Agent
+            </div>
+            <div
+              style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.58rem',
+                fontWeight: 500,
+                color: 'var(--text-muted)',
+              }}
+            >
+              Internship Matching &amp; Interview Preparation
+            </div>
           </div>
-          <span
-            style={{
-              fontFamily: 'var(--font-sans)',
-              fontSize: '1rem',
-              fontWeight: 800,
-              color: 'var(--text)',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            CareerForge
-          </span>
-          <span
-            style={{
-              background: 'var(--accent-bg)',
-              color: 'var(--accent)',
-              padding: '1px 5px',
-              borderRadius: '999px',
-              fontSize: '0.64rem',
-              fontWeight: 800,
-            }}
-          >
-            AI
-          </span>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -722,69 +703,48 @@ export default function AppShell({ isDark, onThemeToggle }: AppShellProps) {
         >
           {/* Left: Product Name & Tagline */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px', minWidth: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <div
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <img
+                src="/logo.png"
+                alt="Logo"
                 style={{
                   width: '30px',
                   height: '30px',
-                  borderRadius: '8px',
-                  background: 'linear-gradient(135deg, #4f2ee8 0%, #3114cf 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#fff',
-                  fontWeight: 800,
-                  fontSize: '0.85rem',
-                  boxShadow: '0 2px 8px rgba(49, 20, 207, 0.25)',
+                  borderRadius: '7px',
+                  objectFit: 'contain',
+                  flexShrink: 0,
+                  boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)',
                 }}
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#fff" stroke="rgba(255,255,255,0.4)" strokeWidth="1" strokeLinejoin="round" />
-                </svg>
+              />
+              <div style={{ lineHeight: 1.25 }}>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontSize: '0.78rem',
+                    fontWeight: 800,
+                    color: 'var(--text)',
+                    letterSpacing: '-0.01em',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  AI-Career Companion Agent
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontSize: '0.62rem',
+                    fontWeight: 500,
+                    color: 'var(--text-muted)',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  for Internship Matching &amp; Interview Preparation
+                </div>
               </div>
-              <span
-                style={{
-                  fontFamily: 'var(--font-sans)',
-                  fontSize: '1.05rem',
-                  fontWeight: 800,
-                  color: 'var(--text)',
-                  letterSpacing: '-0.025em',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                CareerForge
-              </span>
-              <span
-                style={{
-                  background: 'var(--accent-bg)',
-                  color: 'var(--accent)',
-                  padding: '1px 6px',
-                  borderRadius: '999px',
-                  fontSize: '0.68rem',
-                  fontWeight: 800,
-                  letterSpacing: '0.04em',
-                }}
-              >
-                AI
-              </span>
             </div>
 
-            <div
-              className="sticky-nav-tagline"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                color: 'var(--text-muted)',
-                fontSize: '0.8rem',
-                borderLeft: '1px solid var(--border)',
-                paddingLeft: '14px',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              <span>Your career, spoken into shape.</span>
-            </div>
           </div>
+
 
           {/* Right: Theme Toggle, User Profile Capsule & Logout Button */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
@@ -828,7 +788,7 @@ export default function AppShell({ isDark, onThemeToggle }: AppShellProps) {
               type="button"
               onClick={handleLogout}
               id="sticky-nav-logout-btn"
-              title="Sign out of CareerForge AI"
+              title="Sign out of AI-Career Companion Agent"
               aria-label="Logout"
               style={{
                 display: 'inline-flex',

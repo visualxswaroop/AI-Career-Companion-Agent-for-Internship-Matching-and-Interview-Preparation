@@ -118,7 +118,6 @@ export default function LoginPage() {
         padding: '32px 16px',
       }}
     >
-      {/* Top logo link */}
       <div style={{ maxWidth: '440px', width: '100%', margin: '0 auto 32px' }}>
         <Link
           to="/"
@@ -129,33 +128,24 @@ export default function LoginPage() {
             textDecoration: 'none',
           }}
         >
-          <div
+          <img
+            src="/logo.png"
+            alt="AI-Career Companion Agent"
             style={{
-              width: '32px',
-              height: '32px',
+              width: '34px',
+              height: '34px',
               borderRadius: '8px',
-              background: 'linear-gradient(135deg, #4f2ee8 0%, #3114cf 100%)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 4px 12px rgba(49, 20, 207, 0.28)',
+              objectFit: 'contain',
+              flexShrink: 0,
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.25)',
             }}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#fff" stroke="rgba(255,255,255,0.6)" strokeWidth="1" strokeLinejoin="round" />
-            </svg>
-          </div>
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', lineHeight: 1.1 }}>
-              <span style={{ fontFamily: 'var(--font-sans)', fontSize: '1.05rem', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.025em' }}>
-                CareerForge
-              </span>
-              <span style={{ background: 'var(--accent-bg)', color: 'var(--accent)', padding: '1px 6px', borderRadius: '5px', fontSize: '0.68rem', fontWeight: 800, letterSpacing: '0.04em' }}>
-                AI
-              </span>
+          />
+          <div style={{ lineHeight: 1.25 }}>
+            <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.82rem', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.01em' }}>
+              AI-Career Companion Agent
             </div>
-            <div style={{ fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 500 }}>
-              Your career, spoken into shape.
+            <div style={{ fontSize: '0.64rem', color: 'var(--text-muted)', fontWeight: 500 }}>
+              for Internship Matching &amp; Interview Preparation
             </div>
           </div>
         </Link>

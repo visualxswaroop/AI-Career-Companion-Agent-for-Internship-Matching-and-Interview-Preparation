@@ -3,12 +3,15 @@
 // Change BRAND_NAME here to update the product name everywhere on the site.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const BRAND_NAME = 'CareerForge AI'
+export const BRAND_NAME = 'AI-Career Companion Agent for Internship Matching and Interview Preparation'
 
-export const SITE_TAGLINE = 'Your career, spoken into shape.'
+export const BRAND_NAME_SHORT = 'AI-Career Companion Agent'
+
+// Tagline removed — the official product name is self-descriptive.
+export const SITE_TAGLINE = ''
 
 export const SITE_DESCRIPTION =
-  'Build a career plan around your strengths, speak your story into an executive ATS resume, and find high-conviction opportunities tailored for you.'
+  'Your AI-powered companion for internship matching, resume analysis, cover letter generation, and intelligent interview preparation.'
 
 export const NAV_LINKS = [
   { label: 'Explore Careers', href: '#careers' },

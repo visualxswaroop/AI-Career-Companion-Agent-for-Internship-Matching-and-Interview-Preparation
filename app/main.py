@@ -7,8 +7,8 @@ from app import models
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="CareerForge AI API",
-    description="CareerForge AI — Backend & Career Companion Platform",
+    title="AI-Career Companion Agent API",
+    description="AI-Career Companion Agent for Internship Matching and Interview Preparation — Backend Platform",
     version="1.0.0"
 )
 
@@ -31,6 +31,6 @@ app.include_router(voice_resume.router)
 @app.get("/")
 def home():
     return {
-        "message": "CareerForge AI API is Running 🚀",
+        "message": "AI-Career Companion Agent API is Running 🚀",
         "status": "healthy"
     }

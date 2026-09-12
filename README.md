@@ -1,6 +1,6 @@
-# 🎓 CareerForge AI
+# 🎓 AI-Career Companion Agent for Internship Matching & Interview Preparation
 
-An AI-powered career assistance platform for students, fresh graduates, and early-career professionals. Career Companion combines resume parsing, intelligent internship matching, cover letter generation, and a **RAG-based Career Assistant chatbot** into a single integrated system.
+An AI-powered career assistance platform for students, fresh graduates, and early-career professionals. The AI-Career Companion Agent combines resume parsing, intelligent internship matching, cover letter generation, a **RAG-based Career Assistant chatbot**, and an **interactive multi-turn Interview Preparation Agent** into a single integrated system.
 
 ---
 
@@ -32,13 +32,24 @@ An AI-powered career assistance platform for students, fresh graduates, and earl
   - Conversation memory within session
   - Grounded answers: platform-specific queries use knowledge base, not hallucination
 
+- **🎤 Interview Preparation & Mock Interview Agent**
+  - Role recommendation based on parsed resume skills
+  - Technical & HR question generation with STAR method guidance
+  - Multi-turn mock interview with rubric scoring (Clarity, Technical Depth, STAR Structure)
+  - Personalized 2–4 week preparation roadmaps
+
+- **🗣️ Voice Resume Architect (Multilingual)**
+  - Speak your resume in Telugu, Hindi, Tamil, English, and more
+  - LLM translates, de-stutters, and structures spoken input into ATS-ready English
+  - One-click executive PDF export via `jsPDF`
+
 ---
 
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Backend | FastAPI, Python 3.9+ |
+| Backend | FastAPI, Python 3.10+ |
 | Database | SQLite + SQLAlchemy ORM |
 | Auth | JWT (`python-jose`), `passlib`/`bcrypt` |
 | AI/Embeddings | `sentence-transformers/all-MiniLM-L6-v2` |
@@ -52,7 +63,7 @@ An AI-powered career assistance platform for students, fresh graduates, and earl
 ## 📁 Directory Structure
 
 ```text
-careerforgeAI/
+AI-Career-Companion-Agent/
 ├── app/
 │   ├── main.py                    # FastAPI entrypoint & router config
 │   ├── auth.py                    # JWT token helpers
@@ -63,6 +74,8 @@ careerforgeAI/
 │   ├── resume_parser.py           # Regex/heuristic resume field extraction
 │   ├── internship_index.py        # FAISS internship similarity search
 │   ├── cover_letter_service.py    # Cover letter generation service
+│   ├── interview_agent_service.py # Multi-turn interview agent logic
+│   ├── voice_resume_service.py    # Multilingual voice resume extraction
 │   ├── rag/                       # ← RAG system for Career Assistant
 │   │   ├── __init__.py
 │   │   ├── ingest.py              # Document ingestion pipeline
@@ -73,7 +86,9 @@ careerforgeAI/
 │       ├── profile.py
 │       ├── resume.py
 │       ├── cover_letter.py
-│       └── career_assistant.py    # ← Career Assistant endpoints
+│       ├── career_assistant.py    # ← Career Assistant endpoints
+│       ├── interview_agent.py     # ← Interview Agent endpoints
+│       └── voice_resume.py        # ← Voice Resume endpoints
 │
 ├── knowledge_base/
 │   └── career_companion_knowledge.md   # ← Primary RAG knowledge source
@@ -86,13 +101,18 @@ careerforgeAI/
 │       └── metadata.json         # RAG chunk metadata (generated)
 │
 ├── frontend/                      # Vite + React frontend
+│   ├── vercel.json                # Vercel SPA rewrite config
 │   └── src/
 │       ├── pages/app/
+│       │   ├── InterviewAgentPage.tsx
+│       │   ├── ResumePage.tsx
 │       │   └── CareerAssistantPage.tsx
 │       └── api/
 │           └── careerAssistant.ts
 │
 ├── uploads/                       # Uploaded resume files
+├── railway.json                   # Railway deployment config
+├── Procfile                       # Heroku/Railway process definition
 ├── requirements.txt
 ├── .env                           # GROQ_API_KEY (not committed)
 └── .env.example
@@ -104,14 +124,14 @@ careerforgeAI/
 
 ### Prerequisites
 
-- Python 3.9+ installed
+- Python 3.10+ installed
 - Node.js 18+ installed (for frontend)
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/visualxswaroop/resume_parser_api.git
-cd careerforgeAI
+cd AI-Career-Companion-Agent
 ```
 
 ### 2. Create and Activate a Virtual Environment
@@ -144,6 +164,7 @@ cp .env.example .env
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
+SECRET_KEY=your_secret_key_here
 ```
 
 Get a free Groq API key at: https://console.groq.com
@@ -283,11 +304,11 @@ knowledge_base/career_companion_knowledge.md
 ```
 
 It covers:
-- Career Companion platform overview and workflow
+- Platform overview and workflow
 - Authentication, profiles, resume parsing
 - Internship recommendation system
 - Cover letter generation
-- Career Assistant itself
+- Career Assistant chatbot
 - Resume writing guidance and common mistakes
 - ATS concepts and optimization
 - Internship strategies
@@ -310,10 +331,6 @@ python -m app.rag.ingest
 
 3. Restart the backend server (to reload the in-memory index).
 
-### Keeping RAG Separate from Internship Index
-
-The internship FAISS index (`data/internship_index.faiss`) and the RAG knowledge base index (`data/rag/index.faiss`) are **completely separate** and do not interfere with each other.
-
 ---
 
 ## 🌐 Frontend Routes
@@ -327,7 +344,9 @@ The internship FAISS index (`data/internship_index.faiss`) and the RAG knowledge
 | `/app/resume` | Resume Analysis | Yes |
 | `/app/internships` | Internship Recommendations | Yes |
 | `/app/cover-letters` | Cover Letter Generator | Yes |
-| `/app/career-assistant` | **Career Assistant chatbot** | Yes |
+| `/app/career-assistant` | Career Assistant chatbot | Yes |
+| `/app/interview-agent` | Interview Preparation & Mock Sessions | Yes |
+| `/app/voice-resume` | Voice Resume Architect | Yes |
 | `/app/profile` | Profile & Settings | Yes |
 
 ---
@@ -338,6 +357,18 @@ Once the backend is running:
 
 - **Swagger UI**: http://127.0.0.1:8000/docs
 - **ReDoc**: http://127.0.0.1:8000/redoc
+
+---
+
+## 🚀 Deployment
+
+### Backend → Railway
+- Config: [`railway.json`](railway.json) — Nixpacks builder, `uvicorn app.main:app` start command.
+- Set environment variables (`GROQ_API_KEY`, `SECRET_KEY`, `DATABASE_URL`) in Railway dashboard.
+
+### Frontend → Vercel
+- Config: [`frontend/vercel.json`](frontend/vercel.json) — SPA rewrites all routes to `/index.html`.
+- Set `VITE_API_BASE_URL` to your Railway backend URL in Vercel environment variables.
 
 ---
 

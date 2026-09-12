@@ -207,7 +207,7 @@ export default function OnboardingPage() {
                 onBlur={e => (e.target.style.borderColor = 'var(--border)')}
               />
               <p style={{ fontSize: '0.78rem', color: 'var(--text-subtle)', marginTop: '6px' }}>
-                Tip: You can always update this or let your uploaded resume autofill this in Phase 3.
+                Tip: You can always update this or let your uploaded resume autofill this later.
               </p>
             </div>
 

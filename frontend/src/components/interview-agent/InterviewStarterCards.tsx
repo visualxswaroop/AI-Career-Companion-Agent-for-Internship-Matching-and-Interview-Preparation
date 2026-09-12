@@ -357,7 +357,7 @@ export default function InterviewStarterCards({
         </div>
       )}
 
-      {/* Grid of Starter Actions (2 Columns on Desktop, 1 on Mobile) */}
+      {/* Grid of Starter Actions */}
       <div
         style={{
           display: 'grid',
@@ -366,77 +366,122 @@ export default function InterviewStarterCards({
           width: '100%',
           maxWidth: '680px',
         }}
+        className="interview-starter-grid"
       >
-        {starters.map((item) => (
-          <button
-            key={item.id}
-            type="button"
-            onClick={() => onSelectPrompt(item.prompt)}
-            style={{
-              padding: '12px 14px',
-              borderRadius: 'var(--radius)',
-              backgroundColor: 'var(--bg-alt)',
-              border: '1px solid var(--border)',
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '12px',
-              textAlign: 'left',
-              cursor: 'pointer',
-              transition: 'all 0.15s ease',
-              fontFamily: 'inherit',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'var(--accent)'
-              e.currentTarget.style.backgroundColor = 'var(--surface)'
-              e.currentTarget.style.transform = 'translateY(-1px)'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border)'
-              e.currentTarget.style.backgroundColor = 'var(--bg-alt)'
-              e.currentTarget.style.transform = 'translateY(0)'
-            }}
-          >
-            <div
+        {starters.map((item) => {
+          const isMock = item.id === 'mock-interview'
+          return (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => onSelectPrompt(item.prompt)}
+              className={isMock ? 'interview-card-featured' : ''}
               style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: 'var(--radius-sm)',
-                backgroundColor: 'var(--surface)',
-                border: '1px solid var(--border)',
-                color: 'var(--accent)',
+                padding: isMock ? '14px 16px' : '12px 14px',
+                borderRadius: 'var(--radius)',
+                backgroundColor: isMock
+                  ? 'color-mix(in srgb, var(--accent) 10%, var(--bg-alt))'
+                  : 'var(--bg-alt)',
+                border: isMock
+                  ? '1.5px solid color-mix(in srgb, var(--accent) 40%, transparent)'
+                  : '1px solid var(--border)',
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-                marginTop: '1px',
+                alignItems: 'flex-start',
+                gap: '12px',
+                textAlign: 'left',
+                cursor: 'pointer',
+                transition: 'all 0.15s ease',
+                fontFamily: 'inherit',
+                gridColumn: isMock ? '1 / -1' : 'auto',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'var(--accent)'
+                e.currentTarget.style.backgroundColor = isMock
+                  ? 'color-mix(in srgb, var(--accent) 16%, var(--surface))'
+                  : 'var(--surface)'
+                e.currentTarget.style.transform = 'translateY(-1px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = isMock
+                  ? 'color-mix(in srgb, var(--accent) 40%, transparent)'
+                  : 'var(--border)'
+                e.currentTarget.style.backgroundColor = isMock
+                  ? 'color-mix(in srgb, var(--accent) 10%, var(--bg-alt))'
+                  : 'var(--bg-alt)'
+                e.currentTarget.style.transform = 'translateY(0)'
               }}
             >
-              {item.icon()}
-            </div>
-            <div style={{ minWidth: 0 }}>
               <div
                 style={{
-                  fontSize: '0.84rem',
-                  fontWeight: 600,
-                  color: 'var(--text)',
-                  marginBottom: '2px',
+                  width: '34px',
+                  height: '34px',
+                  borderRadius: 'var(--radius-sm)',
+                  backgroundColor: isMock
+                    ? 'color-mix(in srgb, var(--accent) 20%, var(--surface))'
+                    : 'var(--surface)',
+                  border: isMock
+                    ? '1px solid color-mix(in srgb, var(--accent) 35%, transparent)'
+                    : '1px solid var(--border)',
+                  color: 'var(--accent)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  marginTop: '1px',
                 }}
               >
-                {item.title}
+                {item.icon()}
               </div>
-              <div
-                style={{
-                  fontSize: '0.74rem',
-                  color: 'var(--text-muted)',
-                  lineHeight: 1.35,
-                }}
-              >
-                {item.desc}
+              <div style={{ minWidth: 0, flex: 1 }}>
+                <div
+                  style={{
+                    fontSize: isMock ? '0.88rem' : '0.84rem',
+                    fontWeight: isMock ? 700 : 600,
+                    color: 'var(--text)',
+                    marginBottom: '2px',
+                  }}
+                >
+                  {item.title}
+                  {isMock && (
+                    <span
+                      style={{
+                        marginLeft: '8px',
+                        fontSize: '0.68rem',
+                        fontWeight: 700,
+                        padding: '1px 7px',
+                        borderRadius: '999px',
+                        backgroundColor: 'var(--accent)',
+                        color: '#fff',
+                        letterSpacing: '0.02em',
+                        verticalAlign: 'middle',
+                      }}
+                    >
+                      Featured
+                    </span>
+                  )}
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.74rem',
+                    color: 'var(--text-muted)',
+                    lineHeight: 1.35,
+                  }}
+                >
+                  {item.desc}
+                </div>
               </div>
-            </div>
-          </button>
-        ))}
+            </button>
+          )
+        })}
       </div>
+
+      <style>{`
+        @media (max-width: 620px) {
+          .interview-starter-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
 
       {/* Bottom helper prompt / Upload trigger */}
       {!activeDocument && onUploadClick && (

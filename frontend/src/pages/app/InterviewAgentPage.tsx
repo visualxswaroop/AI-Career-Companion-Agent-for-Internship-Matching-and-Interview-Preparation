@@ -24,6 +24,11 @@ const DOC_QUICK_ACTIONS = [
   { label: 'Study Roadmap', prompt: 'Create a study roadmap from this document.' },
 ]
 
+const SpeechRecognitionAPI =
+  (typeof window !== 'undefined' &&
+    ((window as any).SpeechRecognition || (window as any).webkitSpeechRecognition)) ||
+  null
+
 export default function InterviewAgentPage() {
   const { token } = useAuth()
   const [context, setContext] = useState<InterviewAgentContextResponse | null>(null)
@@ -44,6 +49,13 @@ export default function InterviewAgentPage() {
   const [isUploading, setIsUploading] = useState(false)
   const [uploadError, setUploadError] = useState<string | null>(null)
   const [isRemovingDoc, setIsRemovingDoc] = useState(false)
+
+  // Voice recording & transcription state
+  const [isRecording, setIsRecording] = useState(false)
+  const [speechInterim, setSpeechInterim] = useState('')
+  const recognitionRef = useRef<any>(null)
+  const silenceTimerRef = useRef<any>(null)
+  const speechAccumulatedRef = useRef('')
 
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -249,6 +261,112 @@ export default function InterviewAgentPage() {
     },
     [input, isLoading, token, messages, targetRole],
   )
+
+  // ───────────────────────────────────────────────
+  // Voice Recording & Speech-to-Text Handlers
+  // ───────────────────────────────────────────────
+  const stopVoiceRecording = useCallback(
+    (sendOnStop = true) => {
+      if (silenceTimerRef.current) {
+        clearTimeout(silenceTimerRef.current)
+        silenceTimerRef.current = null
+      }
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop()
+        } catch {}
+        recognitionRef.current = null
+      }
+      setIsRecording(false)
+      setSpeechInterim('')
+
+      if (sendOnStop) {
+        const captured = speechAccumulatedRef.current.trim()
+        if (captured) {
+          handleSendMessage(captured)
+        }
+      }
+      speechAccumulatedRef.current = ''
+    },
+    [handleSendMessage],
+  )
+
+  const toggleVoiceRecording = useCallback(() => {
+    if (isRecording) {
+      // Stop recording and send captured message
+      stopVoiceRecording(true)
+      return
+    }
+
+    if (!SpeechRecognitionAPI) {
+      alert('Speech recognition is not supported in this browser. Please use Chrome, Edge, or Safari.')
+      return
+    }
+
+    try {
+      const rec = new SpeechRecognitionAPI()
+      rec.continuous = true
+      rec.interimResults = true
+      rec.lang = 'en-US'
+      rec.maxAlternatives = 1
+
+      speechAccumulatedRef.current = input ? input + ' ' : ''
+
+      rec.onresult = (event: any) => {
+        let interim = ''
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          const res = event.results[i]
+          if (res.isFinal) {
+            speechAccumulatedRef.current += res[0].transcript + ' '
+          } else {
+            interim += res[0].transcript
+          }
+        }
+        setSpeechInterim(interim)
+        const currentFull = (speechAccumulatedRef.current + interim).trim()
+        setInput(currentFull)
+
+        // Reset silence timer: auto-send after 3.5s silence after speaking
+        if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current)
+        if (currentFull.length > 0) {
+          silenceTimerRef.current = setTimeout(() => {
+            stopVoiceRecording(true)
+          }, 3500)
+        }
+      }
+
+      rec.onerror = (e: any) => {
+        console.warn('Speech recognition error:', e)
+        setIsRecording(false)
+        setSpeechInterim('')
+      }
+
+      rec.onend = () => {
+        setIsRecording(false)
+        setSpeechInterim('')
+      }
+
+      recognitionRef.current = rec
+      rec.start()
+      setIsRecording(true)
+    } catch (err) {
+      console.error('Failed to start speech recognition:', err)
+      setIsRecording(false)
+    }
+  }, [isRecording, input, stopVoiceRecording])
+
+  useEffect(() => {
+    return () => {
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop()
+        } catch {}
+      }
+      if (silenceTimerRef.current) {
+        clearTimeout(silenceTimerRef.current)
+      }
+    }
+  }, [])
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -738,8 +856,58 @@ export default function InterviewAgentPage() {
           boxShadow: 'var(--shadow-sm)',
         }}
       >
-        {/* Upper row: Textarea + Send button */}
-        <div style={{ display: 'flex', alignItems: 'flex-end', gap: '10px' }}>
+        {/* Live Voice Recording & Transcription Indicator */}
+        {isRecording && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '6px 12px',
+              borderRadius: 'var(--radius)',
+              backgroundColor: 'rgba(239, 68, 68, 0.12)',
+              border: '1px solid rgba(239, 68, 68, 0.3)',
+              fontSize: '0.78rem',
+              color: '#ef4444',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
+              <span
+                style={{
+                  display: 'inline-block',
+                  width: '8px',
+                  height: '8px',
+                  borderRadius: '50%',
+                  backgroundColor: '#ef4444',
+                  animation: 'micPulse 1.2s ease-in-out infinite',
+                  flexShrink: 0,
+                }}
+              />
+              <span style={{ fontWeight: 700, flexShrink: 0 }}>Listening:</span>
+              <span style={{ color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                {speechInterim || 'Speak your response. Click the red button to finish and send.'}
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => stopVoiceRecording(false)}
+              style={{
+                background: 'none',
+                border: 'none',
+                color: 'var(--text-muted)',
+                fontSize: '0.72rem',
+                cursor: 'pointer',
+                padding: '2px 6px',
+                flexShrink: 0,
+              }}
+            >
+              Cancel
+            </button>
+          </div>
+        )}
+
+        {/* Upper row: Textarea + Mic Button + Send button */}
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px' }}>
           <textarea
             ref={inputRef}
             value={input}
@@ -768,6 +936,62 @@ export default function InterviewAgentPage() {
               padding: '6px 4px',
             }}
           />
+
+          {/* Voice Input / Mic Button */}
+          <button
+            type="button"
+            onClick={toggleVoiceRecording}
+            disabled={isLoading}
+            title={isRecording ? 'Listening... click to finish and send' : 'Speak to record, transcribe & send as text'}
+            aria-label={isRecording ? 'Stop recording and send' : 'Voice input'}
+            style={{
+              width: '36px',
+              height: '36px',
+              borderRadius: 'var(--radius)',
+              backgroundColor: isRecording ? '#ef4444' : 'var(--surface)',
+              color: isRecording ? '#fff' : 'var(--text-muted)',
+              border: isRecording ? '1.5px solid #ef4444' : '1px solid var(--border)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: isLoading ? 'not-allowed' : 'pointer',
+              transition: 'all 0.15s ease',
+              flexShrink: 0,
+              boxShadow: isRecording ? '0 0 14px rgba(239, 68, 68, 0.45)' : 'none',
+              animation: isRecording ? 'micPulse 1.4s ease-in-out infinite' : 'none',
+            }}
+            onMouseEnter={(e) => {
+              if (!isRecording && !isLoading) {
+                e.currentTarget.style.borderColor = 'var(--accent)'
+                e.currentTarget.style.color = 'var(--accent)'
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (!isRecording && !isLoading) {
+                e.currentTarget.style.borderColor = 'var(--border)'
+                e.currentTarget.style.color = 'var(--text-muted)'
+              }
+            }}
+          >
+            {isRecording ? (
+              <span
+                style={{
+                  display: 'inline-block',
+                  width: '12px',
+                  height: '12px',
+                  borderRadius: '2px',
+                  backgroundColor: '#fff',
+                }}
+              />
+            ) : (
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <line x1="12" y1="19" x2="12" y2="22" />
+                <line x1="8" y1="22" x2="16" y2="22" />
+              </svg>
+            )}
+          </button>
 
           <button
             type="button"
@@ -1095,6 +1319,11 @@ export default function InterviewAgentPage() {
       <style>{`
         @keyframes spin {
           to { transform: rotate(360deg); }
+        }
+        @keyframes micPulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.08); }
+          100% { transform: scale(1); }
         }
       `}</style>
     </div>
