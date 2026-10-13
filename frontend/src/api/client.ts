@@ -60,8 +60,9 @@ export async function request<T>(endpoint: string, options: RequestOptions = {})
     delete reqHeaders['content-type']
   }
 
-  if (token) {
-    reqHeaders['Authorization'] = `Bearer ${token}`
+  const authToken = token || (typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null)
+  if (authToken && !reqHeaders['Authorization'] && !reqHeaders['authorization']) {
+    reqHeaders['Authorization'] = `Bearer ${authToken}`
   }
 
   let response: Response

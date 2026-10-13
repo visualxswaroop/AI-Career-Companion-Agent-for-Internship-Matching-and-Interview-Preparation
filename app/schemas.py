@@ -305,3 +305,152 @@ class VoiceResumeGenerateResponse(BaseModel):
 class VoiceResumeTranscribeResponse(BaseModel):
     transcript: str
     language: Optional[str] = "en"
+
+
+# =========================================================
+# ATS SCORER SCHEMAS
+# =========================================================
+
+class ATSScoreRequest(BaseModel):
+    resume_id: int
+    job_description: str
+
+
+class ATSSectionFeedback(BaseModel):
+    score: float
+    present: bool
+    feedback: str
+
+
+class ATSScoreResponse(BaseModel):
+    ats_score: int
+    similarity_score: float
+    matched_keywords: List[str]
+    missing_keywords: List[str]
+    keyword_coverage: float
+    section_feedback: Dict[str, Any]
+    recommendation: str
+
+
+# =========================================================
+# KNOWLEDGE BASE SCHEMAS
+# =========================================================
+
+class KBInternship(BaseModel):
+    id: str
+    company: str
+    role_title: str
+    domain: str
+    location: str
+    mode: str
+    duration_weeks: int
+    stipend_inr_per_month: int
+    min_education: str
+    required_skills: List[str]
+    preferred_skills: List[str]
+    description: str
+
+
+class KBListResponse(BaseModel):
+    total: int
+    domains: List[str]
+    internships: List[KBInternship]
+
+
+class KBQueryRequest(BaseModel):
+    question: str
+    conversation_history: Optional[List[ChatMessage]] = None
+
+
+class KBQueryResponse(BaseModel):
+    answer: str
+    sources: List[ChatSource] = []
+    retrieval_used: bool = False
+    generation_method: str = "llm"
+
+
+# =========================================================
+# JOB MATCHING SCHEMAS
+# =========================================================
+
+class JobMatchRequest(BaseModel):
+    resume_id: int
+    top_k: int = 10
+    threshold: float = 0.0   # 0–100 filter slider
+
+
+class RoadmapStep(BaseModel):
+    step: int
+    title: str
+    description: str
+    duration_weeks: int
+    priority: str = "medium"
+
+
+class CourseRecommendation(BaseModel):
+    title: str
+    platform: str
+    url: str
+    estimated_hours: int
+
+
+class ProjectIdea(BaseModel):
+    title: str
+    description: str
+    tech_stack: List[str]
+
+
+# =========================================================
+# SKILL GAP SCHEMAS
+# =========================================================
+
+class SkillGapRequest(BaseModel):
+    resume_id: int
+    target_role: str
+
+
+class SkillGapResponse(BaseModel):
+    target_role: str
+    current_skills: List[str]
+    required_skills: List[str]
+    matched_skills: List[str]
+    missing_skills: List[str]
+    overall_readiness_pct: int
+    readiness_label: str
+    roadmap: List[Dict[str, Any]]
+    courses: List[Dict[str, Any]]
+    project_ideas: List[Dict[str, Any]]
+
+
+# =========================================================
+# CUSTOMIZER / RESUME TAILORING SCHEMAS
+# =========================================================
+
+class TailorResumeRequest(BaseModel):
+    resume_id: int
+    job_description: str
+    target_role: Optional[str] = ""
+
+
+class TailorResumeResponse(BaseModel):
+    tailored_summary: str
+    suggested_skills: List[str]
+    bullet_improvements: List[Dict[str, str]]
+    cover_points: List[str]
+    keyword_density_tips: List[str]
+
+
+class CVGenerateRequest(BaseModel):
+    resume_id: int
+    template: str = "professional"   # "professional" | "modern" | "academic"
+    custom_data: Optional[Dict[str, Any]] = None
+
+
+# =========================================================
+# CAREER ASSISTANT EXPORT SCHEMAS
+# =========================================================
+
+class ExportChatRequest(BaseModel):
+    messages: List[ChatMessage]
+    format: str = "md"   # "md" | "txt" | "pdf"
+    title: Optional[str] = "Career Assistant Conversation"

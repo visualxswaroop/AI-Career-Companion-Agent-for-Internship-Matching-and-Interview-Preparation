@@ -637,6 +637,12 @@ export default function ResumePage() {
         const detail = await resumeApi.getById(resumeId, accessToken)
         if (!cancelled) {
           setSelectedResume(detail)
+          try {
+            localStorage.setItem('cc_selected_resume_id', String(detail.resume_id))
+            if (detail.extracted_data) {
+              localStorage.setItem('cc_active_resume_data', JSON.stringify(detail.extracted_data))
+            }
+          } catch {}
         }
       } catch (err) {
         if (cancelled) return
@@ -672,6 +678,12 @@ export default function ResumePage() {
     setUploading(true)
     try {
       const uploaded = await resumeApi.upload(file, token)
+      try {
+        localStorage.setItem('cc_selected_resume_id', String(uploaded.resume_id))
+        if (uploaded.extracted_data) {
+          localStorage.setItem('cc_active_resume_data', JSON.stringify(uploaded.extracted_data))
+        }
+      } catch {}
       setStatusMessage({
         type: 'success',
         text: uploaded.message || 'Resume uploaded and parsed successfully.',

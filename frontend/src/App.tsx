@@ -11,8 +11,11 @@ import OnboardingPage from './pages/OnboardingPage'
 
 import OverviewPage from './pages/app/OverviewPage'
 import ResumePage from './pages/app/ResumePage'
-import InternshipsPlaceholderPage from './pages/app/InternshipsPlaceholderPage'
-import CoverLetterPlaceholderPage from './pages/app/CoverLetterPlaceholderPage'
+import JobMatchingPage from './pages/app/JobMatchingPage'
+import SkillGapPage from './pages/app/SkillGapPage'
+import CustomizerPage from './pages/app/CustomizerPage'
+import KnowledgeBasePage from './pages/app/KnowledgeBasePage'
+import CareerAssistantPage from './pages/app/CareerAssistantPage'
 import InterviewAgentPage from './pages/app/InterviewAgentPage'
 import VoiceResumePage from './pages/app/VoiceResumePage'
 import ProfilePage from './pages/app/ProfilePage'
@@ -57,12 +60,16 @@ export default function App() {
             >
               <Route index element={<OverviewPage />} />
               <Route path="resume" element={<ResumePage />} />
-              <Route path="internships" element={<InternshipsPlaceholderPage />} />
-              <Route path="cover-letters" element={<CoverLetterPlaceholderPage />} />
+              <Route path="internships" element={<JobMatchingPage />} />
+              <Route path="matching" element={<JobMatchingPage />} />
+              <Route path="skill-gap" element={<SkillGapPage />} />
+              <Route path="customizer" element={<CustomizerPage />} />
+              <Route path="cover-letters" element={<CustomizerPage />} />
+              <Route path="knowledge-base" element={<KnowledgeBasePage />} />
               <Route path="interview-agent" element={<InterviewAgentPage />} />
               <Route path="voice-resume" element={<VoiceResumePage />} />
               <Route path="voice_resume" element={<VoiceResumePage />} />
-              <Route path="career-assistant" element={<Navigate to="/app" replace />} />
+              <Route path="career-assistant" element={<CareerAssistantPage />} />
               <Route path="profile" element={<ProfilePage />} />
             </Route>
           </Route>

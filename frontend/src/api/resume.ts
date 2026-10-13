@@ -7,35 +7,35 @@ import type {
 } from './types'
 
 export const resumeApi = {
-  async upload(file: File, token: string): Promise<ResumeUploadResponse> {
+  async upload(file: File, token?: string): Promise<ResumeUploadResponse> {
     const formData = new FormData()
     formData.append('file', file)
 
     return request<ResumeUploadResponse>('/resume/upload', {
       method: 'POST',
-      token,
+      token: token || (typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null),
       body: formData,
     })
   },
 
-  async list(token: string): Promise<ResumeListResponse> {
+  async list(token?: string): Promise<ResumeListResponse> {
     return request<ResumeListResponse>('/resume', {
       method: 'GET',
-      token,
+      token: token || (typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null),
     })
   },
 
-  async getById(resumeId: number, token: string): Promise<ResumeResponse> {
+  async getById(resumeId: number, token?: string): Promise<ResumeResponse> {
     return request<ResumeResponse>(`/resume/${resumeId}`, {
       method: 'GET',
-      token,
+      token: token || (typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null),
     })
   },
 
-  async matchInternships(resumeId: number, token: string, topK = 10): Promise<SemanticSearchResponse> {
+  async matchInternships(resumeId: number, token?: string, topK = 10): Promise<SemanticSearchResponse> {
     return request<SemanticSearchResponse>(`/resume/${resumeId}/match-internships`, {
       method: 'POST',
-      token,
+      token: token || (typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null),
       body: JSON.stringify({ resume_id: resumeId, top_k: topK }),
     })
   },

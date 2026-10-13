@@ -117,29 +117,76 @@ export default function OverviewPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
           {[
             {
-              title: 'Resume Breakdown',
-              desc: 'Upload PDF or DOCX resumes to inspect extracted skills, strengths, and role suggestions.',
+              badge: 'PARSER & ATS',
+              title: 'Resume Parser and Analysis',
+              desc: 'Upload PDF/DOCX resumes. Get instant TF-IDF ATS compatibility scoring, extracted profile analysis, and keyword feedback.',
               link: '/app/resume',
-              cta: 'View Resume Module',
+              cta: 'Analyze Resume',
             },
             {
-              title: 'Opportunity Discovery',
-              desc: 'Discover tailored internships ranked by semantic match score and required skill overlap.',
+              badge: 'SEMANTIC MATCHING',
+              title: 'Job Matching',
+              desc: 'Intelligent job matching using project dataset listings. Inspect skill overlaps, match scores, and role insights.',
               link: '/app/internships',
-              cta: 'Discover Roles',
+              cta: 'Find Matches',
             },
             {
-              title: 'Personalized Cover Letters',
-              desc: 'Generate role-aligned cover letters powered by Groq LLM with customized tone settings.',
-              link: '/app/cover-letters',
-              cta: 'Open Letter Studio',
+              badge: 'LEARNING PATHWAY',
+              title: 'Skill Gap & Roadmap',
+              desc: 'Select target job titles to generate personalized skill matrices, weekly actionable study roadmaps, and curated course recommendations.',
+              link: '/app/skill-gap',
+              cta: 'View Roadmap',
+            },
+            {
+              badge: 'REPORTLAB PDF',
+              title: 'CV Customizer & PDF',
+              desc: 'Customize your resume in Professional, Modern, and Academic templates, type personalized details with live preview, and download crisp PDF CVs.',
+              link: '/app/customizer',
+              cta: 'Customize & Export CV',
+            },
+            {
+              badge: 'MOCK SIMULATOR',
+              title: 'AI Interview Agent',
+              desc: 'Simulate full technical and behavioral interviews with speech dictation, live question generation, rubric scoring, and STAR evaluation.',
+              link: '/app/interview-agent',
+              cta: 'Practice Interview',
+            },
+            {
+              badge: 'SPEECH REC',
+              title: 'Voice Resume Studio',
+              desc: 'Build comprehensive professional profiles hands-free using browser Web Speech API voice dictation and conversational drafting.',
+              link: '/app/voice-resume',
+              cta: 'Voice Dictate CV',
             },
           ].map(f => (
-            <div key={f.title} className="card" style={{ display: 'flex', flexDirection: 'column' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text)', marginBottom: '8px' }}>
+            <div
+              key={f.title}
+              className="card"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                transition: 'transform 0.2s ease, border-color 0.2s ease',
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                <span
+                  style={{
+                    fontSize: '0.68rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.05em',
+                    color: 'var(--accent)',
+                    backgroundColor: 'var(--accent-bg)',
+                    padding: '2px 8px',
+                    borderRadius: '100px',
+                  }}
+                >
+                  {f.badge}
+                </span>
+              </div>
+              <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--text)', marginBottom: '8px' }}>
                 {f.title}
               </h3>
-              <p className="body-sm" style={{ marginBottom: '20px', flex: 1 }}>
+              <p className="body-sm" style={{ marginBottom: '20px', flex: 1, color: 'var(--text-muted)', lineHeight: 1.5 }}>
                 {f.desc}
               </p>
               <Link to={f.link}>
